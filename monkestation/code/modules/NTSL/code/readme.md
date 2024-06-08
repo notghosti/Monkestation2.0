@@ -16,7 +16,11 @@ for example, adding in their job after their name
 - code\datums\chatmessage.dm -- Added a if(!speaker); return; due to NTSL code apparently not passing a speaker, i think, maybe, idk
 - code\game\machinery\telecomms\telecomunications.dm -- Added some logging if there's a wrong filter path
 - code\game\machinery\telecomms\machines\server.dm -- Added stuff to make the servers actually compile NTSL
+- code\modules\research\techweb\all_nodes.dm -- Added the programming console thingy to the telecomms techweb
+
 - interface\skin.dmf -- Added stuff to make NTSL code editing UI work... im sorry... i really need to turn it to TGUI
+
+- icons\ui_icons\achievements.dmi -- Added the achievement icon for loud and silent birb
 
 ### Defines:
 

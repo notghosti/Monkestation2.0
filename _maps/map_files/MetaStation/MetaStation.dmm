@@ -3570,12 +3570,6 @@
 "blu" = (
 /obj/structure/table/wood,
 /obj/machinery/light/small/directional/west,
-/obj/item/radio/off{
-	pixel_y = 4
-	},
-/obj/item/screwdriver{
-	pixel_y = 10
-	},
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "blw" = (
@@ -20100,12 +20094,6 @@
 /obj/structure/sign/poster/official/random/directional/south,
 /turf/open/floor/iron,
 /area/station/service/hydroponics)
-"hxB" = (
-/obj/item/kirbyplants{
-	icon_state = "plant-21"
-	},
-/turf/open/floor/iron/grimy,
-/area/station/tcommsat/computer)
 "hxD" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/blue{
@@ -32558,6 +32546,9 @@
 /obj/structure/showcase/cyborg/old{
 	pixel_y = 20
 	},
+/obj/item/kirbyplants{
+	icon_state = "plant-21"
+	},
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "lJm" = (
@@ -33310,6 +33301,12 @@
 "lVq" = (
 /obj/machinery/light/small/directional/south,
 /obj/structure/table/wood,
+/obj/item/radio/off{
+	pixel_y = 4
+	},
+/obj/item/screwdriver{
+	pixel_y = 10
+	},
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "lVB" = (
@@ -43342,6 +43339,10 @@
 /obj/machinery/light_switch/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/office)
+"pvq" = (
+/obj/machinery/computer/telecomms/traffic,
+/turf/open/floor/iron/grimy,
+/area/station/tcommsat/computer)
 "pvL" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/public/glass{
@@ -122949,7 +122950,7 @@ pQv
 tSP
 dHe
 giA
-xCS
+pvq
 nCu
 jGo
 lVq
@@ -123209,7 +123210,7 @@ giA
 lJj
 pKv
 dfC
-hxB
+xCS
 hJJ
 hJJ
 hJJ

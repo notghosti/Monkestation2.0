@@ -12267,6 +12267,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "cNy" = (
@@ -40286,7 +40287,6 @@
 /turf/open/floor/glass/reinforced,
 /area/station/security/brig)
 "lSp" = (
-/obj/structure/filingcabinet/chestdrawer,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 10
 	},
@@ -48913,11 +48913,11 @@
 /turf/open/floor/wood/large,
 /area/station/service/library)
 "oHC" = (
-/obj/structure/table,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/west,
+/obj/machinery/announcement_system,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "oHM" = (
@@ -73215,8 +73215,10 @@
 /turf/open/floor/iron/smooth,
 /area/station/maintenance/tram/right)
 "wnq" = (
-/obj/machinery/announcement_system,
 /obj/effect/turf_decal/trimline/yellow/filled/line{
+	dir = 1
+	},
+/obj/machinery/computer/telecomms/traffic{
 	dir = 1
 	},
 /turf/open/floor/iron/dark,

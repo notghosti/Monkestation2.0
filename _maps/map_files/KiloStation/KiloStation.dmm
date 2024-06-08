@@ -3886,6 +3886,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/item/kirbyplants{
+	icon_state = "plant-05"
+	},
 /turf/open/floor/iron/dark/corner,
 /area/station/hallway/primary/central/fore)
 "bpn" = (
@@ -13282,15 +13285,12 @@
 /obj/effect/turf_decal/tile/neutral{
 	dir = 4
 	},
-/obj/item/kirbyplants{
-	icon_state = "plant-05"
-	},
 /obj/effect/turf_decal/tile/red{
 	dir = 1
 	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
-/turf/open/floor/iron,
+/turf/closed/wall/r_wall,
 /area/station/hallway/primary/central/fore)
 "epN" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -16433,6 +16433,10 @@
 /obj/item/food/grown/poppy/geranium,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
+"foD" = (
+/obj/machinery/status_display/ai/directional/south,
+/turf/closed/wall/r_wall,
+/area/station/tcommsat/computer)
 "foQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -29699,6 +29703,12 @@
 "jnp" = (
 /turf/closed/wall/rust,
 /area/station/cargo/drone_bay)
+"jnu" = (
+/obj/machinery/computer/telecomms/traffic{
+	dir = 1
+	},
+/turf/open/floor/engine,
+/area/station/tcommsat/computer)
 "jnQ" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -37994,7 +38004,6 @@
 	},
 /obj/machinery/light/small/directional/east,
 /obj/item/radio/intercom/directional/east,
-/obj/machinery/status_display/ai/directional/south,
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "mfY" = (
@@ -107212,7 +107221,7 @@ shk
 orT
 aQB
 mfU
-vqw
+jnu
 vqw
 imo
 tEE
@@ -107469,7 +107478,7 @@ qZx
 hPW
 vqw
 vqw
-vqw
+foD
 epA
 xxP
 wqE
