@@ -50,7 +50,8 @@
 #define LOG_SPEECH_INDICATORS (1 << 21)
 #define LOG_CLONING (1 << 22)
 #define LOG_MECHCOMP (1 << 23)
-#define LOG_BLACKMARKET (1 << 24)
+#define LOG_NTSL (1 << 24) // MONKESTATION ADDITION: NTSL
+#define LOG_BLACKMARKET (1 << 25)
 
 //Individual logging panel pages
 #define INDIVIDUAL_GAME_LOG (LOG_GAME)
@@ -113,6 +114,7 @@
 #define LOG_CATEGORY_TOOL "tool"
 #define LOG_CATEGORY_VIRUS "virus"
 #define LOG_CATEGORY_MECHCOMP "mechcomp"
+#define LOG_CATEGORY_NTSL "ntsl" // MONKESTATION ADDITION: NTSL
 #define LOG_CATEGORY_CLONING "cloning"
 #define LOG_CATEGORY_MUSIC "music"
 #define LOG_CATEGORY_META "currency"
