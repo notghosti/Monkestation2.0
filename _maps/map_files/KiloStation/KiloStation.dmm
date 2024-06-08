@@ -13278,20 +13278,6 @@
 	},
 /turf/open/floor/wood,
 /area/station/command/heads_quarters/hop)
-"epA" = (
-/obj/effect/turf_decal/tile/yellow/half/contrasted{
-	dir = 8
-	},
-/obj/effect/turf_decal/tile/neutral{
-	dir = 4
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 1
-	},
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable,
-/turf/closed/wall/r_wall,
-/area/station/hallway/primary/central/fore)
 "epN" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/closed/wall,
@@ -16433,10 +16419,6 @@
 /obj/item/food/grown/poppy/geranium,
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
-"foD" = (
-/obj/machinery/status_display/ai/directional/south,
-/turf/closed/wall/r_wall,
-/area/station/tcommsat/computer)
 "foQ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -18968,6 +18950,8 @@
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted{
 	dir = 1
 	},
+/obj/structure/cable,
+/obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/iron/dark/corner{
 	dir = 1
 	},
@@ -73768,6 +73752,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/status_display/ai/directional/north,
 /turf/open/floor/iron,
 /area/station/hallway/primary/central/fore)
 "xye" = (
@@ -107478,8 +107463,8 @@ qZx
 hPW
 vqw
 vqw
-foD
-epA
+vqw
+vqw
 xxP
 wqE
 wuh
