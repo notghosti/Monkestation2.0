@@ -32,7 +32,7 @@
 	var/process = 0
 	circuit = /obj/item/circuitboard/computer/comm_traffic
 
-	req_access = list(ACCESS_TCOMMS) // CHANGE TO TCOMMADMIN
+	req_access = list(ACCESS_TCOMMS_ADMIN)
 
 /obj/machinery/computer/telecomms/traffic/Initialize(mapload)
 	. = ..()

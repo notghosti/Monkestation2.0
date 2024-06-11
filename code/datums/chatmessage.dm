@@ -307,7 +307,7 @@
 	// Ensure the list we are using, if present, is a copy so we don't modify the list provided to us
 	spans = spans ? spans.Copy() : list()
 
-	// MONKESTATION ADDITION START -- NTSL -- doesn't pass a speaker when you do broadcast() since technically nothing is actually speaking.
+	// MONKESTATION ADDITION START -- NTSL -- NTSL doesn't pass a speaker when you do broadcast() since technically nothing is actually speaking.
 	if(!speaker)
 		return
 	// MONKESTATION ADDITION END

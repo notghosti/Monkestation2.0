@@ -4,7 +4,6 @@
 #define HUMAN (1<<0)
 #define MONKEY (1<<1)
 #define ROBOT (1<<2)
-#define POLYSMORPH (1<<3)
 #define DRACONIC (1<<4)
 #define BEACHTONGUE (1<<5)
 #define SYLVAN (1<<6)
@@ -137,7 +136,6 @@ GLOBAL_LIST_INIT(allowed_translations, list(
 		"human" = HUMAN,
 		"monkey" = MONKEY,
 		"robot" = ROBOT,
-		"polysmorph" = POLYSMORPH,
 		"draconic" = DRACONIC,
 		"beachtounge" = BEACHTONGUE,
 		"sylvan" = SYLVAN,
@@ -499,7 +497,6 @@ GLOBAL_LIST_INIT(allowed_translations, list(
 #undef HUMAN
 #undef MONKEY
 #undef ROBOT
-#undef POLYSMORPH
 #undef DRACONIC
 #undef BEACHTONGUE
 #undef SYLVAN
