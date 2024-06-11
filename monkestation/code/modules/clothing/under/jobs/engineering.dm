@@ -4,5 +4,4 @@
 	icon = 'monkestation/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'monkestation/icons/mob/clothing/uniform.dmi'
 	icon_state = "signal_tech"
-	inhand_icon_state = "signal_tech"
 	species_exception = list(/datum/species/golem/uranium)
