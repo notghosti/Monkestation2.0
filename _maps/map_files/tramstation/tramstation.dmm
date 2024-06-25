@@ -54696,6 +54696,7 @@
 "qxZ" = (
 /obj/structure/chair/office,
 /obj/effect/turf_decal/trimline/yellow/filled/line,
+/obj/effect/landmark/start/signal_technician,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "qya" = (

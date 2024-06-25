@@ -47,6 +47,10 @@
 		"Telecomunications Engineer",
 	)
 
+/obj/effect/landmark/start/signal_technician
+	name = JOB_SIGNAL_TECHNICIAN
+	icon_state = JOB_SIGNAL_TECHNICIAN
+
 /datum/outfit/job/signal_tech
 	name = "Signal Technician"
 	jobtype = /datum/job/signal_technician

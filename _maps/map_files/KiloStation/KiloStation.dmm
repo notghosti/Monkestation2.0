@@ -40020,6 +40020,8 @@
 	},
 /obj/machinery/light/small/directional/east,
 /obj/item/radio/intercom/directional/east,
+/obj/effect/landmark/start/signal_technician,
+/obj/structure/chair/office,
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "mLs" = (

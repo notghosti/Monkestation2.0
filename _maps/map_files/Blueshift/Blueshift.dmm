@@ -28983,6 +28983,7 @@
 "fBZ" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
+/obj/item/kirbyplants/organic/plant21,
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/computer)
 "fCd" = (
@@ -32762,9 +32763,6 @@
 	pixel_x = 6;
 	pixel_y = 16
 	},
-/obj/item/reagent_containers/cup/beaker/vial,
-/obj/item/reagent_containers/cup/beaker/vial,
-/obj/item/reagent_containers/cup/beaker/vial,
 /turf/open/floor/iron/white,
 /area/station/medical/virology)
 "gpr" = (
@@ -36182,7 +36180,9 @@
 /turf/open/floor/iron,
 /area/station/science/ordnance)
 "gZw" = (
-/obj/item/kirbyplants/organic/plant21,
+/obj/machinery/computer/telecomms/traffic{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/tcommsat/computer)
 "gZx" = (
@@ -46255,7 +46255,8 @@
 	cycle_id = "tcomms-internal"
 	},
 /obj/machinery/door/firedoor/heavy,
-/obj/effect/mapping_helpers/airlock/access/all/command/general,
+/obj/effect/mapping_helpers/airlock/access/any/engineering/tcoms,
+/obj/effect/mapping_helpers/airlock/access/any/command/general,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "jay" = (
@@ -111592,6 +111593,7 @@
 "vEE" = (
 /obj/structure/chair/office/light,
 /obj/machinery/light/floor/has_bulb,
+/obj/effect/landmark/start/signal_technician,
 /turf/open/floor/iron,
 /area/station/tcommsat/computer)
 "vEF" = (
@@ -113720,10 +113722,6 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/cable,
 /obj/machinery/disease2/centrifuge,
-/obj/item/reagent_containers/cup/beaker/vial,
-/obj/item/reagent_containers/cup/beaker/vial,
-/obj/item/reagent_containers/cup/beaker/vial,
-/obj/item/reagent_containers/cup/beaker/vial,
 /turf/open/floor/iron,
 /area/station/medical/virology)
 "wax" = (

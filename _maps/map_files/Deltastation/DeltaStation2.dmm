@@ -90255,6 +90255,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/obj/effect/landmark/start/signal_technician,
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "vBB" = (
