@@ -1,6 +1,13 @@
 import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
-import { NoticeBox, Box, Input, LabeledList, Button, TextArea } from '../components';
+import {
+  NoticeBox,
+  Box,
+  Input,
+  LabeledList,
+  Button,
+  TextArea,
+} from '../components';
 import { Window } from '../layouts';
 
 export const NTSLCoding = (props, context) => {
@@ -11,11 +18,13 @@ export const NTSLCoding = (props, context) => {
     <Window
       title="NTSL NT patented transmission console powershell"
       width={500}
-      height={500}>
+      height={500}
+    >
       <Window.Content>
         <NoticeBox
           color={Authenticated === 1 ? 'green' : 'red'}
-          textAlign="center">
+          textAlign="center"
+        >
           {Authenticated === 1 ? 'ACCESS GRANTED' : 'ACCESS DENIED'}
         </NoticeBox>
         {Authenticated === 1 ? <GrantedPanel /> : <DeniedPanel />}
