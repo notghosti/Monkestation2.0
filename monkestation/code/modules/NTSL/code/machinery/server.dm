@@ -43,12 +43,6 @@
 	log_entries.Add(log)
 	update_logs()
 
-
-/obj/machinery/telecomms/server/proc/setcode(t)
-	if(t)
-		if(istext(t))
-			rawcode = t
-
 /obj/machinery/telecomms/server/proc/compile(mob/user = usr)
 	if(is_banned_from(user.ckey, "Network Admin"))
 		to_chat(user, span_warning("You are banned from using NTSL."))
@@ -64,7 +58,7 @@
 		if(!compileerrors.len && (compiledcode != rawcode))
 			user.log_message(rawcode, LOG_NTSL)
 			compiledcode = rawcode
-		if(user.mind.assigned_role == "Network Admin") //achivement description says only Network Admin gets the achivement
+		if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
 			var/freq
 			if(freq_listening.len > 0)
 				freq = freq_listening[1]

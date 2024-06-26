@@ -7030,7 +7030,6 @@
 #include "monkestation\code\modules\NTSL\code\global.dm"
 #include "monkestation\code\modules\NTSL\code\logging.dm"
 #include "monkestation\code\modules\NTSL\code\misc_procs.dm"
-#include "monkestation\code\modules\NTSL\code\coding_language\client_verbs.dm"
 #include "monkestation\code\modules\NTSL\code\coding_language\errors.dm"
 #include "monkestation\code\modules\NTSL\code\coding_language\options.dm"
 #include "monkestation\code\modules\NTSL\code\coding_language\stack.dm"
