@@ -47,40 +47,43 @@
 	if(is_banned_from(user.ckey, "Network Admin"))
 		to_chat(user, span_warning("You are banned from using NTSL."))
 		return "Unauthorized access."
-	if(Compiler)
-		if(!reject_bad_ntsl_text(rawcode, 20000, require_pretty = FALSE, allow_newline = TRUE, allow_code = TRUE))
-			rawcode = null
-			return "Please use galactic common characters only."
-		if(!COOLDOWN_FINISHED(src, compile_cooldown))
-			return "Servers are recharging, please wait."
-		var/list/compileerrors = Compiler.Compile(rawcode)
-		COOLDOWN_START(src, compile_cooldown, 2 SECONDS)
-		if(!compileerrors.len && (compiledcode != rawcode))
-			user.log_message(rawcode, LOG_NTSL)
-			compiledcode = rawcode
-		if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
-			var/freq
-			if(freq_listening.len > 0)
-				freq = freq_listening[1]
-			else
-				freq = 1459
-			var/atom/movable/M = new()
-			var/atom/movable/virtualspeaker/speaker = new(null, M, server_radio)
-			speaker.name = "Poly"
-			speaker.job = ""
-			var/datum/signal/subspace/vocal/signal = new(src, freq, speaker, /datum/language/common, "test", list(), )
-			signal.data["server"] = src
+
+	if(!Compiler)
+		return
+
+	if(!reject_bad_ntsl_text(rawcode, 20000, require_pretty = FALSE, allow_newline = TRUE, allow_code = TRUE))
+		rawcode = null
+		return "Please use galactic common characters only."
+	if(!COOLDOWN_FINISHED(src, compile_cooldown))
+		return "Servers are recharging, please wait."
+	var/list/compileerrors = Compiler.Compile(rawcode)
+	COOLDOWN_START(src, compile_cooldown, 2 SECONDS)
+	if(!compileerrors.len && (compiledcode != rawcode))
+		user.log_message(rawcode, LOG_NTSL)
+		compiledcode = rawcode
+	if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
+		var/freq
+		if(freq_listening.len > 0)
+			freq = freq_listening[1]
+		else
+			freq = 1459
+		var/atom/movable/M = new()
+		var/atom/movable/virtualspeaker/speaker = new(null, M, server_radio)
+		speaker.name = "Poly"
+		speaker.job = ""
+		var/datum/signal/subspace/vocal/signal = new(src, freq, speaker, /datum/language/common, "test", list(), )
+		signal.data["server"] = src
+		Compiler.Run(signal)
+		if(signal.data["reject"] == TRUE)
+			signal.data["name"] = ""
+			signal.data["reject"] = FALSE
 			Compiler.Run(signal)
-			if(signal.data["reject"] == TRUE)
-				signal.data["name"] = ""
-				signal.data["reject"] = FALSE
-				Compiler.Run(signal)
-				if(!signal.data["reject"] == FALSE)
-					user.client.give_award(/datum/award/achievement/jobs/Poly_silent, user)
-			else
-				for(var/sample in signal.data["spans"])
-					if(sample == SPAN_COMMAND)
-						user.client.give_award(/datum/award/achievement/jobs/Poly_loud, user)
-						break // Not having this break leaves us open to a potential DoS attack.
-		return compileerrors
+			if(!signal.data["reject"] == FALSE)
+				user.client.give_award(/datum/award/achievement/jobs/Poly_silent, user)
+		else
+			for(var/sample in signal.data["spans"])
+				if(sample == SPAN_COMMAND)
+					user.client.give_award(/datum/award/achievement/jobs/Poly_loud, user)
+					break // Not having this break leaves us open to a potential DoS attack.
+	return compileerrors
 //end-NTSL

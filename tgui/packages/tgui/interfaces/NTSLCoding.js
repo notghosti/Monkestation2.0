@@ -64,6 +64,7 @@ const GrantedPanel = (props, context) => {
     selected_server_name,
     selected_server_autorun,
     code,
+    temp,
     errors,
     warnings,
   } = data;
@@ -85,6 +86,7 @@ const GrantedPanel = (props, context) => {
           })
         }
       />
+      {temp !== 0 && <Box textColor="blue">{temp}</Box>}
       {detected_servers.length > 0 && (
         <LabeledList>
           {detected_servers.map((detected_servers) => (

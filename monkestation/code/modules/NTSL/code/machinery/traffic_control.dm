@@ -28,9 +28,6 @@
 	var/list/access_log = list()
 	var/process = 0
 
-
-
-	var/mob/code_editor
 	var/obj/machinery/telecomms/server/SelectedServer
 
 	var/code_errors
@@ -67,6 +64,8 @@
 
 /obj/machinery/computer/telecomms/traffic/Destroy()
 	GLOB.traffic_comps -= src
+	SelectedServer = null
+	auth = null
 	return ..()
 
 /obj/machinery/computer/telecomms/traffic/ui_interact(mob/user, datum/tgui/ui)
@@ -111,7 +110,7 @@
 	data["errors"] = code_errors ? code_errors : FALSE
 	data["warnings"] = code_warnings ? code_warnings : FALSE
 
-	data["temp"] = temp
+	data["temp"] = temp ? temp : FALSE
 
 	return data
 
