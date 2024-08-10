@@ -16,102 +16,78 @@
 	name = "traffic control computer"
 	desc = "A computer used to interface with the programming of communication servers."
 
-	var/emagged = FALSE
-	var/list/servers = list() // the servers located by the computer
-	var/list/viewingcode = list()
-
-	var/network = "NULL" // the network to probe
-	var/temp = "" // temporary feedback messages
-
-	var/storedcode = "" // code stored
-	var/obj/item/card/id/auth = null
+	/// The servers located by the computer
+	var/list/obj/machinery/telecomms/server/servers = list()
+	/// The network to probe
+	var/network = "NULL"
+	/// The current code being used
+	var/storedcode = ""
+	/// The ID currently inserted
+	var/obj/item/card/id/inserted_id
+	/// The name and job on the ID used to log in
+	var/user_name = ""
+	/// Logs for users logging in/out or compiling code
 	var/list/access_log = list()
-	var/process = 0
+	/// Output from compiling to the servers
+	var/list/compiler_output = list()
 
-	var/obj/machinery/telecomms/server/SelectedServer
-
-	var/code_errors
-	var/code_warnings
+	var/unlimited_range = FALSE
 
 	circuit = /obj/item/circuitboard/computer/comm_traffic
 
 	req_access = list(ACCESS_TCOMMS_ADMIN)
 
-// Confirm that the current user can use NTSL and its related functions
-/obj/machinery/computer/telecomms/traffic/proc/isAuthorized(mob/user)
-	if(!istype(user))
-		return FALSE
-
-	if(is_banned_from(user.ckey, "Signal Technician"))
-		to_chat(user, span_warning("You are banned from using the NTSL console"))
-		return FALSE
-
-	if(!SelectedServer)
-		to_chat(user, span_warning("No selected server detected"))
-		return FALSE
-
-	if(issilicon(user))
-		return TRUE
-
-	if((emagged || auth) && in_range(user, src))
-		return TRUE
-
-	return FALSE
-
 /obj/machinery/computer/telecomms/traffic/Initialize(mapload)
 	. = ..()
 	GLOB.traffic_comps += src
+	if(mapload)
+		unlimited_range = TRUE
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/computer/telecomms/traffic/LateInitialize()
+	. = ..()
+	refresh_servers()
+	for(var/obj/machinery/telecomms/server/new_server in servers)
+		new_server.autoruncode = TRUE
 
 /obj/machinery/computer/telecomms/traffic/Destroy()
 	GLOB.traffic_comps -= src
-	SelectedServer = null
-	auth = null
 	return ..()
 
+/obj/machinery/computer/telecomms/traffic/proc/create_log(entry)
+	if(!user_name)
+		CRASH("[type] tried to create a log with no user_name!")
+	access_log += "\[[get_timestamp()]\] [user_name] [entry]"
+
 /obj/machinery/computer/telecomms/traffic/ui_interact(mob/user, datum/tgui/ui)
+	if(is_banned_from(user.ckey, "Signal Technician"))
+		to_chat(user, span_warning("You are banned from using the NTSL console"))
+		return "You are banned from using NTSL."
+
 	. = ..()
 	ui = SStgui.try_update_ui(user, src, ui)
-	if(ui)
-		return
+	if(!ui)
+		ui = new(user, src, "NTSLCoding")
+		ui.open()
 
-	ui = new(user, src, "NTSLCoding")
-	ui.open()
-	ui.set_autoupdate(TRUE)
-
-/datum/asset/simple/telecomms
-	assets = list(
-		"server.png" = icon('icons/obj/machines/telecomms.dmi', "comm_server"),
-	)
-
-/obj/machinery/computer/telecomms/traffic/ui_assets(mob/user)
-	return list(
-		get_asset_datum(/datum/asset/simple/telecomms),
-	)
-
-/obj/machinery/computer/telecomms/traffic/ui_static_data(mob/user)
+/obj/machinery/computer/telecomms/traffic/ui_data(mob/user)
 	var/list/data = list()
-
-	var/list/detected_servers = list()
-	for(var/obj/machinery/telecomms/server in servers)
-		detected_servers += list(list(
-			"name" = server.name,
-			"frequency" = server.freq_listening.len == 1 ? server.freq_listening[1] : 1459,
-		))
-	data["detected_servers"] = detected_servers
-
-	data["selected_server_name"] = SelectedServer ? SelectedServer.name : FALSE
-	data["selected_server_autorun"] = SelectedServer ? SelectedServer.autoruncode : FALSE
-
+	var/list/server_data = list()
+	for(var/obj/machinery/telecomms/server/server in servers)
+		server_data.Add(list(list(
+			"server" = REF(server),
+			"server_id" = server.id,
+			"server_name" = server.name,
+			"run_code" = server.autoruncode,
+		)))
+	data["server_data"] = server_data
+	data["stored_code"] = storedcode
 	data["network"] = network
-
-	data["Authenticated"] = !isnull(auth) ? TRUE : FALSE
-
-	data["code"] = storedcode
-	data["errors"] = code_errors ? code_errors : FALSE
-	data["warnings"] = code_warnings ? code_warnings : FALSE
-
-	data["temp"] = temp ? temp : FALSE
-
+	data["user_name"] = user_name
+	data["has_access"] = inserted_id
+	data["access_log"] = access_log.Copy()
+	data["compiler_output"] = compiler_output.Copy()
+	data["emagged"] = ((obj_flags & EMAGGED) > 0)
 	return data
 
 /obj/machinery/computer/telecomms/traffic/ui_act(action, list/params)
@@ -121,126 +97,111 @@
 
 	playsound(src, "terminal_type", 15, FALSE)
 	switch(action)
-		if("Change Network")
-			network = params["network"]
-			servers = list()
-			for(var/obj/machinery/telecomms/server/server in range(25, src))
-				if(server.network == network)
-					servers += server
-
-			if(!servers.len)
-				temp = "Minor Error: Failed to find servers in the network \"[network]\""
+		if("refresh_servers")
+			refresh_servers()
+			return TRUE
+		if("toggle_code_execution")
+			var/obj/machinery/telecomms/server/selected_server = locate(params["selected_server"])
+			selected_server.autoruncode = !selected_server.autoruncode
+			return TRUE
+		if("save_code")
+			storedcode = params["saved_code"]
+			return TRUE
+		if("compile_code")
+			if(!user_name)
+				message_admins("[key_name_admin(usr)] attempted compiling NTSL without being logged in.") // tell admins that someone tried a javascript injection
+				return
+			for(var/obj/machinery/telecomms/server/server as anything in servers)
+				if(storedcode && istext(storedcode))
+					server.rawcode = storedcode
+			qdel(compiler_output)
+			compiler_output = compile_all(usr)
+			return TRUE
+		if("set_network")
+			if(!user_name)
+				return
+			network = params["new_network"]
+			return TRUE
+		if("log_in")
+			var/mob/living/usr_mob = usr
+			if(usr_mob.has_unlimited_silicon_privilege)
+				user_name = "System Administrator"
+			else if(check_access(inserted_id))
+				user_name = "[inserted_id?.registered_name] ([inserted_id?.assignment])"
 			else
-				temp = "[servers.len] probed and buffered successfully!"
-
-			update_static_data_for_all_viewers()
-
-		if("Select Server")
-			for(var/obj/machinery/telecomms/server/server in servers)
-				if(server.name == params["server"])
-					SelectedServer = server
-					break
-
-			update_static_data_for_all_viewers()
-
-		if("Toggle Autorun")
-			SelectedServer.autoruncode = !(SelectedServer.autoruncode)
-			update_static_data_for_all_viewers()
-
-		if("Save Code")
-			if(!isAuthorized(usr))
+				var/obj/item/card/id/user_id = usr_mob.get_idcard(TRUE)
+				if(!check_access(user_id))
+					return
+				user_name = "[user_id?.registered_name] ([user_id?.assignment])"
+			create_log("has logged in.")
+			return TRUE
+		if("log_out")
+			if(obj_flags & EMAGGED)
+				return TRUE
+			create_log("has logged out.")
+			user_name = null
+			return TRUE
+		if("clear_logs")
+			if(!user_name)
+				message_admins("[key_name_admin(usr)] attempted clearing NTSL logs without being logged in.")
 				return
+			qdel(access_log)
+			access_log = list()
+			create_log("cleared access logs.")
+			return TRUE
 
-			if(!params["code"] || !istext(params["code"]))
-				return
+/obj/machinery/computer/telecomms/traffic/proc/refresh_servers()
+	qdel(servers)
+	servers = list()
+	for(var/obj/machinery/telecomms/server/new_server as anything in GLOB.tcomms_servers)
+		if(new_server.network != network)
+			continue
+		if(!unlimited_range && get_dist(src, new_server))
+			continue
+		servers.Add(new_server)
 
-			storedcode = params["code"]
-			SelectedServer.rawcode = params["code"]
-			update_static_data_for_all_viewers()
+/obj/machinery/computer/telecomms/traffic/proc/compile_all(mob/user)
+	if(is_banned_from(user.ckey, "Network Admin"))
+		return list("You are banned from using NTSL.")
+	if(!servers.len)
+		return list("No servers detected.")
+	for(var/obj/machinery/telecomms/server/server as anything in servers)
+		var/list/compile_errors = server.compile(user)
+		if(!compile_errors)
+			return list("A fatal error has occured. Please contact your local network adminstrator.")
+		if(istext(compile_errors))
+			return splittext(compile_errors, "\n")
+		var/list/text_list = list()
+		for(var/datum/scriptError/error in compile_errors)
+			text_list.Add(error.message)
+		if(text_list.len)
+			return text_list
+	create_log("compiled to all linked servers on [network].")
+	return list("Compiling finished.")
 
-		if("Compile Code")
-			if(!isAuthorized(usr))
-				return
-
-			var/mob/player = usr
-
-
-			var/list/compiling_errors = SelectedServer.compile(player)
-
-			if(!compiling_errors)
-				code_errors = "!!FATAL ERROR DETECTED!! Error could not be cached, please contact your local Signal Technician for immediate assistance"
-
-			else if(istext(compiling_errors))
-				code_errors = compiling_errors
-
-			else if(length(compiling_errors))
-				code_errors = ""
-				for(var/datum/scriptError/error in compiling_errors)
-					code_errors = "[code_errors]\n[error.message]"
-
-			else // Returned a blank list, means no errors.
-				code_errors = FALSE
-
-			if(SelectedServer.compile_warnings.len)
-				code_warnings = ""
-				for(var/datum/scriptError/error in SelectedServer.compile_warnings)
-					code_warnings = "[code_warnings]\n[error.message]"
-
-			update_static_data_for_all_viewers()
-
-/obj/machinery/computer/telecomms/traffic/proc/create_log(entry, mob/user)
-	var/id = null
-	if(issilicon(user) || isAI(user))
-		id = "System Administrator"
-	else if(ispAI(user))
-		id = "[user.name] (pAI)"
-	else
-		if(auth)
-			id = "[auth.registered_name] ([auth.assignment])"
-		else
-			return
-	access_log += "\[[get_timestamp()]\] [id] [entry]"
-
-/obj/machinery/computer/telecomms/traffic/attackby(obj/O, mob/user, params)
-	src.updateUsrDialog()
-	if(istype(O, /obj/item/card/id) && check_access(O) && user.transferItemToLoc(O, src))
-		auth = O
-		create_log("has logged in.", usr)
-	else
-		..()
-
-	update_static_data_for_all_viewers()
+/obj/machinery/computer/telecomms/traffic/attackby(obj/item/item, mob/user, params)
+	if(istype(item, /obj/item/card/id) && check_access(item) && user.transferItemToLoc(item, src))
+		inserted_id = item
+		playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
+		return
+	return ..()
 
 /obj/machinery/computer/telecomms/traffic/emag_act(mob/user, obj/item/card/emag/emag_card)
-	if(emagged)
+	if(obj_flags & EMAGGED)
 		return FALSE
+	obj_flags |= EMAGGED
+	user_name = "System Administrator"
+	create_log("has logged in.")
 	playsound(src.loc, 'sound/effects/sparks4.ogg', 75, 1)
-	emagged = TRUE
-	to_chat(user, span_notice("You you disable the security protocols."))
-	update_static_data_for_all_viewers()
-
-/obj/machinery/computer/telecomms/traffic/proc/canAccess(mob/user)
-	if(issilicon(user) || in_range(user, src))
-		return 1
-	return 0
+	to_chat(user, span_notice("You bypass the console's security protocols."))
 
 /obj/machinery/computer/telecomms/traffic/AltClick(mob/user)
 	if(!user.can_perform_action(src, NEED_DEXTERITY) || !iscarbon(user))
 		return
 
-	var/mob/living/carbon/C = user
-	if(!auth)
-		var/obj/item/card/id/I = C.get_active_held_item()
-		if(istype(I))
-			if(check_access(I))
-				if(!C.transferItemToLoc(I, src))
-					return
-				auth = I
-				create_log("has logged in.", user)
-	else
-		create_log("has logged out.", user)
-		auth.forceMove(drop_location())
-		C.put_in_hands(auth)
-		auth = null
-
-	update_static_data_for_all_viewers()
+	var/mob/living/carbon/carbon_user = user
+	if(inserted_id)
+		playsound(src, 'sound/machines/terminal_insert_disc.ogg', 50, 0)
+		inserted_id.forceMove(drop_location())
+		carbon_user.put_in_hands(inserted_id)
+		inserted_id = null

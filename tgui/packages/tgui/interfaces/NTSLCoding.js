@@ -1,164 +1,207 @@
-import { resolveAsset } from '../assets';
 import { useBackend, useLocalState } from '../backend';
 import {
-  NoticeBox,
   Box,
-  Input,
-  LabeledList,
   Button,
+  Divider,
+  Input,
+  Tabs,
   TextArea,
+  Section,
+  Stack,
 } from '../components';
 import { Window } from '../layouts';
 
-export const NTSLCoding = (props, context) => {
-  const { act, data } = useBackend(context);
-  const { Authenticated } = data;
+export const NTSLCoding = (props) => {
+  // Make sure we don't start larger than 50%/80% of screen width/height.
+  const winWidth = Math.min(900, window.screen.availWidth * 0.5);
+  const winHeight = Math.min(600, window.screen.availHeight * 0.8);
 
   return (
-    <Window
-      title="NTSL NT patented transmission console powershell"
-      width={500}
-      height={500}
-    >
+    <Window title="Traffic Control Console" width={winWidth} height={winHeight}>
       <Window.Content>
-        <NoticeBox
-          color={Authenticated === 1 ? 'green' : 'red'}
-          textAlign="center"
-        >
-          {Authenticated === 1 ? 'ACCESS GRANTED' : 'ACCESS DENIED'}
-        </NoticeBox>
-        {Authenticated === 1 ? <GrantedPanel /> : <DeniedPanel />}
+        <Stack fill>
+          <Stack.Item width={winWidth - 240}>
+            <ScriptEditor />
+          </Stack.Item>
+          <Stack.Item>
+            <MainMenu />
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );
 };
 
-const DeniedPanel = (props, context) => {
+const ScriptEditor = (props) => {
+  const { act, data } = useBackend();
+  const { stored_code, user_name } = data;
   return (
-    <Box textColor="blue">
-      PS: Starting session 2952 of user root. <br />
-      PS: Starting jobs... <br />
-      PS: Finished starting jobs. <br />
-      PS: Waiting for jobs to finish... <br />
-      PS: Jobs should have finished. <br />
-      PS: Disposed job objects. <br />
-      PS: Successfully saved &apos;boottime.xml&apos; <br />
-      PS: Asking for administrative permission... <br />
-      PS: getting parameter &apos;Authentication&apos; <br />
-      WARN: Parameter &apos;Authentication&apos; not detected. <br />
-      @echo User credential login attempt detected, authentication required.
-      Please insert your ID card into the computer <br />
-      PS: getting parameter &apos;Required Access&apos; <br />
-      @echo Required access needed: ACCESS_TCOMMS_ADMIN <br />
-      PS: Process shutdown successfully. <br />
-      Exit Code: 0 <br />
+    <Box width="100%" height="100%">
+      {user_name ? (
+        <TextArea
+          noborder
+          scrollbar
+          value={stored_code}
+          width="100%"
+          height="100%"
+          onChange={(_, value) =>
+            act('save_code', {
+              saved_code: value,
+            })
+          }
+        />
+      ) : (
+        <Section width="100%" height="100%">
+          {stored_code}
+        </Section>
+      )}
     </Box>
   );
 };
 
-const GrantedPanel = (props, context) => {
-  const { act, data } = useBackend(context);
-  const {
-    network,
-    detected_servers,
-    selected_server_name,
-    selected_server_autorun,
-    code,
-    temp,
-    errors,
-    warnings,
-  } = data;
-
-  // We store code locally until the user manually uses the "save" button, since TextArea will save it every time you press ENTER
-  const [NTSLCode, setNTSLCode] = useLocalState(context, code, '');
-  // This is made so we have a dynamically changing height of the box, just something to look nice
-  const code_lines = NTSLCode.split('\n').length * 1.5 + 1;
-
+const MainMenu = (props) => {
+  const { act, data } = useBackend();
+  const { emagged, user_name } = data;
+  const [tabIndex, setTabIndex] = useLocalState('tab-index', 1);
   return (
-    <Box>
-      Currently connected network:
-      <Input
-        value={network}
-        maxLength={15}
-        onChange={(_, value) =>
-          act('Change Network', {
-            network: value,
-          })
-        }
-      />
-      {temp !== 0 && <Box textColor="blue">{temp}</Box>}
-      {detected_servers.length > 0 && (
-        <LabeledList>
-          {detected_servers.map((detected_servers) => (
-            <LabeledList.Item
-              key={detected_servers.name}
-              label={
-                detected_servers.name + ' (' + detected_servers.frequency + ')'
-              }
-              buttons={
-                <Button
-                  content={'Select Server'}
-                  color={'green'}
-                  onClick={() =>
-                    act('Select Server', {
-                      server: detected_servers.name,
-                    })
-                  }
-                />
+    <>
+      <Section width="240px">
+        {user_name ? (
+          <Stack>
+            <Stack.Item>
+              <Button
+                icon="power-off"
+                color="purple"
+                content="Log Out"
+                disabled={emagged}
+                onClick={() => act('log_out')}
+              />
+            </Stack.Item>
+            <Stack.Item verticalAlign="middle">{user_name}</Stack.Item>
+          </Stack>
+        ) : (
+          <Button
+            icon="power-off"
+            color="green"
+            content="Log In"
+            onClick={() => act('log_in')}
+          />
+        )}
+      </Section>
+      {user_name && (
+        <Section width="240px" height="90%" fill>
+          <Tabs>
+            <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
+              Compile
+            </Tabs.Tab>
+            <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
+              Network
+            </Tabs.Tab>
+            <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
+              Logs
+            </Tabs.Tab>
+          </Tabs>
+          {tabIndex === 1 && <CompilerOutput />}
+          {tabIndex === 2 && <ServerList />}
+          {tabIndex === 3 && <LogViewer />}
+        </Section>
+      )}
+    </>
+  );
+};
+
+const CompilerOutput = (props) => {
+  const { act, data } = useBackend();
+  const { compiler_output } = data;
+  return (
+    <>
+      <Box>
+        <Button
+          mb={1}
+          icon="save"
+          content="Compile & Run"
+          onClick={() => act('compile_code')}
+        />
+      </Box>
+      <Divider />
+      <Section fill scrollable height="87.2%">
+        {compiler_output
+          ? compiler_output.map((error_message, index) => (
+              <Box key={index}>{error_message}</Box>
+            ))
+          : 'No compile errors.'}
+      </Section>
+    </>
+  );
+};
+
+const ServerList = (props) => {
+  const { act, data } = useBackend();
+  const { network, server_data } = data;
+  return (
+    <>
+      <Box>
+        <Button
+          mb={1}
+          icon="sync"
+          content="Reconnect to Network"
+          onClick={() => act('refresh_servers')}
+        />
+      </Box>
+      <Box>
+        <Input
+          mb={1}
+          value={network}
+          onChange={(_, value) =>
+            act('set_network', {
+              new_network: value,
+            })
+          }
+        />
+      </Box>
+      <Divider />
+      <Section fill scrollable height="82%">
+        {server_data.map((nt_server, index) => (
+          <Box key={index}>
+            <Button.Checkbox
+              mb={0.5}
+              checked={nt_server.run_code}
+              content={nt_server.server_name}
+              onClick={() =>
+                act('toggle_code_execution', {
+                  selected_server: nt_server.server,
+                })
               }
             />
-          ))}
-        </LabeledList>
-      )}
-      {selected_server_name !== 0 && (
-        <Box>
-          Currently Selected Server:
-          <img src={resolveAsset('server.png')} />
-          {selected_server_name}
-          <Button
-            content={'Toggle Code Execution'}
-            color={selected_server_autorun === 1 ? 'green' : 'red'}
-            onClick={() => act('Toggle Autorun')}
-          />
-          <Button
-            content={'Save Code'}
-            color={NTSLCode === code ? 'red' : 'green'}
-            onClick={() =>
-              act('Save Code', {
-                code: NTSLCode,
-              })
-            }
-          />
-          <Button
-            content={'Compile Code'}
-            color={'green'}
-            onClick={() => act('Compile Code')}
-          />
-          <TextArea
-            width="90%"
-            height={code_lines}
-            value={code}
-            maxLength={4000}
-            onInput={(_, new_value) => setNTSLCode(new_value)}
-          />
-        </Box>
-      )}
-      {errors !== 0 && (
-        <Box textColor="red">
-          <pre>
-            compiling error detected, current errors:
-            {errors}
-          </pre>
-        </Box>
-      )}
-      {warnings !== 0 && (
-        <Box textColor="yellow">
-          <pre>
-            compiling warning detected, current warnings:
-            {warnings}
-          </pre>
-        </Box>
-      )}
-    </Box>
+          </Box>
+        ))}
+      </Section>
+    </>
+  );
+};
+
+const LogViewer = (props) => {
+  const { act, data } = useBackend();
+  const { access_log } = data;
+  // This is terrible but nothing else will work
+  return (
+    <>
+      <Box>
+        <Button
+          mb={1}
+          icon="trash"
+          content="Clear Logs"
+          onClick={() => act('clear_logs')}
+        />
+      </Box>
+      <Divider />
+      <Section fill scrollable height="87.2%">
+        {access_log
+          ? access_log.map((access_message, index) => (
+              <Box key={index}>{access_message}</Box>
+            ))
+          : 'Access log could not be found. Please contact an administrator.'}
+      </Section>
+    </>
   );
 };
