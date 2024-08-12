@@ -14296,7 +14296,6 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/lattice,
 /obj/structure/lattice/catwalk,
 /obj/structure/cable,
 /turf/open/space/basic,
@@ -27601,12 +27600,6 @@
 /obj/structure/lattice,
 /turf/open/space/openspace,
 /area/space/nearstation)
-"ikC" = (
-/obj/structure/lattice,
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/turf/open/space/basic,
-/area/space/nearstation)
 "ikD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 10
@@ -29681,12 +29674,6 @@
 /obj/structure/table/glass,
 /turf/open/floor/iron/dark/small,
 /area/station/engineering/storage/tech)
-"iPN" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/purple,
-/turf/open/space/basic,
-/area/space/nearstation)
 "iPQ" = (
 /obj/structure/railing{
 	dir = 4
@@ -43508,11 +43495,6 @@
 /obj/item/kirbyplants/organic/plant6,
 /turf/open/floor/wood/large,
 /area/station/service/bar)
-"mLP" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/turf/open/space/basic,
-/area/space/nearstation)
 "mMb" = (
 /obj/machinery/firealarm/directional/west,
 /obj/effect/turf_decal/bot_white,
@@ -51908,13 +51890,6 @@
 /obj/effect/landmark/start/roboticist,
 /turf/open/floor/iron/dark,
 /area/station/science/robotics/augments)
-"pqY" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/purple,
-/turf/open/space/basic,
-/area/space/nearstation)
 "pqZ" = (
 /obj/structure/lattice/catwalk,
 /turf/open/space,
@@ -72502,7 +72477,6 @@
 /turf/open/floor/iron/dark,
 /area/station/cargo/storage)
 "vwf" = (
-/obj/structure/cable,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -101648,15 +101622,15 @@ laO
 laO
 obu
 laO
-pqY
-mLP
-mLP
-mLP
-mLP
-mLP
+oPL
 wmi
-mLP
-pqY
+wmi
+wmi
+wmi
+wmi
+wmi
+wmi
+oPL
 obu
 laO
 laO
@@ -103704,19 +103678,19 @@ laO
 obu
 oPL
 obu
-iPN
+oPL
 wmi
 wmi
 wmi
 wmi
 wmi
 wmi
-mLP
-pqY
+wmi
+oPL
 obu
 ctI
-ikC
-ikC
+byb
+byb
 ctI
 elP
 ctI
@@ -103976,7 +103950,7 @@ laO
 laO
 obu
 pGv
-ikC
+byb
 obu
 bev
 bev

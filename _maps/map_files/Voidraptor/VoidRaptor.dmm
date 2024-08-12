@@ -6570,7 +6570,7 @@
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
 /obj/machinery/computer/message_monitor{
-	dir = 8
+	dir = 1
 	},
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
@@ -27677,10 +27677,6 @@
 /turf/open/floor/iron/white/small,
 /area/station/common/pool)
 "hYR" = (
-/obj/machinery/computer/telecomms/server{
-	dir = 4;
-	network = "tcommsat"
-	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
 /obj/effect/turf_decal/bot,
 /turf/open/floor/engine,
@@ -37388,14 +37384,12 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "kFO" = (
-/obj/item/clipboard{
-	pixel_x = 4
-	},
-/obj/item/book/manual/wiki/tcomms,
-/obj/item/radio,
 /obj/item/radio/intercom/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/obj/structure/table,
+/obj/machinery/computer/telecomms/server{
+	dir = 1;
+	network = "tcommsat"
+	},
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "kFS" = (
@@ -58541,6 +58535,12 @@
 	name = "telecomms camera";
 	network = list("ss13","tcomms")
 	},
+/obj/structure/table,
+/obj/item/radio,
+/obj/item/book/manual/wiki/tcomms,
+/obj/item/clipboard{
+	pixel_x = 4
+	},
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "qso" = (
@@ -71420,11 +71420,6 @@
 /obj/effect/spawner/random/structure/grille,
 /turf/open/floor/iron/textured,
 /area/station/maintenance/port/greater)
-"tSC" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/open/space/basic,
-/area/space/nearstation)
 "tSD" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -101675,7 +101670,7 @@ xMq
 xMq
 iLQ
 iLQ
-tSC
+xMq
 xMq
 xMq
 xMq
