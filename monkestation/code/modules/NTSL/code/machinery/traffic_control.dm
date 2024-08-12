@@ -161,7 +161,7 @@
 		servers.Add(new_server)
 
 /obj/machinery/computer/telecomms/traffic/proc/compile_all(mob/user)
-	if(is_banned_from(user.ckey, "Network Admin"))
+	if(is_banned_from(user.ckey, "Signal Technician"))
 		return list("You are banned from using NTSL.")
 	if(!servers.len)
 		return list("No servers detected.")
