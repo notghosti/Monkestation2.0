@@ -10559,13 +10559,6 @@
 /turf/open/floor/iron/checker,
 /area/station/hallway/primary/central/fore)
 "diN" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/cable,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
@@ -37083,10 +37076,8 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel)
 "kVa" = (
+/obj/machinery/computer/message_monitor,
 /obj/effect/turf_decal/box,
-/obj/machinery/computer/telecomms/server{
-	network = "tcommsat"
-	},
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "kVl" = (
@@ -44127,10 +44118,8 @@
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/command/heads_quarters/rd)
 "mUk" = (
-/obj/machinery/computer/telecomms/monitor{
-	network = "tcommsat"
-	},
 /obj/effect/turf_decal/box,
+/obj/machinery/computer/telecomms/traffic,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "mUt" = (
@@ -55404,13 +55393,6 @@
 /turf/open/openspace,
 /area/station/science/ordnance/office)
 "qqW" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/marker_beacon/purple,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/marker_beacon/purple,
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
@@ -66082,10 +66064,12 @@
 /turf/open/floor/plating/airless,
 /area/space/nearstation)
 "tDk" = (
+/obj/machinery/computer/telecomms/server{
+	network = "tcommsat"
+	},
 /obj/effect/turf_decal/box,
 /obj/machinery/light/cold/directional/north,
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/computer/telecomms/traffic,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "tDr" = (
@@ -68088,7 +68072,8 @@
 	},
 /obj/structure/railing,
 /obj/structure/window/reinforced/spawner/directional/south,
-/obj/machinery/computer/message_monitor{
+/obj/machinery/computer/telecomms/monitor{
+	network = "tcommsat";
 	dir = 1
 	},
 /turf/open/floor/wood/large,
@@ -79468,20 +79453,6 @@
 /turf/open/floor/iron,
 /area/station/engineering/supermatter/room)
 "xxX" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/window/reinforced/spawner/directional/east,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/lattice/catwalk,
-/obj/structure/cable,
-/obj/merge_conflict_marker{
-	name = "---Merge Conflict Marker---";
-	
-	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
-	},
 /obj/structure/railing{
 	dir = 4
 	},

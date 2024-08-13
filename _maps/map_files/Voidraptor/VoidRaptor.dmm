@@ -1084,8 +1084,11 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/table,
-/obj/item/multitool,
-/obj/item/storage/toolbox/mechanical,
+/obj/item/book/manual/wiki/tcomms,
+/obj/item/clipboard{
+	pixel_x = 4
+	},
+/obj/item/radio,
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "apl" = (
@@ -1718,11 +1721,10 @@
 /turf/open/floor/carpet/purple,
 /area/station/common/night_club)
 "ayH" = (
-/obj/machinery/computer/telecomms/monitor{
-	dir = 4;
-	network = "tcommsat"
-	},
 /obj/effect/turf_decal/bot,
+/obj/machinery/computer/message_monitor{
+	dir = 4
+	},
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "ayO" = (
@@ -5957,11 +5959,8 @@
 	network = list("ss13","tcomms")
 	},
 /obj/structure/table,
-/obj/item/radio,
-/obj/item/book/manual/wiki/tcomms,
-/obj/item/clipboard{
-	pixel_x = 4
-	},
+/obj/item/multitool,
+/obj/item/storage/toolbox/mechanical,
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
 "bMg" = (
@@ -58547,8 +58546,9 @@
 "qsO" = (
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/hidden,
-/obj/machinery/computer/message_monitor{
-	dir = 1
+/obj/machinery/computer/telecomms/monitor{
+	dir = 1;
+	network = "tcommsat"
 	},
 /turf/open/floor/engine,
 /area/station/tcommsat/computer)
