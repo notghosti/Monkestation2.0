@@ -165,7 +165,7 @@
 /obj/machinery/computer/telecomms/traffic/proc/compile_all(mob/user)
 	if(is_banned_from(user.ckey, "Signal Technician"))
 		return list("You are banned from using NTSL.")
-	if(!servers.len)
+	if(!length(servers))
 		return list("No servers detected.")
 	for(var/obj/machinery/telecomms/server/server as anything in servers)
 		var/list/compile_errors = server.compile(user)
@@ -176,7 +176,7 @@
 		var/list/text_list = list()
 		for(var/datum/scriptError/error in compile_errors)
 			text_list.Add(error.message)
-		if(text_list.len)
+		if(length(text_list))
 			return text_list
 	create_log("compiled to all linked servers on [network].")
 	return list("Compiling finished.")

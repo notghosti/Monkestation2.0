@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 		var/list/L = object
 		switch(key)
 			if("len")
-				return L.len
+				return length(L)
 			if("Copy")
 				return ntsl_method(/list, /datum/n_function/list_copy)
 			if("Cut")
@@ -38,7 +38,7 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 /datum/n_Interpreter/proc/get_index(object, index, datum/scope/scope, node)
 	if(islist(object))
 		var/list/L = object
-		if(!isnum(index) || (index <= L.len && index >= 1))
+		if(!isnum(index) || (index <= length(L) && index >= 1))
 			return L[index]
 	else if(istext(object))
 		if(isnum(index) && index >= 1 && index <= length(object))
@@ -48,7 +48,7 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 /datum/n_Interpreter/proc/set_index(object, index, val, datum/scope/scope, node)
 	if(islist(object))
 		var/list/L = object
-		if(!isnum(index) || (index <= L.len && index >= 1))
+		if(!isnum(index) || (index <= length(L) && index >= 1))
 			L[index] = val
 			return
 	RaiseError(new /datum/runtimeError/IndexOutOfRange(object, index), scope, node)
@@ -126,9 +126,9 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 	scope.function = function_def
 	if(node)
 		scope.call_node = node
-	for(var/i=1 to function_def.parameters.len)
+	for(var/i=1 to length(function_def.parameters))
 		var/val
-		if(params.len>=i)
+		if(length(params)>=i)
 			val = params[i]
 		//else
 		//	unspecified param
@@ -184,37 +184,37 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 	name = "Copy"
 
 /datum/n_function/list_copy/execute(list/this_obj, list/params)
-	return this_obj.Copy(params.len >= 1 ? params[1] : 1, params.len >= 2 ? params[2] : 0)
+	return this_obj.Copy(length(params) >= 1 ? params[1] : 1, length(params) >= 2 ? params[2] : 0)
 
 /datum/n_function/list_cut
 	name = "Cut"
 
 /datum/n_function/list_cut/execute(list/this_obj, list/params)
-	this_obj.Cut(params.len >= 1 ? params[1] : 1, params.len >= 2 ? params[2] : 0)
+	this_obj.Cut(length(params) >= 1 ? params[1] : 1, length(params) >= 2 ? params[2] : 0)
 
 /datum/n_function/list_find
 	name = "Find"
 
 /datum/n_function/list_find/execute(list/this_obj, list/params)
-	return this_obj.Find(params[1], params.len >= 2 ? params[2] : 1, params.len >= 3 ? params[3] : 0)
+	return this_obj.Find(params[1], length(params) >= 2 ? params[2] : 1, length(params) >= 3 ? params[3] : 0)
 
 /datum/n_function/list_insert
 	name = "Insert"
 
 /datum/n_function/list_insert/execute(list/this_obj, list/params)
-	if(params.len >= 2)
+	if(length(params) >= 2)
 		if(params[1] == 0)
-			for(var/I in 2 to params.len)
+			for(var/I in 2 to length(params))
 				this_obj.Add(params[I])
 		else
-			for(var/I = params.len; I >= 2; I--)
+			for(var/I = length(params); I >= 2; I--)
 				this_obj.Insert(params[1], params[I])
 
 /datum/n_function/list_join
 	name = "Join"
 
 /datum/n_function/list_join/execute(list/this_obj, list/params)
-	return this_obj.Join(params[1], params.len >= 2 ? params[2] : 1, params.len >= 3 ? params[3] : 0)
+	return this_obj.Join(params[1], length(params) >= 2 ? params[2] : 1, length(params) >= 3 ? params[3] : 0)
 
 /datum/n_function/list_remove
 	name = "Remove"

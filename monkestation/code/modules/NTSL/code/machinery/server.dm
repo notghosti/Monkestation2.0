@@ -31,10 +31,10 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 	. = ..()
 
 /obj/machinery/telecomms/server/proc/update_logs()
-	if(log_entries.len >= 400) // If so, start deleting at least, hopefully, one log entry
+	if(length(log_entries) >= 400) // If so, start deleting at least, hopefully, one log entry
 		log_entries.Cut(1, 2)
 	/*
-		for(var/i = 1, i <= log_entries.len, i++) // locate the first garbage collectable log entry and remove it
+		for(var/i = 1, i <= length(log_entries), i++) // locate the first garbage collectable log entry and remove it
 			var/datum/comm_log_entry/L = log_entries[i]
 			if(L.garbage_collector)
 				log_entries.Remove(L)
@@ -65,12 +65,12 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 		return "Servers are recharging, please wait."
 	var/list/compileerrors = Compiler.Compile(rawcode)
 	COOLDOWN_START(src, compile_cooldown, 2 SECONDS)
-	if(!compileerrors.len && (compiledcode != rawcode))
+	if(!length(compileerrors) && (compiledcode != rawcode))
 		user.log_message(rawcode, LOG_NTSL)
 		compiledcode = rawcode
 	if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
 		var/freq
-		if(freq_listening.len > 0)
+		if(length(freq_listening) > 0)
 			freq = freq_listening[1]
 		else
 			freq = 1459

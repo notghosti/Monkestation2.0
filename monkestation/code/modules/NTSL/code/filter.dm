@@ -15,7 +15,7 @@
 
 	//Split the line at every "="
 	var/list/parts = splittext(line, "=")
-	if(!parts.len)
+	if(!length(parts))
 		return FALSE
 
 	//pattern is before the first "="
@@ -25,11 +25,11 @@
 
 	//replacement follows the first "="
 	var/replacement = ""
-	if(parts.len >= 2)
+	if(length(parts) >= 2)
 		var/index = 2
-		for(index = 2; index <= parts.len; index++)
+		for(index = 2; index <= length(parts); index++)
 			replacement += parts[index]
-			if(index < parts.len)
+			if(index < length(parts))
 				replacement += "="
 
 	if(!replacement)
