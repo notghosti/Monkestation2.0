@@ -35,6 +35,16 @@
 		src.allowed_status = allowed_status | parent.allowed_status
 	return ..()
 
+/datum/scope/Destroy()
+	parent = null
+	variables_parent = null
+	block = null
+	functios = null
+	variables = null
+	function = null
+	call_node = null
+	return ..()
+
 /datum/scope/proc/get_scope(name)
 	var/datum/scope/S = src
 	while(S)
