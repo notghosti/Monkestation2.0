@@ -24,11 +24,14 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 	Compiler.Holder = src
 	server_radio = new()
 	GLOB.tcomms_servers += src
-	. = ..()
+	return ..()
 
 /obj/machinery/telecomms/server/Destroy()
+	QDEL_NULL(Compiler)
+	QDEL_NULL(server_radio)
+	memory = null
 	GLOB.tcomms_servers -= src
-	. = ..()
+	return ..()
 
 /obj/machinery/telecomms/server/proc/update_logs()
 	if(length(log_entries) >= 400) // If so, start deleting at least, hopefully, one log entry
