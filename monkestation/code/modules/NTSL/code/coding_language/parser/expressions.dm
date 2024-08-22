@@ -174,8 +174,8 @@
 			errors += new /datum/scriptError/EndOfFile()
 			break
 		var/datum/token/ntok
-		if(index+1 <= length(tokens))
-			ntok = tokens[index+1]
+		if(index + 1 <= length(tokens))
+			ntok = tokens[index + 1]
 
 		if(istype(curToken, /datum/token/symbol) && curToken.value == "(") //Parse parentheses expression
 			if(expecting == VALUE)
