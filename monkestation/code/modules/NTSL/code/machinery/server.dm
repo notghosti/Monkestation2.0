@@ -72,11 +72,7 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 		user.log_message(rawcode, LOG_NTSL)
 		compiledcode = rawcode
 	if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
-		var/freq
-		if(length(freq_listening) > 0)
-			freq = freq_listening[1]
-		else
-			freq = 1459
+		var/freq = length(freq_listening[1]) ? freq_listening[1] : 1459
 		var/atom/movable/M = new()
 		var/atom/movable/virtualspeaker/speaker = new(null, M, server_radio)
 		speaker.name = "Poly"
