@@ -58,7 +58,7 @@
 		var/twochar = copytext(code, codepos, codepos + 2) // For finding comment syntax
 		if(char == "\n")
 			line++
-			linepos=codepos
+			linepos = codepos
 
 		if(ignore.Find(char))
 			continue
@@ -90,11 +90,11 @@
 /datum/n_Scanner/nS_Scanner/proc/ReadString(start)
 	var/buf
 	for(, codepos <= length(code), codepos++)//codepos to length(code))
-		var/char=copytext(code, codepos, codepos+1)
+		var/char = copytext(code, codepos, codepos + 1)
 		switch(char)
 			if("\\")					//Backslash (\) encountered in string
 				codepos++ //Skip next character in string, since it was escaped by a backslash
-				char=copytext(code, codepos, codepos+1)
+				char = copytext(code, codepos, codepos + 1)
 				switch(char)
 					if("\\") //Double backslash
 						buf += "\\"
@@ -121,12 +121,12 @@
 
 ///Reads characters separated by an item in <delim> into a token.
 /datum/n_Scanner/nS_Scanner/proc/ReadWord()
-	var/char = copytext(code, codepos, codepos+1)
+	var/char = copytext(code, codepos, codepos + 1)
 	var/buf
 
 	while(!delim.Find(char) && codepos <= length(code))
 		buf += char
-		char = copytext(code, ++codepos, codepos+1)
+		char = copytext(code, ++codepos, codepos + 1)
 	codepos-- //allow main Scan() proc to read the delimiter
 	if(options.keywords.Find(buf))
 		return new /datum/token/keyword(buf, line, COLUMN_LOCATION)
@@ -135,21 +135,21 @@
 
 ///Reads a symbol into a token.
 /datum/n_Scanner/nS_Scanner/proc/ReadSymbol()
-	var/char = copytext(code, codepos, codepos+1)
+	var/char = copytext(code, codepos, codepos + 1)
 	var/buf
 
 	while(options.symbols.Find(buf+char))
 		buf += char
 		if(++codepos > length(code))
 			break
-		char = copytext(code, codepos, codepos+1)
+		char = copytext(code, codepos, codepos + 1)
 
 	codepos-- //allow main Scan() proc to read the next character
 	return new /datum/token/symbol(buf, line, COLUMN_LOCATION)
 
 ///Reads a number into a token.
 /datum/n_Scanner/nS_Scanner/proc/ReadNumber()
-	var/char = copytext(code, codepos, codepos+1)
+	var/char = copytext(code, codepos, codepos + 1)
 	var/buf
 	var/dec = 0
 
@@ -158,7 +158,7 @@
 			dec = 1
 		buf += char
 		codepos++
-		char=copytext(code, codepos, codepos+1)
+		char = copytext(code, codepos, codepos + 1)
 	var/datum/token/number/T = new(buf, line, COLUMN_LOCATION)
 	if(isnull(text2num(buf)))
 		errors += new /datum/scriptError("Bad number: ", T)
@@ -178,24 +178,24 @@
 	// Remember that we still have that $codepos "pointer" variable to use.
 	var/longeur = length(code) // So I don't call for var/code's length every while loop
 
-	if(copytext(code, codepos, codepos+2) == "//") // If line comment
+	if(copytext(code, codepos, codepos + 2) == "//") // If line comment
 		++codepos // Eat the current comment start, halfway
 		while(++codepos <= longeur) // Second half of the eating, on the first eval
-			if(copytext(code, codepos, codepos+1) == "\n") // then stop on the newline
+			if(copytext(code, codepos, codepos + 1) == "\n") // then stop on the newline
 				line++
-				linepos=codepos
+				linepos = codepos
 				return
 	else // If long comment
 		++codepos // Eat the current comment start, halfway
 		while(++codepos <= longeur) // Ditto, on the first eval
-			if(copytext(code, codepos, codepos+2) == "*/") // then stop on any */ 's'
+			if(copytext(code, codepos, codepos + 2) == "*/") // then stop on any */ 's'
 				++codepos // Eat the comment end
 				//but not all of it, because the for-loop this is in
 				//will increment it again later.
 				return
-			else if(copytext(code, codepos, codepos+1) == "\n") // We still have to count line numbers!
+			else if(copytext(code, codepos, codepos + 1) == "\n") // We still have to count line numbers!
 				line++
-				linepos=codepos
+				linepos = codepos
 		//Else if the longcomment didn't end, do an error
 		errors += new /datum/scriptError/UnterminatedComment()
 

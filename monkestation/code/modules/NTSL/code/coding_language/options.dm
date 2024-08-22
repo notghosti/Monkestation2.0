@@ -84,18 +84,18 @@
 ///Returns TRUE if the character can start a variable, function, or keyword name (by default letters or an underscore)
 /datum/n_scriptOptions/proc/CanStartID(char)
 	if(!isnum(char))
-		char=text2ascii(char)
-	return (char in ascii_A to ascii_Z) || (char in ascii_a to ascii_z) || char==ascii_UNDERSCORE || char==ascii_DOLLAR
+		char = text2ascii(char)
+	return (char in ascii_A to ascii_Z) || (char in ascii_a to ascii_z) || char == ascii_UNDERSCORE || char == ascii_DOLLAR
 
 ///Returns TRUE if the character can be in the body of a variable, function, or keyword name (by default letters, numbers, and underscore)
 /datum/n_scriptOptions/proc/IsValidIDChar(char)
 	if(!isnum(char))
-		char=text2ascii(char)
+		char = text2ascii(char)
 	return CanStartID(char) || IsDigit(char)
 
 /datum/n_scriptOptions/proc/IsDigit(char)
 	if(!isnum(char))
-		char=text2ascii(char)
+		char = text2ascii(char)
 	return char in ascii_ZERO to ascii_NINE
 
 ///Returns TRUE if all the characters in the string are okay to be in an identifier name.

@@ -171,37 +171,37 @@
 				RaiseError(new /datum/runtimeError/UnknownInstruction(exp), scope, exp)
 
 /datum/n_Interpreter/proc/Equal(a, b)
-	return a==b
+	return a == b
 
 /datum/n_Interpreter/proc/NotEqual(a, b)
-	return a!=b //LogicalNot(Equal(a, b))
+	return a != b //LogicalNot(Equal(a, b))
 
 /datum/n_Interpreter/proc/Greater(a, b)
-	return a>b
+	return a > b
 
 /datum/n_Interpreter/proc/Less(a, b)
-	return a<b
+	return a < b
 
 /datum/n_Interpreter/proc/GreaterOrEqual(a, b)
-	return a>=b
+	return a >= b
 
 /datum/n_Interpreter/proc/LessOrEqual(a, b)
-	return a<=b
+	return a <= b
 
 /datum/n_Interpreter/proc/LogicalAnd(a, b)
-	return a&&b
+	return a && b
 
 /datum/n_Interpreter/proc/LogicalOr(a, b)
-	return a||b
+	return a || b
 
 /datum/n_Interpreter/proc/LogicalXor(a, b)
-	return (a||b) && !(a&&b)
+	return (a || b) && !(a && b)
 
 /datum/n_Interpreter/proc/BitwiseAnd(a, b)
-	return a&b
+	return a & b
 
 /datum/n_Interpreter/proc/BitwiseOr(a, b)
-	return a|b
+	return a | b
 
 /datum/n_Interpreter/proc/BitwiseXor(a, b)
 	return a^b

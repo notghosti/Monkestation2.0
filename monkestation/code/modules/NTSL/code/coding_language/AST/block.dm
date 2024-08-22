@@ -13,12 +13,12 @@
 /**
  * SetVar
  * Defines a permanent variable. The variable will not be deleted when it goes out of scope.
- * 
+ *
  * Notes:
  * Since all pre-existing temporary variables are deleted,
  * it is not generally desirable to use this proc after the interpreter has been instantiated.
  * Instead, use <n_Interpreter.SetVar()>.
- * 
+ *
  * See Also:
  * - <n_Interpreter.SetVar()>
  */

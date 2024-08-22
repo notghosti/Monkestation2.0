@@ -20,11 +20,11 @@
 /*
  * VariableAssignment
  * Sets a variable in an accessible scope to the given value if one exists, otherwise initializes a new local variable to the given value.
- * 
+ *
  * Notes:
  * If a variable with the same name exists in a higher block, the value will be assigned to it. If not,
  * a new variable is created in the current block. To force creation of a new variable, use <VariableDeclaration>.
- * 
+ *
  * See Also:
  * - <VariableDeclaration>
  */
@@ -36,7 +36,7 @@
 /*
  * VariableDeclaration
  * Intializes a local variable to a null value.
- * 
+ *
  * See Also:
  * - <VariableAssignment>
  */

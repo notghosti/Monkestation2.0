@@ -61,7 +61,7 @@
 		O = input_token.value
 	if(istext(O))
 		if(L.Find(O))
-			O=L[O]
+			O = L[O]
 		else
 			return null
 	if(input_token)
@@ -110,12 +110,12 @@
 	if(istype(O, /datum/node/expression/expression_operator/binary))
 		var/datum/node/expression/expression_operator/binary/B = O
 		B.exp2 = val.Pop()
-		B.exp =val.Pop()
+		B.exp = val.Pop()
 		val.Push(B)
 		if(check_assignments && istype(B, /datum/node/expression/expression_operator/binary/Assign) && !istype(B.exp, /datum/node/expression/value/variable) && !istype(B.exp, /datum/node/expression/member))
 			errors += new /datum/scriptError/InvalidAssignment()
 	else
-		O.exp=val.Pop()
+		O.exp = val.Pop()
 		val.Push(O)
 
 /*
@@ -151,11 +151,11 @@
  * - <ParseParenExpression()>
  * - <ParseParamExpression()>
  */
-/datum/n_Parser/nS_Parser/proc/ParseExpression(list/end=list(/datum/token/end), list/ErrChars=list("{", "}"), check_functions = 0, check_assignments = 1)
+/datum/n_Parser/nS_Parser/proc/ParseExpression(list/end = list(/datum/token/end), list/ErrChars = list("{", "}"), check_functions = 0, check_assignments = 1)
 	var/datum/stack/opr = new
 	var/datum/stack/val = new
 
-	expecting=VALUE
+	expecting = VALUE
 	var/loop = 0
 	while(TRUE)
 		loop++
@@ -170,12 +170,12 @@
 			break
 
 
-		if(index>length(tokens)) //End of File
+		if(index > length(tokens)) //End of File
 			errors += new /datum/scriptError/EndOfFile()
 			break
 		var/datum/token/ntok
-		if(index+1<=length(tokens))
-			ntok=tokens[index+1]
+		if(index+1 <= length(tokens))
+			ntok = tokens[index+1]
 
 		if(istype(curToken, /datum/token/symbol) && curToken.value == "(") //Parse parentheses expression
 			if(expecting == VALUE)
@@ -207,19 +207,19 @@
 		else if(istype(curToken, /datum/token/symbol)) //Operator found.
 			var/datum/node/expression/expression_operator/curOperator //Figure out whether it is unary or binary and get a new instance.
 			if(expecting == OPERATOR)
-				curOperator=GetBinaryOperator(curToken)
+				curOperator = GetBinaryOperator(curToken)
 				if(!curOperator)
 					errors += new /datum/scriptError/ExpectedToken("operator", curToken)
 					NextToken()
 					continue
 			else
-				curOperator=GetUnaryOperator(curToken)
+				curOperator = GetUnaryOperator(curToken)
 				if(!curOperator) //given symbol isn't a unary operator
 					errors += new /datum/scriptError/ExpectedToken("expression", curToken)
 					NextToken()
 					continue
 
-			if(opr.Top() && Precedence(opr.Top(), curOperator)==REDUCE) //Check order of operations and reduce if necessary
+			if(opr.Top() && Precedence(opr.Top(), curOperator)== REDUCE) //Check order of operations and reduce if necessary
 				Reduce(opr, val, check_assignments)
 				continue
 			opr.Push(curOperator)
@@ -240,7 +240,7 @@
 			NextToken()
 			continue
 		else
-			if(expecting!=VALUE)
+			if(expecting != VALUE)
 				errors += new /datum/scriptError/ExpectedToken("operator", curToken)
 				NextToken()
 				continue

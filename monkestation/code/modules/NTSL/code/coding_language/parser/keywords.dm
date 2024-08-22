@@ -52,7 +52,7 @@
 		return
 	var/datum/node/statement/ReturnStatement/stmt = new(parser.curToken)
 	parser.NextToken() //skip 'return' token
-	stmt.value=parser.ParseExpression()
+	stmt.value = parser.ParseExpression()
 	parser.curBlock.statements += stmt
 
 /datum/n_Keyword/nS_Keyword/kwIf
@@ -61,13 +61,13 @@
 	. = KW_PASS
 	var/datum/node/statement/IfStatement/stmt = new(parser.curToken)
 	parser.NextToken() //skip 'if' token
-	stmt.cond=parser.ParseParenExpression()
+	stmt.cond = parser.ParseParenExpression()
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
-	if(!parser.CheckToken("{", /datum/token/symbol, skip=0)) //datum/token needs to be preserved for parse loop, so skip=0
+	if(!parser.CheckToken("{", /datum/token/symbol, skip = 0)) //datum/token needs to be preserved for parse loop, so skip = 0
 		return KW_ERR
 	parser.curBlock.statements += stmt
-	stmt.block=new
+	stmt.block = new
 	parser.AddBlock(stmt.block)
 
 /datum/n_Keyword/nS_Keyword/kwElseIf
@@ -88,7 +88,7 @@
 	stmt.cond = parser.ParseParenExpression()
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
-	if(!parser.CheckToken("{", /datum/token/symbol, skip = FALSE)) //datum/token needs to be preserved for parse loop, so skip=0
+	if(!parser.CheckToken("{", /datum/token/symbol, skip = FALSE)) //datum/token needs to be preserved for parse loop, so skip = 0
 		return KW_ERR
 	parser.curBlock.statements += stmt
 	stmt.block = new
@@ -102,14 +102,14 @@
 	. = KW_PASS
 	var/list/L = parser.curBlock.statements
 	var/datum/node/statement/IfStatement/stmt
-	if(L&&length(L)) stmt=L[length(L)] //Get the last statement in the current block
+	if(L && length(L)) stmt = L[length(L)] //Get the last statement in the current block
 	if(!stmt || !istype(stmt) || stmt.else_block) //Ensure that it is an if statement
 		parser.errors += new /datum/scriptError/ExpectedToken("if statement",parser.curToken)
 		return KW_FAIL
 	parser.NextToken() //skip 'else' token
-	if(!parser.CheckToken("{", /datum/token/symbol, skip=0))
+	if(!parser.CheckToken("{", /datum/token/symbol, skip = 0))
 		return KW_ERR
-	stmt.else_block=new()
+	stmt.else_block = new()
 	parser.AddBlock(stmt.else_block)
 
 /datum/n_Keyword/nS_Keyword/kwWhile
@@ -118,10 +118,10 @@
 	. = KW_PASS
 	var/datum/node/statement/WhileLoop/stmt = new(parser.curToken)
 	parser.NextToken() //skip 'while' token
-	stmt.cond=parser.ParseParenExpression()
+	stmt.cond = parser.ParseParenExpression()
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
-	if(!parser.CheckToken("{", /datum/token/symbol, skip=0))
+	if(!parser.CheckToken("{", /datum/token/symbol, skip = 0))
 		return KW_ERR
 	parser.curBlock.statements += stmt
 	stmt.block = new
@@ -144,7 +144,7 @@
 	stmt.increment = parser.ParseExpression(list(")"))
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
-	if(!parser.CheckToken("{", /datum/token/symbol, skip=0))
+	if(!parser.CheckToken("{", /datum/token/symbol, skip = 0))
 		return KW_ERR
 	parser.curBlock.statements += stmt
 	stmt.block = new
@@ -181,7 +181,7 @@
 	if(!parser.options.IsValidID(parser.curToken.value))
 		parser.errors += new /datum/scriptError/InvalidID(parser.curToken)
 		return KW_FAIL
-	def.func_name=parser.curToken.value
+	def.func_name = parser.curToken.value
 	parser.NextToken()
 	if(!parser.CheckToken("(", /datum/token/symbol))
 		return KW_FAIL
@@ -197,7 +197,7 @@
 					return KW_ERR
 
 		else if(istype(parser.curToken, /datum/token/word))
-			def.parameters+=parser.curToken.value
+			def.parameters += parser.curToken.value
 			parser.NextToken()
 		else
 			parser.errors += new /datum/scriptError/InvalidID(parser.curToken)
@@ -206,11 +206,11 @@
 		return KW_FAIL
 
 	if(istype(parser.curToken, /datum/token/end)) //Function prototype
-		parser.curBlock.statements+=def
+		parser.curBlock.statements += def
 	else if(parser.curToken.value == "{" && istype(parser.curToken, /datum/token/symbol))
 		def.block = new
 		parser.curBlock.statements.Insert(1, def) // insert into the beginning so that all functions are defined first
-		parser.curBlock.functions[def.func_name]=def
+		parser.curBlock.functions[def.func_name] = def
 		parser.AddBlock(def.block)
 	else
 		parser.errors += new /datum/scriptError/BadToken(parser.curToken)

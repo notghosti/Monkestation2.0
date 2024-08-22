@@ -15,7 +15,7 @@
  * MAX_STATEMENTS fuckin'... holds the maximum statements. I'unno, dude, I'm not the guy who made NTSL,
  * I don't do fuckin verbose-ass comments line this.
  * Figure it out yourself, fuckface.
- * 
+ *
  * very helpful comment ^ ty
  */
 ///Maximum amount of statements that can be called in one execution. this is to prevent massive crashes and exploitation
@@ -61,7 +61,7 @@
  * Load
  * Loads a 'compiled' script into Memory.
  * program - A <GlobalBlock> object which represents the script's global scope.
- * 
+ *
  * Parameters:
  * program - A <GlobalBlock> object which represents the script's global scope.
  */
@@ -74,10 +74,10 @@
 ///Trims strings and vectors down to an acceptable size, to prevent runaway memory usage
 /datum/n_Interpreter/proc/Trim(value)
 	if(istext(value) && (length(value) > MAX_STRINGLEN))
-		value = copytext(value, 1, MAX_STRINGLEN+1)
+		value = copytext(value, 1, MAX_STRINGLEN + 1)
 	else if(islist(value) && (length(value) > MAX_LISTLEN))
 		var/list/L = value
-		value = L.Copy(1, MAX_LISTLEN+1)
+		value = L.Copy(1, MAX_LISTLEN + 1)
 	return value
 
 ///Sets ourselves to Garbage Collect.
@@ -137,10 +137,10 @@
 			. = Eval(S, scope)
 		else if(istype(S, /datum/node/statement/VariableDeclaration))
 			//VariableDeclaration nodes are used to forcibly declare a local variable so that one in a higher scope isn't used by default.
-			var/datum/node/statement/VariableDeclaration/dec=S
+			var/datum/node/statement/VariableDeclaration/dec = S
 			scope.init_var(dec.var_name.id_name, src, S)
 		else if(istype(S, /datum/node/statement/FunctionDefinition))
-			var/datum/node/statement/FunctionDefinition/dec=S
+			var/datum/node/statement/FunctionDefinition/dec = S
 			scope.init_var(dec.func_name, new /datum/n_function/defined(dec, scope, src), src, S)
 		else if(istype(S, /datum/node/statement/WhileLoop))
 			. = RunWhile(S, scope)
@@ -153,7 +153,7 @@
 				RaiseError(new /datum/runtimeError/UnexpectedReturn(), scope, S)
 				continue
 			scope.status |= RETURNING
-			. = (scope.return_val=Eval(S:value, scope))
+			. = (scope.return_val = Eval(S:value, scope))
 			break
 		else if(istype(S, /datum/node/statement/BreakStatement))
 			if(!(scope.allowed_status & BREAKING))
@@ -187,7 +187,7 @@
 		return
 	var/list/params = list()
 	for(var/datum/node/expression/P in stmt.parameters)
-		params+=list(Eval(P, scope))
+		params += list(Eval(P, scope))
 
 	try
 		return func.execute(this_obj, params, scope, src, stmt)
@@ -216,14 +216,14 @@
 
 ///Runs a while loop.
 /datum/n_Interpreter/proc/RunWhile(datum/node/statement/WhileLoop/stmt, datum/scope/scope)
-	var/i=1
+	var/i = 1
 	scope = scope.push(stmt.block, allowed_status = CONTINUING | BREAKING)
 	while(Eval(stmt.cond, scope) && Iterate(stmt.block, scope, i++))
 		continue
 	scope = scope.pop(RETURNING)
 
 /datum/n_Interpreter/proc/RunFor(datum/node/statement/ForLoop/stmt, datum/scope/scope)
-	var/i=1
+	var/i = 1
 	scope = scope.push(stmt.block)
 	Eval(stmt.init, scope)
 	while(Eval(stmt.test, scope))
@@ -239,7 +239,7 @@
 	if(MAX_ITERATIONS > 0 && count >= MAX_ITERATIONS)
 		RaiseError(new /datum/runtimeError/IterationLimitReached(), scope, block)
 		return FALSE
-	if(status & (BREAKING|RETURNING))
+	if(status & (BREAKING | RETURNING))
 		return FALSE
 	status &= ~CONTINUING
 	return TRUE

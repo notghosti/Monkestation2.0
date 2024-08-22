@@ -32,7 +32,7 @@
  * object - (Optional) An object which will the be target of a function call.
  * params - Only required if object is not null, a list of the names of parameters the proc takes.
  */
-/datum/n_Interpreter/proc/SetProc(name, path, object=null, list/params=null)
+/datum/n_Interpreter/proc/SetProc(name, path, object = null, list/params = null)
 	if(!istext(name))
 		//CRASH("Invalid function name")
 		return

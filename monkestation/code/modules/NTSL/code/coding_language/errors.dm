@@ -21,11 +21,11 @@
 		message += "[token]"
 
 /datum/scriptError/InvalidID
-	parent_type=/datum/scriptError/BadToken
+	parent_type = /datum/scriptError/BadToken
 	message = "Invalid identifier name: "
 
 /datum/scriptError/ReservedWord
-	parent_type=/datum/scriptError/BadToken
+	parent_type = /datum/scriptError/BadToken
 	message = "Identifer using reserved word: "
 
 /datum/scriptError/BadNumber

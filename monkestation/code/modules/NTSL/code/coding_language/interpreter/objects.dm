@@ -132,9 +132,9 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 	scope.function = function_def
 	if(node)
 		scope.call_node = node
-	for(var/i=1 to length(function_def.parameters))
+	for(var/i = 1 to length(function_def.parameters))
 		var/val
-		if(length(params)>=i)
+		if(length(params) >= i)
 			val = params[i]
 		//else
 		//	unspecified param
