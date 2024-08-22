@@ -38,7 +38,7 @@
 	req_access = list(ACCESS_TCOMMS_ADMIN)
 
 /obj/machinery/computer/telecomms/traffic/Initialize(mapload)
-	. = ..()
+	..()
 	GLOB.traffic_comps += src
 	if(length(GLOB.pretty_filter_items) == 0)
 		setup_pretty_filter()
