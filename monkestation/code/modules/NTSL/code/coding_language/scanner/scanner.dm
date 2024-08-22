@@ -85,7 +85,7 @@
  * ReadString
  * Reads a string in the source code into a token.
  * Arguments:
- *  start - The character used to start the string.
+ * start - The character used to start the string.
  */
 /datum/n_Scanner/nS_Scanner/proc/ReadString(start)
 	var/buf
@@ -93,10 +93,10 @@
 		var/char=copytext(code, codepos, codepos+1)
 		switch(char)
 			if("\\")					//Backslash (\) encountered in string
-				codepos++       //Skip next character in string, since it was escaped by a backslash
+				codepos++ //Skip next character in string, since it was escaped by a backslash
 				char=copytext(code, codepos, codepos+1)
 				switch(char)
-					if("\\")      //Double backslash
+					if("\\") //Double backslash
 						buf += "\\"
 					if("n")				//\n Newline
 						buf += "\n"
@@ -115,7 +115,7 @@
 				if(char == start) //string delimiter found, end string
 					break
 				else
-					buf += char     //Just a normal character in a string
+					buf += char //Just a normal character in a string
 	if(!.)
 		return new /datum/token/string(buf, line, COLUMN_LOCATION)
 
@@ -123,7 +123,7 @@
 /datum/n_Scanner/nS_Scanner/proc/ReadWord()
 	var/char = copytext(code, codepos, codepos+1)
 	var/buf
-	
+
 	while(!delim.Find(char) && codepos <= length(code))
 		buf += char
 		char = copytext(code, ++codepos, codepos+1)
@@ -169,9 +169,9 @@
 /*
  * ReadComment
  * Reads a comment. Wow.
- *  I'm glad I wrote this proc description for you to explain that.
+ * I'm glad I wrote this proc description for you to explain that.
  * Unlike the other Read functions, this one doesn't have to return any tokens,
- *  since it's just "reading" comments.
+ * since it's just "reading" comments.
  * All it does is just pass var/codepos through the comments until it reaches the end of'em.
  */
 /datum/n_Scanner/nS_Scanner/proc/ReadComment()

@@ -3,11 +3,11 @@
  * each of which represents a certain part of the source code. For example, an <IfStatement> node represents an if statement in the
  * script's source code. Because it is a representation of the source code in memory, it is independent of any specific scripting language.
  * This allows a script in any language for which a parser exists to be run by the interpreter.
- * 
+ *
  * The AST is produced by an <n_Parser> object. It consists of a <GlobalBlock> with an arbitrary amount of statements. These statements are
  * run in order by an <n_Interpreter> object. A statement may in turn run another block (such as an if statement might if its condition is
  * met).
- * 
+ *
  * Articles:
  * - <http://en.wikipedia.org/wiki/Abstract_syntax_tree>
  */
@@ -17,25 +17,25 @@
  * The higher the value, the lower the priority in the precedence.
  */
 #define OOP_ASSIGN 0
-///Logical or  ||
+///Logical or ||
 #define OOP_OR 1
-///Logical and  &&
+///Logical and &&
 #define OOP_AND 2
-///Bitwise operations  &, |
+///Bitwise operations &, |
 #define OOP_BIT 3
-///Equality checks  ==, !=
+///Equality checks ==, !=
 #define OOP_EQUAL 4
-///Greater than, less than, etc  >, <, >=, <=
+///Greater than, less than, etc >, <, >=, <=
 #define OOP_COMPARE 5
-///Addition and subtraction  + -
+///Addition and subtraction + -
 #define OOP_ADD 6
-///Multiplication and division  * / %
+///Multiplication and division * / %
 #define OOP_MULTIPLY 7
-///Exponents  ^
+///Exponents ^
 #define OOP_POW 8
-///Unary Operators  !
+///Unary Operators !
 #define OOP_UNARY 9
-///Parenthesis  ()
+///Parenthesis ()
 #define OOP_GROUP 10
 
 /**

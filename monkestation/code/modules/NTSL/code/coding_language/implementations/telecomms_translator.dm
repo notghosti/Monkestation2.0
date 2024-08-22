@@ -296,7 +296,7 @@ GLOBAL_LIST_INIT(allowed_translations, list(
 	return S
 
 
-/*  -- Actual language proc code --  */
+/* -- Actual language proc code -- */
 
 #define SIGNAL_COOLDOWN 20 // 2 seconds
 #define MAX_MEM_VARS 500 // The maximum number of variables that can be stored by NTSL via mem()

@@ -31,8 +31,8 @@
 /datum/n_function/default/find/execute(this_obj, list/params)
 	var/haystack = params.len >= 1 ? params[1] : null
 	var/needle = params.len >= 2 ? params[2] : null
-	var/start  = params.len >= 3 ? params[3] : 1
-	var/end  = params.len >= 4 ? params[4] : 0
+	var/start = params.len >= 3 ? params[3] : 1
+	var/end = params.len >= 4 ? params[4] : 0
 	if(!haystack || !needle)
 		return
 	if(IS_OBJECT(haystack))
@@ -51,8 +51,8 @@
 
 /datum/n_function/default/substr/execute(this_obj, list/params)
 	var/string = params.len >= 1 ? params[1] : null
-	var/start = params.len >= 2 ? params[2] :  1
-	var/end = params.len >= 3 ? params[3] :  0
+	var/start = params.len >= 2 ? params[2] : 1
+	var/end = params.len >= 3 ? params[3] : 0
 	if(istext(string) && isnum(start) && isnum(end))
 		if(start > 0)
 			return copytext(string, start, end)
@@ -92,7 +92,7 @@
 
 /datum/n_function/default/explode/execute(this_obj, list/params)
 	var/string = params.len >= 1 ? params[1] : null
-	var/separator  = params.len >= 2 ? params[2] :  ""
+	var/separator = params.len >= 2 ? params[2] : ""
 	if(istext(string) && (istext(separator) || isnull(separator)))
 		return splittext(string, separator)
 

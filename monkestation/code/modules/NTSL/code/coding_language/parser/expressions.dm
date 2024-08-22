@@ -41,13 +41,13 @@
  * GetOperator
  * Gets a path related to a token or string and returns an instance of the given type.
  * This is used to get an instance of either a binary or unary operator from a token.
- * 
+ *
  * Arguments:
  * O - The input value. If this is a token, O is reset to the token's value.
  * When O is a string and is in L, its associated value is used as the path to instantiate.
  * type - The desired type of the returned object.
  * L - The list in which to search for O.
- * 
+ *
  * See Also:
  * - <GetBinaryOperator()>
  * - <GetUnaryOperator()>
@@ -74,7 +74,7 @@
  * GetBinaryOperator
  * Uses <GetOperator()> to search for an instance of a binary operator type with which the given string is associated. For example, if
  * O is set to "+", an <Add> node is returned.
- * 
+ *
  * See Also:
  * - <GetOperator()>
  * - <GetUnaryOperator()>
@@ -86,13 +86,13 @@
  * Proc: GetUnaryOperator
  * Uses <GetOperator()> to search for an instance of a unary operator type with which the given string is associated. For example, if
  * O is set to "!", a <LogicalNot> node is returned.
- * 
+ *
  * See Also:
  * - <GetOperator()>
  * - <GetBinaryOperator()>
  */
 /datum/n_Parser/nS_Parser/proc/GetUnaryOperator(O)
-	return GetOperator(O, /datum/node/expression/expression_operator/unary,  options.unary_operators)
+	return GetOperator(O, /datum/node/expression/expression_operator/unary, options.unary_operators)
 
 /*
  * Reduce
@@ -121,7 +121,7 @@
 /*
  * EndOfExpression
  * Returns true if the current token represents the end of an expression.
- * 
+ *
  * Arguments:
  * end - A list of values to compare the current token to.
  */
@@ -137,15 +137,15 @@
 /*
  * ParseExpression
  * Uses the Shunting-yard algorithm to parse expressions.
- * 
+ *
  * Notes:
  * - When an opening parenthesis is found, then <ParseParenExpression()> is called to handle it.
- * - The <expecting>  variable helps distinguish unary operators from binary operators (for cases like the - operator, which can be either).
- * 
+ * - The <expecting> variable helps distinguish unary operators from binary operators (for cases like the - operator, which can be either).
+ *
  * Articles:
  * - <http://epaperpress.com/oper/>
  * - <http://en.wikipedia.org/wiki/Shunting-yard_algorithm>
- * 
+ *
  * See Also:
  * - <ParseFunctionExpression()>
  * - <ParseParenExpression()>
@@ -313,7 +313,7 @@
 /*
  * ParseParenExpression
  * Parses an expression that ends with a close parenthesis. This is used for parsing expressions inside of parentheses.
- * 
+ *
  * See Also:
  * - <ParseExpression()>
  */
@@ -326,7 +326,7 @@
 /*
  * Proc: ParseParamExpression
  * Parses an expression that ends with either a comma or close parenthesis. This is used for parsing the parameters passed to a function call.
- * 
+ *
  * See Also:
  * - <ParseExpression()>
  */

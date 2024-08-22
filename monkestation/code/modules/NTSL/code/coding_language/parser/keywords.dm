@@ -3,7 +3,7 @@
  */
 #define KW_FAIL 0 //Fatal error; stop parsing entire script.
 #define KW_PASS 1 //OK
-#define KW_ERR  2 //Non-fatal error, keyword couldn't be handled properly. Ignore keyword but continue on.
+#define KW_ERR 2 //Non-fatal error, keyword couldn't be handled properly. Ignore keyword but continue on.
 #define KW_WARN 3 //Warning
 
 /*
@@ -21,7 +21,7 @@
 /*
  * Parse
  * Called when the parser finds a keyword in the code.
- * 
+ *
  * Arguments:
  * parser - The parser that created this object.
  * You can use the parameter to manipulate the parser in order to add statements and blocks to its AST.
@@ -32,7 +32,7 @@
  * nS_Keyword
  * A keyword in n_Script. By default these include return, if, else, while, and def. To enable or disable a keyword, change the
  * <nS_Options.keywords> list.
- * 
+ *
  * Behavior:
  * When a parser is expecting a new statement, and a keyword listed in <nS_Options.keywords> is found, it will call the keyword's
  * <n_Keyword.Parse()> proc.
@@ -51,7 +51,7 @@
 		parser.tokens.len = parser.index
 		return
 	var/datum/node/statement/ReturnStatement/stmt = new(parser.curToken)
-	parser.NextToken()   //skip 'return' token
+	parser.NextToken() //skip 'return' token
 	stmt.value=parser.ParseExpression()
 	parser.curBlock.statements += stmt
 
@@ -60,7 +60,7 @@
 /datum/n_Keyword/nS_Keyword/kwIf/Parse(datum/n_Parser/nS_Parser/parser)
 	. = KW_PASS
 	var/datum/node/statement/IfStatement/stmt = new(parser.curToken)
-	parser.NextToken()  //skip 'if' token
+	parser.NextToken() //skip 'if' token
 	stmt.cond=parser.ParseParenExpression()
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
@@ -84,7 +84,7 @@
 		return KW_FAIL
 
 	var/datum/node/statement/IfStatement/ElseIf/stmt = new(parser.curToken)
-	parser.NextToken()  //skip 'if' token
+	parser.NextToken() //skip 'if' token
 	stmt.cond = parser.ParseParenExpression()
 	if(!parser.CheckToken(")", /datum/token/symbol))
 		return KW_FAIL
@@ -106,7 +106,7 @@
 	if(!stmt || !istype(stmt) || stmt.else_block) //Ensure that it is an if statement
 		parser.errors += new /datum/scriptError/ExpectedToken("if statement",parser.curToken)
 		return KW_FAIL
-	parser.NextToken()         //skip 'else' token
+	parser.NextToken() //skip 'else' token
 	if(!parser.CheckToken("{", /datum/token/symbol, skip=0))
 		return KW_ERR
 	stmt.else_block=new()
@@ -169,7 +169,7 @@
 		parser.errors += new /datum/scriptError/BadToken(parser.curToken)
 		. = KW_WARN
 	var/datum/node/statement/ContinueStatement/stmt = new(parser.curToken)
-	parser.NextToken()   //skip 'break' token
+	parser.NextToken() //skip 'break' token
 	parser.curBlock.statements += stmt
 
 /datum/n_Keyword/nS_Keyword/kwDef

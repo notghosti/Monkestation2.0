@@ -22,7 +22,7 @@
 		"{",
 		"}",
 		".",
-	) 
+	)
 	/*
 	 * Var: keywords
 	 * An associative list used by the parser to parse keywords. Indices are strings which will trigger the keyword when parsed and the
@@ -42,7 +42,7 @@
 	var/list/unary_operators = list(
 		"!" = /datum/node/expression/expression_operator/unary/LogicalNot,
 		"~" = /datum/node/expression/expression_operator/unary/BitwiseNot,
-		"-"  = /datum/node/expression/expression_operator/unary/Minus,
+		"-" = /datum/node/expression/expression_operator/unary/Minus,
 	)
 
 	var/list/binary_operators = list(
@@ -58,12 +58,12 @@
 		"|"= /datum/node/expression/expression_operator/binary/BitwiseOr,
 		"`" = /datum/node/expression/expression_operator/binary/BitwiseXor,
 		"+"= /datum/node/expression/expression_operator/binary/Add,
-		"-"  = /datum/node/expression/expression_operator/binary/Subtract,
+		"-" = /datum/node/expression/expression_operator/binary/Subtract,
 		"*"= /datum/node/expression/expression_operator/binary/Multiply,
-		"/"  = /datum/node/expression/expression_operator/binary/Divide,
+		"/" = /datum/node/expression/expression_operator/binary/Divide,
 		"^"= /datum/node/expression/expression_operator/binary/Power,
-		"%"  = /datum/node/expression/expression_operator/binary/Modulo,
-		"="  = /datum/node/expression/expression_operator/binary/Assign,
+		"%" = /datum/node/expression/expression_operator/binary/Modulo,
+		"=" = /datum/node/expression/expression_operator/binary/Assign,
 		"&=" = /datum/node/expression/expression_operator/binary/Assign/BitwiseAnd,
 		"|=" = /datum/node/expression/expression_operator/binary/Assign/BitwiseOr,
 		"`=" = /datum/node/expression/expression_operator/binary/Assign/BitwiseXor,
