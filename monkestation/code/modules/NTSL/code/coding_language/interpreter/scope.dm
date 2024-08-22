@@ -39,7 +39,7 @@
 	parent = null
 	variables_parent = null
 	block = null
-	functios = null
+	functions = null
 	variables = null
 	function = null
 	call_node = null
