@@ -54,6 +54,10 @@
 
 /obj/machinery/computer/telecomms/traffic/Destroy()
 	GLOB.traffic_comps -= src
+	servers = null
+	if(!isnull(inserted_id))
+		inserted_id.forceMove(drop_location())
+		inserted_id = null
 	return ..()
 
 /obj/machinery/computer/telecomms/traffic/proc/create_log(entry)
