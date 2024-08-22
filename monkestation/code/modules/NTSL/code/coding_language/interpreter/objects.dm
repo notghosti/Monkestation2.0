@@ -116,6 +116,12 @@ GLOBAL_LIST_EMPTY(ntsl_methods)
 	src.closure = closure
 	src.context = context
 
+/datum/n_function/defined/Destroy()
+	function_def = null
+	closure = null
+	context = null
+	return ..()
+
 /datum/n_function/defined/execute(this_obj, list/params, datum/scope/scope, datum/n_Interpreter/interp, datum/node/node)
 	if(scope.recursion >= 10)
 		interp.AlertAdmins()
