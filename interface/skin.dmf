@@ -277,6 +277,14 @@ window "outputwindow"
 		command = ".winset \"mebutton.is-checked=true ? input.command=\"!me \\\"\" : input.command=\"\"mebutton.is-checked=true ? saybutton.is-checked=false\"\"mebutton.is-checked=true ? oocbutton.is-checked=false\""
 		is-flat = true
 		button-type = pushbox
+	elem "mediapanel"
+		type = BROWSER
+		pos = 599,460
+		size = 1x1
+		anchor1 = 100,100
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = ""
 	elem "browseroutput"
 		type = BROWSER
 		pos = 0,0
@@ -348,14 +356,6 @@ window "statwindow"
 		size = 640x480
 		anchor1 = 0,0
 		anchor2 = 100,100
-		is-visible = false
-		saved-params = ""
-	elem "mediapanel"
-		type = BROWSER
-		pos = 392,25
-		size = 1x1
-		anchor1 = -1,-1
-		anchor2 = -1,-1
 		is-visible = false
 		saved-params = ""
 
