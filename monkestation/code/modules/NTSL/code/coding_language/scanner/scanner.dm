@@ -51,6 +51,10 @@
 	src.delim += ignore + options.symbols + end_stmt + string_delim
 	LoadCode(code)
 
+/datum/n_Scanner/nS_Scanner/Destroy(force)
+	options = null
+	return ..()
+
 /datum/n_Scanner/nS_Scanner/Scan()
 	var/list/datum/token/tokens = new
 	for(, codepos <= length(code), codepos++)

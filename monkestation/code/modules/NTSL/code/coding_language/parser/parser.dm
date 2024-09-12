@@ -17,6 +17,13 @@
 	////A list of non-fatal problems in the script.
 	var/list/warnings = new
 
+/datum/n_Parser/Destroy(force)
+	curToken = null
+	blocks = null
+	global_block = null
+	curBlock = null
+	return ..()
+
 ///Reads the tokens and returns the AST's <GlobalBlock> node. Be sure to populate the tokens list before calling this procedure.
 /datum/n_Parser/proc/Parse()
 
@@ -39,6 +46,10 @@
 	src.tokens = tokens
 	src.options = options
 	src.curBlock = global_block
+	return ..()
+
+/datum/n_Parser/nS_Parser/Destroy(force)
+	options = null
 	return ..()
 
 /datum/n_Parser/nS_Parser/Parse()

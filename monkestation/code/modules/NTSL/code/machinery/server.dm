@@ -58,7 +58,7 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 		to_chat(user, span_warning("You are banned from using NTSL."))
 		return "Unauthorized access."
 
-	if(!Compiler)
+	if(QDELETED(Compiler))
 		return
 
 	if(!reject_bad_ntsl_text(rawcode, 20000, require_pretty = FALSE, allow_newline = TRUE, allow_code = TRUE))
