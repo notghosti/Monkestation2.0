@@ -8639,28 +8639,22 @@
 /turf/open/floor/wood,
 /area/station/service/hydroponics/upper)
 "cCS" = (
-/obj/structure/table,
 /obj/effect/turf_decal/siding/dark{
 	dir = 10
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/item/wrench,
-/obj/item/radio/off,
-/obj/item/book/manual/wiki/tcomms{
-	pixel_x = 4
-	},
-/obj/item/screwdriver{
-	pixel_y = 5
-	},
-/obj/item/multitool,
 /obj/machinery/firealarm/directional/west{
 	pixel_y = 3
 	},
 /obj/machinery/light_switch/directional/west{
 	pixel_y = -6
 	},
+/obj/machinery/computer/message_monitor{
+	dir = 1
+	},
+/obj/item/paper/monitorkey,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "cCY" = (
@@ -29939,6 +29933,20 @@
 /obj/machinery/atmospherics/pipe/smart/simple/cyan/visible{
 	dir = 5
 	},
+/obj/structure/table,
+/obj/item/folder/blue{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/obj/item/folder/yellow,
+/obj/item/paper_bin{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/pen,
+/obj/item/pen/blue{
+	pixel_y = 5
+	},
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "jac" = (
@@ -50393,21 +50401,8 @@
 /obj/effect/turf_decal/siding/dark{
 	dir = 9
 	},
-/obj/structure/table,
-/obj/item/folder/blue{
-	pixel_x = 3;
-	pixel_y = 2
-	},
-/obj/item/folder/yellow,
-/obj/item/paper_bin{
-	pixel_x = -4;
-	pixel_y = 3
-	},
-/obj/item/pen,
-/obj/item/pen/blue{
-	pixel_y = 5
-	},
 /obj/item/radio/intercom/directional/west,
+/obj/machinery/computer/telecomms/traffic,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "pdi" = (
@@ -58727,15 +58722,15 @@
 /turf/open/floor/iron,
 /area/station/hallway/primary/central)
 "ryd" = (
-/obj/machinery/computer/message_monitor{
-	dir = 4
-	},
 /obj/effect/turf_decal/siding/dark{
 	dir = 8
 	},
-/obj/item/paper/monitorkey,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable,
+/obj/structure/chair/office{
+	dir = 1
+	},
+/obj/effect/landmark/start/signal_technician,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "ryf" = (
@@ -62575,9 +62570,6 @@
 /turf/open/floor/iron/dark,
 /area/station/service/chapel/funeral)
 "sFo" = (
-/obj/structure/chair/office{
-	dir = 8
-	},
 /obj/structure/cable,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
@@ -66933,6 +66925,16 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold/cyan/visible{
 	dir = 4
+	},
+/obj/structure/table,
+/obj/item/wrench,
+/obj/item/radio/off,
+/obj/item/book/manual/wiki/tcomms{
+	pixel_x = 4
+	},
+/obj/item/multitool,
+/obj/item/screwdriver{
+	pixel_y = 5
 	},
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)

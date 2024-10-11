@@ -11107,12 +11107,10 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "dqU" = (
-/obj/machinery/computer/telecomms/server{
-	network = "tcommsat"
-	},
 /obj/effect/turf_decal/box,
 /obj/machinery/light/cold/directional/north,
 /obj/machinery/airalarm/directional/north,
+/obj/machinery/computer/telecomms/traffic,
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "dqV" = (
@@ -70065,7 +70063,9 @@
 /area/station/hallway/secondary/entry)
 "uLY" = (
 /obj/effect/turf_decal/box,
-/obj/machinery/computer/telecomms/traffic,
+/obj/machinery/computer/telecomms/server{
+	network = "tcommsat"
+	},
 /turf/open/floor/iron/dark/small,
 /area/station/tcommsat/computer)
 "uMd" = (

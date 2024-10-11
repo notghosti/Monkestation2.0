@@ -68001,7 +68001,9 @@
 /turf/open/floor/carpet,
 /area/station/service/library/printer)
 "niX" = (
-/obj/structure/chair/office/light,
+/obj/structure/chair/office/light{
+	dir = 8
+	},
 /obj/machinery/light/floor/has_bulb,
 /obj/effect/landmark/start/signal_technician,
 /turf/open/floor/iron,
@@ -150573,8 +150575,8 @@ vCy
 nds
 nds
 nds
-fVk
 jsT
+fVk
 xdB
 nds
 bNr
