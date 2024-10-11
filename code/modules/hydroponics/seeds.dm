@@ -342,7 +342,7 @@
 			var/amount = max(1, round((edible_vol)*(potency/100) * reagent_overflow_mod, 1)) //the plant will always have at least 1u of each of the reagents in its reagent production traits
 			var/list/data
 			if(rid == /datum/reagent/blood) // Hack to make blood in plants always O-
-				data = list("blood_type" = "O-")
+				data = list("blood_type" = /datum/blood_type/crew/human/o_minus)
 			if(istype(grown_edible) && (rid == /datum/reagent/consumable/nutriment || rid == /datum/reagent/consumable/nutriment/vitamin))
 				data = grown_edible.tastes // apple tastes of apple.
 			T.reagents.add_reagent(rid, amount, data)
@@ -429,11 +429,6 @@
 		return
 
 	var/max_potency = MAX_PLANT_YIELD
-	for(var/datum/plant_gene/trait/trait in genes)
-		if(trait.trait_flags & TRAIT_LIMIT_POTENCY)
-			max_potency = 100
-			break
-
 	potency = clamp(potency + adjustamt, 0, max_potency)
 	var/datum/plant_gene/core/C = get_gene(/datum/plant_gene/core/potency)
 	if(C)

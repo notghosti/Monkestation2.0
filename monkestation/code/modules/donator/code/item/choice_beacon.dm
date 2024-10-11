@@ -76,11 +76,6 @@
 	default_name = "Plant Crab"
 	donator_pet = 	/mob/living/basic/crab/plant
 
-/obj/item/choice_beacon/pet/donator/quilava
-	name = "Quil Maid"
-	default_name = "Quil Maid"
-	donator_pet = 	/mob/living/basic/pet/quilmaid
-
 /obj/item/choice_beacon/pet/donator/gumball_goblin
 	name = "Gumball Goblin"
 	default_name = "Gumball Goblin"
@@ -98,10 +93,15 @@
 
 /obj/item/choice_beacon/pet/donator/darkscug
 	name = "night slugcat"
-	default_name ="night slugcat"
+	default_name = "night slugcat"
 	donator_pet = 	/mob/living/basic/pet/darkscug
 
 /obj/item/choice_beacon/pet/donator/hypnotoad
 	name = "hypnotoad"
-	default_name ="hypnotoad"
+	default_name = "hypnotoad"
 	donator_pet = 	/mob/living/basic/frog/hypnotoad
+
+/obj/item/choice_beacon/pet/donator/ghastly_evil_demon
+	name = "ghastly evil demon"
+	default_name = "ghastly evil demon"
+	donator_pet = 	/mob/living/basic/pet/ghastly_evil_demon

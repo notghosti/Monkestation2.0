@@ -53,6 +53,8 @@
 #define TRAIT_REVIVES_BY_HEALING "trait_revives_by_healing"
 /// This mob is a ghost critter.
 #define TRAIT_GHOST_CRITTER "ghost_critter"
+/// This mob is *currently* being flashed by someone with CAN_BYPASS_INNATE_FLASH_RESISTANCE returning TRUE. Used to make IPCs not immune to rev and bb conversions.
+#define TRAIT_CONVERSION_FLASHED "conversion_flashed"
 
 // /datum/mind + /mob/living
 /// Prevents the user from casting spells using sign language. Works on both /datum/mind and /mob/living.
@@ -128,5 +130,16 @@
 #define TRAIT_NO_SLAB_INVOKE		"no_slab_invoke"
 /// Has an item been enchanted by a clock cult Stargazer?
 #define TRAIT_STARGAZED				"stargazed"
+
+#define TRAIT_FEATHERED "feathers"
+#define TRAIT_NON_IMPORTANT_SHOE_BLOCK "shoe_block"
+/// Skip a breath once in every x breaths (where x is ticks between breaths)
+#define TRAIT_LABOURED_BREATHING "laboured_breathing"
+/// Blocks losebreath from accumulating from things such as heart attacks or choking
+#define TRAIT_ASSISTED_BREATHING "assisted_breathing"
+/// Stops organs from decaying while dead
+#define TRAIT_NO_ORGAN_DECAY "no_organ_decay"
+/// Mob does not homeostasize body temperature
+#define TRAIT_COLD_BLOODED "cold_blooded"
 
 // END TRAIT DEFINES

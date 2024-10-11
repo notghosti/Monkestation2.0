@@ -365,25 +365,6 @@
 	donator_only = TRUE
 	requires_purchase = FALSE
 
-/datum/loadout_item/toys/quilark
-	name = "Quilark Plush"
-	item_path = /obj/item/toy/plush/quilark
-	donator_only = TRUE
-	requires_purchase = FALSE
-
-/datum/loadout_item/pocket_items/donator/quilava
-	name = "Pet Delivery Beacon - Quil Maid"
-	item_path = /obj/item/choice_beacon/pet/donator/quilava
-	donator_only = TRUE
-	requires_purchase = FALSE
-	ckeywhitelist = list("quilark")
-
-/datum/loadout_item/effects/quilava
-	ckeywhitelist = list("quilark")
-	name = "Quil Maid Transformation"
-	item_path = /obj/item/effect_granter/donator/quilava
-	requires_purchase = FALSE
-
 /datum/loadout_item/suit/org_thirteen
 	name = "Organization 13 Cloak"
 	item_path = /obj/item/clothing/suit/hooded/org_thirteen
@@ -486,6 +467,25 @@
 	name = "Bumbliest Bee Plushie"
 	item_path = /obj/item/toy/plush/pooba_bee_plush
 	donator_only = TRUE
+	requires_purchase = FALSE
+
+/datum/loadout_item/suit/centcom_jacket
+	name = "Centcom Jacket"
+	item_path = /obj/item/clothing/suit/toggle/centcom_jacket
+	donator_only = TRUE
+	requires_purchase = FALSE
+
+/datum/loadout_item/pocket_items/donator/ghastly_evil_demon
+	name = "Pet Delivery Beacon - Ghastly Evil Demon"
+	item_path = /obj/item/choice_beacon/pet/donator/ghastly_evil_demon
+	donator_only = TRUE
+	requires_purchase = FALSE
+	ckeywhitelist = list("ThePooba")
+
+/datum/loadout_item/effects/ghastly_evil_demon
+	ckeywhitelist = list("ThePooba")
+	name = "Ghastly Evil Demon Transformation"
+	item_path = /obj/item/effect_granter/donator/ghastly_evil_demon
 	requires_purchase = FALSE
 
 //Mr_Sandman02
@@ -625,3 +625,10 @@
 	item_path = /obj/item/effect_granter/donator/hypnotoad
 	requires_purchase = FALSE
 	ckeywhitelist = list("Ophaq")
+
+//Jason Farqiour
+/datum/loadout_item/suit/mothysmantle
+	name = "Mothy's Mantle"
+	item_path = /obj/item/clothing/suit/hooded/mothysmantle
+	donator_only = TRUE
+	requires_purchase = FALSE

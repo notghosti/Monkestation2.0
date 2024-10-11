@@ -27,6 +27,7 @@
 		JOB_AI,
 		JOB_CYBORG,
 		JOB_CAPTAIN,
+		JOB_BLUESHIELD,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
@@ -40,6 +41,7 @@
 	earliest_start = 0 SECONDS
 	weight = 1 //these are meant to be very rare
 	max_occurrences = 1
+	event_icon_state = "flukeops"
 
 /datum/round_event/antagonist/solo/clown_operative
 	excute_round_end_reports = TRUE

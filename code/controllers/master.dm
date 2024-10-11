@@ -234,6 +234,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 		// Initialize subsystems.
 		for (var/datum/controller/subsystem/subsystem in stage_sorted_subsystems[current_init_stage])
 			init_subsystem(subsystem)
+			#ifndef OPENDREAM
 			if(world.system_type == MS_WINDOWS)
 				var/ss_name = "[subsystem.name]"
 				var/memory_summary = call_ext("memorystats", "get_memory_stats")()
@@ -241,6 +242,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 
 				var/string = "[ss_name] [memory_summary]"
 				WRITE_FILE(file, string)
+			#endif
 
 			CHECK_TICK
 		current_initializing_subsystem = null
@@ -287,7 +289,7 @@ GLOBAL_REAL(Master, /datum/controller/master)
 	if(sleep_offline_after_initializations && CONFIG_GET(flag/resume_after_initializations))
 		world.sleep_offline = FALSE
 	initializations_finished_with_no_players_logged_in = initialized_tod < REALTIMEOFDAY - 10
-	SSgamemode.handle_picking_stroyteller() //monkestation edit
+	SSgamemode.handle_picking_storyteller() //monkestation edit
 
 /**
  * Initialize a given subsystem and handle the results.

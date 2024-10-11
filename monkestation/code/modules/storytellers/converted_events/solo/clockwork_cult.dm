@@ -21,6 +21,7 @@
 	)
 	enemy_roles = list(
 		JOB_CAPTAIN,
+		JOB_BLUESHIELD,
 		JOB_DETECTIVE,
 		JOB_HEAD_OF_SECURITY,
 		JOB_SECURITY_OFFICER,
@@ -34,8 +35,9 @@
 	min_players = 45
 	roundstart = TRUE
 	earliest_start = 0 SECONDS
-	weight = 4
+	weight = 0
 	max_occurrences = 1
+	event_icon_state = "clockcult"
 
 /datum/round_event/antagonist/solo/clockcult
 	end_when = 60000

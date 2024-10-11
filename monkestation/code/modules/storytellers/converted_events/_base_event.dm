@@ -70,6 +70,12 @@
 	var/list/protected_roles
 	/// Restricted roles from the antag roll
 	var/list/restricted_roles
+	var/event_icon_state
+
+/datum/round_event_control/proc/generate_image(list/mobs)
+	return
+/datum/round_event_control/antagonist/generate_image(list/mobs)
+	SScredits.generate_major_icon(mobs, event_icon_state)
 
 /datum/round_event_control/antagonist/proc/check_required()
 	if(!length(exclusive_roles))
@@ -240,9 +246,12 @@
 
 	var/list/weighted_candidates = return_antag_rep_weight(possible_candidates)
 
-	while(length(possible_candidates) && length(candidates) < antag_count) //both of these pick_n_take from possible_candidates so this should be fine
+	while(length(weighted_candidates) && length(candidates) < antag_count) //both of these pick_n_take from weighted_candidates so this should be fine
 		if(prompted_picking)
-			var/client/picked_client = pick_n_take_weighted(weighted_candidates)
+			var/picked_ckey = pick_n_take_weighted(weighted_candidates)
+			var/client/picked_client = GLOB.directory[picked_ckey]
+			if(QDELETED(picked_client))
+				continue
 			var/mob/picked_mob = picked_client.mob
 			log_storyteller("Prompted antag event mob: [picked_mob], special role: [picked_mob.mind?.special_role ? picked_mob.mind.special_role : "none"]")
 			if(picked_mob)
@@ -258,14 +267,15 @@
 					show_candidate_amount = FALSE,
 				)
 		else
-			if(!length(weighted_candidates))
-				break
-			var/client/picked_client = pick_n_take_weighted(weighted_candidates)
+			var/picked_ckey = pick_n_take_weighted(weighted_candidates)
+			var/client/picked_client = GLOB.directory[picked_ckey]
+			if(QDELETED(picked_client))
+				continue
 			var/mob/picked_mob = picked_client.mob
 			log_storyteller("Picked antag event mob: [picked_mob], special role: [picked_mob.mind?.special_role ? picked_mob.mind.special_role : "none"]")
 			candidates |= picked_mob
 
-
+	var/list/picked_mobs = list()
 	for(var/i in 1 to antag_count)
 		if(!length(candidates))
 			message_admins("A roleset event got fewer antags then its antag_count and may not function correctly.")
@@ -282,8 +292,10 @@
 		setup_minds += candidate.mind
 		candidate.mind.special_role = antag_flag
 		candidate.mind.restricted_roles = restricted_roles
+		picked_mobs += WEAKREF(candidate.client)
 
 	setup = TRUE
+	control.generate_image(picked_mobs)
 	if(LAZYLEN(extra_spawned_events))
 		var/event_type = pick_weight(extra_spawned_events)
 		if(!event_type)
@@ -353,22 +365,21 @@
 		)
 
 	var/list/weighted_candidates = return_antag_rep_weight(candidates)
+	var/selected_count = 0
+	while(length(weighted_candidates) && selected_count < antag_count)
+		var/candidate_ckey = pick_n_take_weighted(weighted_candidates)
+		var/client/candidate_client = GLOB.directory[candidate_ckey]
+		if(QDELETED(candidate_client) || QDELETED(candidate_client.mob))
+			continue
+		var/mob/candidate = candidate_client.mob
 
-	for(var/i in 1 to antag_count)
-		if(!length(weighted_candidates))
-			break
-
-		var/client/mob_client = pick_n_take_weighted(weighted_candidates)
-		var/mob/candidate = mob_client.mob
-
-		if(candidate.client) //I hate this
-			candidate.client.prefs.reset_antag_rep()
+		candidate_client.prefs?.reset_antag_rep()
 
 		if(!candidate.mind)
 			candidate.mind = new /datum/mind(candidate.key)
-
 		var/mob/living/carbon/human/new_human = make_body(candidate)
 		new_human.mind.special_role = antag_flag
 		new_human.mind.restricted_roles = restricted_roles
 		setup_minds += new_human.mind
+		selected_count++
 	setup = TRUE
