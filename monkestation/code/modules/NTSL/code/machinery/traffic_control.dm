@@ -151,18 +151,16 @@
 			if(!user_name)
 				message_admins("[key_name_admin(usr)] attempted clearing NTSL logs without being logged in.")
 				return
-			qdel(access_log)
-			access_log = list()
+			access_log.Cut()
 			create_log("cleared access logs.")
 			return TRUE
 
 /obj/machinery/computer/telecomms/traffic/proc/refresh_servers()
-	qdel(servers)
-	servers = list()
+	servers.Cut()
 	for(var/obj/machinery/telecomms/server/new_server as anything in GLOB.tcomms_servers)
 		if(new_server.network != network)
 			continue
-		if(!unlimited_range && get_dist(src, new_server))
+		if(!unlimited_range && get_dist(src, new_server) > 15)
 			continue
 		servers.Add(new_server)
 
