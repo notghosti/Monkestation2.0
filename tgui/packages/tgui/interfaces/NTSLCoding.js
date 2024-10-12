@@ -9,6 +9,7 @@ import {
   Section,
   Stack,
 } from '../components';
+import { RADIO_CHANNELS } from '../constants';
 import { Window } from '../layouts';
 
 export const NTSLCoding = (props) => {
@@ -100,10 +101,14 @@ const MainMenu = (props) => {
             <Tabs.Tab selected={tabIndex === 3} onClick={() => setTabIndex(3)}>
               Logs
             </Tabs.Tab>
+            <Tabs.Tab selected={tabIndex === 4} onClick={() => setTabIndex(4)}>
+              Reference
+            </Tabs.Tab>
           </Tabs>
           {tabIndex === 1 && <CompilerOutput />}
           {tabIndex === 2 && <ServerList />}
           {tabIndex === 3 && <LogViewer />}
+          {tabIndex === 4 && <Guide />}
         </Section>
       )}
     </>
@@ -203,5 +208,57 @@ const LogViewer = (props) => {
           : 'Access log could not be found. Please contact an administrator.'}
       </Section>
     </>
+  );
+};
+
+// These frequencies wont show up the list of the frequencies in the guide,
+// Because you cant use them.
+const blacklistedChannels = [
+  'Syndicate',
+  'Red Team',
+  'Blue Team',
+  'Green Team',
+  'Yellow Team',
+];
+
+const Guide = (props) => {
+  return (
+    <Section fill scrollable height="95.5%">
+      NT Recognized Frequencies: <br />
+      (var = channels.channel_name) <br />
+      {RADIO_CHANNELS.filter(
+        (channel) => !blacklistedChannels.includes(channel.name),
+      ).map((channel, index) => (
+        <div key={index} style={{ color: channel.color }}>
+          {channel.name}: {channel.freq}
+        </div>
+      ))}
+      <br />
+      <br />
+      NT radio filters: <br />
+      (var = filter_types.filter_name) <br />
+      # fonts <br />
+      &quot;robot&quot; (robot) <br />
+      &quot;sans&quot; (wacky) <br />
+      # manipulation <br />
+      <i>&quot;italics&quot; (emphasis)</i> <br />
+      <b>&quot;yell&quot; (loud)</b> <br />
+      &quot;command_headset&quot; (commanding) <br />
+      <br />
+      <br />
+      NT Readable languages: <br />
+      (var = languages.language_name) <br />
+      1 (human) <br />
+      2 (monkey) <br />
+      4 (robot) <br />
+      8 (draconic) <br />
+      16 (beachtounge) <br />
+      32 (sylvan) <br />
+      64 (etherean) <br />
+      128 (bonespeak) <br />
+      256 (mothian) <br />
+      512 (cat) <br />
+      1024 (english) <br />
+    </Section>
   );
 };

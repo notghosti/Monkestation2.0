@@ -4,14 +4,14 @@
 #define HUMAN (1<<0)
 #define MONKEY (1<<1)
 #define ROBOT (1<<2)
-#define DRACONIC (1<<4)
-#define BEACHTONGUE (1<<5)
-#define SYLVAN (1<<6)
-#define ETHEREAN (1<<7)
-#define BONE (1<<8)
-#define MOTH (1<<9)
-#define CAT (1<<10)
-#define ENGLISH (1<<11)
+#define DRACONIC (1<<3)
+#define BEACHTONGUE (1<<4)
+#define SYLVAN (1<<5)
+#define ETHEREAN (1<<6)
+#define BONE (1<<7)
+#define MOTH (1<<8)
+#define CAT (1<<9)
+#define ENGLISH (1<<10)
 
 ///Span classes that players are allowed to set in a radio transmission.
 GLOBAL_LIST_INIT(allowed_custom_spans, list(
@@ -105,6 +105,7 @@ GLOBAL_LIST_INIT(allowed_translations, list(
 			"service" = FREQ_SERVICE,
 			"centcom" = FREQ_CENTCOM,
 			"aiprivate" = FREQ_AI_PRIVATE,
+			"radio" = FREQ_RADIO,
 		))
 	)
 
