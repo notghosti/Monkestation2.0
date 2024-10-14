@@ -52,7 +52,7 @@
 			return S
 		S = S.variables_parent
 
-/datum/scope/proc/push(datum/node/BlockDefinition/B, datum/scope/variables_parent = src, allowed_status = 0)
+/datum/scope/proc/push(datum/node/BlockDefinition/B, datum/scope/variables_parent = src, allowed_status = 0) as /datum/scope
 	return new /datum/scope(B, src, variables_parent, allowed_status)
 
 /datum/scope/proc/pop(keep_status = (BREAKING | CONTINUING | RETURNING)) // keep_status is which flags you want to copy to the parent.

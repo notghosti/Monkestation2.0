@@ -26,7 +26,7 @@
 	return SHIFT
 
 ///Takes a token expected to represent a value and returns an <expression> node.
-/datum/n_Parser/nS_Parser/proc/GetExpression(datum/token/T)
+/datum/n_Parser/nS_Parser/proc/GetExpression(datum/token/T) as /datum/node/expression
 	if(!T)
 		return
 	if(istype(T, /datum/node/expression))
@@ -258,7 +258,7 @@
 		return null
 
 ///Parses a function call inside of an expression. (See also <ParseExpression()>)
-/datum/n_Parser/nS_Parser/proc/ParseFunctionExpression(func_exp)
+/datum/n_Parser/nS_Parser/proc/ParseFunctionExpression(func_exp) as /datum/node/expression/FunctionCall
 	var/datum/node/expression/FunctionCall/exp = new(curToken)
 	exp.function = func_exp
 	NextToken() //skip open parenthesis, already found
@@ -282,7 +282,7 @@
 			errors += new /datum/scriptError/ExpectedToken(")")
 			return exp
 
-/datum/n_Parser/nS_Parser/proc/ParseListExpression()
+/datum/n_Parser/nS_Parser/proc/ParseListExpression() as /datum/node/expression/value/list_init
 	var/datum/node/expression/value/list_init/exp = new(curToken)
 	exp.init_list = list()
 	NextToken() // skip the "list" word
@@ -317,7 +317,7 @@
  * See Also:
  * - <ParseExpression()>
  */
-/datum/n_Parser/nS_Parser/proc/ParseParenExpression()
+/datum/n_Parser/nS_Parser/proc/ParseParenExpression() as /datum/node/expression/expression_operator/unary/group
 	var/group_token = curToken
 	if(!CheckToken("(", /datum/token/symbol))
 		return

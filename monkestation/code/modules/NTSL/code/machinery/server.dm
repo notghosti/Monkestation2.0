@@ -53,7 +53,7 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 	log_entries.Add(log)
 	update_logs()
 
-/obj/machinery/telecomms/server/proc/compile(mob/user = usr)
+/obj/machinery/telecomms/server/proc/compile(mob/user = usr) as /list
 	if(is_banned_from(user.ckey, JOB_SIGNAL_TECHNICIAN))
 		to_chat(user, span_warning("You are banned from using NTSL."))
 		return "Unauthorized access."

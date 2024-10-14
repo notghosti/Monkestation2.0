@@ -16,7 +16,7 @@
 		return null
 	return contents[length(contents)]
 
-/datum/stack/proc/Copy()
+/datum/stack/proc/Copy() as /datum/stack
 	var/datum/stack/new_stack = new()
 	new_stack.contents = contents.Copy()
 	return new_stack
