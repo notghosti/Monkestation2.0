@@ -42,7 +42,7 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 
 	alt_titles = list(
-		"Signal Technician",
+		JOB_SIGNAL_TECHNICIAN,
 		"Network Admin",
 		"Telecomunications Engineer",
 	)
@@ -52,7 +52,7 @@
 	icon_state = JOB_SIGNAL_TECHNICIAN
 
 /datum/outfit/job/signal_tech
-	name = "Signal Technician"
+	name = JOB_SIGNAL_TECHNICIAN
 	jobtype = /datum/job/signal_technician
 
 	id_trim = /datum/id_trim/job/signal_technician
@@ -75,7 +75,7 @@
 
 
 /datum/id_trim/job/signal_technician
-	assignment = "Signal Technician"
+	assignment = JOB_SIGNAL_TECHNICIAN
 	intern_alt_name = "Junior Signal Technician"
 	trim_state = "trim_signaltech"
 	department_color = COLOR_ENGINEERING_ORANGE

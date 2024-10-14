@@ -54,7 +54,7 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 	update_logs()
 
 /obj/machinery/telecomms/server/proc/compile(mob/user = usr)
-	if(is_banned_from(user.ckey, "Network Admin"))
+	if(is_banned_from(user.ckey, JOB_SIGNAL_TECHNICIAN))
 		to_chat(user, span_warning("You are banned from using NTSL."))
 		return "Unauthorized access."
 
@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY(tcomms_servers)
 	if(!length(compileerrors) && (compiledcode != rawcode))
 		user.log_message(rawcode, LOG_NTSL)
 		compiledcode = rawcode
-	if(user.mind.assigned_role == "Network Admin") //achivement description says only Signal Technician gets the achivement
+	if(user.mind.assigned_role == JOB_SIGNAL_TECHNICIAN) //achivement description says only Signal Technician gets the achivement
 		var/freq = length(freq_listening[1]) ? freq_listening[1] : 1459
 		var/atom/movable/M = new()
 		var/atom/movable/virtualspeaker/speaker = new(null, M, server_radio)
