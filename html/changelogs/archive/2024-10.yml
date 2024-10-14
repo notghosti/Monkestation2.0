@@ -183,3 +183,41 @@
   - rscadd: Component printer now in the pharmacy.
   - rscdel: Removed useless chromatography machines (no fermichem)
   - bugfix: spooky
+  Gw0sty:
+  - rscadd: Added robotic versions of the organ repair surgeries
+  - qol: Made eye/ear surgery only appears if the organ is damaged.
+  KnigTheThrasher:
+  - bugfix: fixed tram disposals around science
+  ven1883:
+  - bugfix: fixed lobby music exclude being broken
+2024-10-12:
+  Absolucy:
+  - bugfix: Fixed more roundstart active turfs at centcom.
+  - bugfix: Fixed some items (primarily greyscale/recolorable items) having incorrect
+      icons in the loadout shop UI.
+  - qol: Made the loadout shop UI slightly wider, to better fit the category names
+      at the top.
+  - bugfix: Fixed a runtime error when a player logged out while having the loadout
+      shop open.
+2024-10-13:
+  Absolucy:
+  - bugfix: Fixed the radio mic being delayed by 2 seconds.
+2024-10-14:
+  Absolucy:
+  - bugfix: Fixed speech artifacts EXCLUSIVELY making dead/mute mobs speak.
+  Absolucy, Aylong, jlsnow301:
+  - refactor: Added a better system of displaying object icons in tgui.
+  - refactor: Botany seed extractors now use aforementioned system to display seed
+      icons.
+  CannibalHunter:
+  - rscadd: Added new wield keybind to hold firearms in both hands!
+  DexeeXI:
+  - rscdel: removes a series of plushies that should have not been added to the codebase.
+  Gw0sty:
+  - rscadd: Adds new greyscale kitsune mask to vendors and the monkeshop.
+  - bugfix: Fixed the visuals of radio frequency showing on its old frequency spot.
+  t-toasted:
+  - image: Resprited the Centcom Officer Turtleneck.
+  - rscadd: Added the NT Rep Office to Meta, Delta, and Icebox.
+  - qol: Moved Gateway on Meta above arrivals.
+  - bugfix: Various minor fixes.
