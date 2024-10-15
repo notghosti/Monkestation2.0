@@ -244,7 +244,7 @@ const Guide = (props) => {
       <i>&quot;italics&quot; (emphasis)</i> <br />
       <b>&quot;yell&quot; (loud)</b> <br />
       &quot;command_headset&quot; (commanding) <br />
-      <br />
+      <br /> {/* Btw, clown is also allowed. But we don't tell them that */}
       <br />
       NT Readable languages: <br />
       (var = languages.language_name) <br />
