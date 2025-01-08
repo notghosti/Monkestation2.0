@@ -17,6 +17,16 @@
 	if(sigreturn & HANDLE_BLOOD_HANDLED)
 		return
 
+	var/spleen_efficiency = 1
+	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM))
+		if(blood_volume < BLOOD_VOLUME_NORMAL)
+			var/mob/living/carbon/human/H = src
+			spleen_efficiency = SEND_SIGNAL(src, HANDLE_SPLEEN_MULT_BLOODGEN)
+			if(blood_volume < BLOOD_VOLUME_BAD)
+				var/emergency = SEND_SIGNAL(src, HANDLE_SPLEEN_EMERGENCY)
+				if(emergency)
+					blood_volume += emergency
+
 	if(!(sigreturn & HANDLE_BLOOD_NO_NUTRITION_DRAIN))
 		if(blood_volume < BLOOD_VOLUME_NORMAL && !HAS_TRAIT(src, TRAIT_NOHUNGER))
 			var/nutrition_ratio = 0
@@ -34,7 +44,7 @@
 			if(satiety > 80)
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR * seconds_per_tick)
-			blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
+			blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick * spleen_efficiency), BLOOD_VOLUME_NORMAL)
 
 	// // we call lose_blood() here rather than quirk/process() to make sure that the blood loss happens in sync with life()
 	// if(HAS_TRAIT(src, TRAIT_BLOOD_DEFICIENCY))

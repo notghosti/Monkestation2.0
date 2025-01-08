@@ -8319,6 +8319,7 @@
 #include "monkestation\code\modules\surgery\organs\internal\heart.dm"
 #include "monkestation\code\modules\surgery\organs\internal\liver.dm"
 #include "monkestation\code\modules\surgery\organs\internal\lungs.dm"
+#include "monkestation\code\modules\surgery\organs\internal\spleen.dm"
 #include "monkestation\code\modules\surgery\organs\internal\stomach.dm"
 #include "monkestation\code\modules\surgery\organs\internal\tongue.dm"
 #include "monkestation\code\modules\syndicate_ghostroles\_base.dm"

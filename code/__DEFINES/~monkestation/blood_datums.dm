@@ -2,7 +2,8 @@
 	#define HANDLE_BLOOD_HANDLED (1<<0)
 	#define HANDLE_BLOOD_NO_NUTRITION_DRAIN (1<<1)
 	#define HANDLE_BLOOD_NO_EFFECTS (1<<2)
-
+	#define HANDLE_SPLEEN_MULT_BLOODGEN (1<<3)
+	#define HANDLE_SPLEEN_EMERGENCY (1<<4)
 #define COLOR_BLOOD "#c90000"
 
 /// Modifier used in math involving bloodiness, so the above values can be adjusted easily
