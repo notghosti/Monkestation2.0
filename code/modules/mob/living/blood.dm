@@ -20,11 +20,11 @@
 	//This is processing for spleen organ which effects blood regen
 	var/mob/living/carbon/human/humantarget = src
 	var/spleen_process = 0
-	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM) && !src.get_organ_slot(ORGAN_SLOT_SPLEEN) && !isnull(humantarget.dna.species.mutantspleen))
+	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM) && src.get_organ_slot(ORGAN_SLOT_SPLEEN) && !isnull(humantarget.dna.species.mutantspleen))
 		spleen_process = 1
 	if(blood_volume < BLOOD_VOLUME_OKAY)
 		if(spleen_process)
-			SEND_SIGNAL(src, COMSIG_SPLEEN_EMERGENCY, src)
+			SEND_SIGNAL(src, COMSIG_SPLEEN_EMERGENCY)
 	//End Monkestation addition
 
 	if(!(sigreturn & HANDLE_BLOOD_NO_NUTRITION_DRAIN))
@@ -45,7 +45,7 @@
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR * seconds_per_tick)
 			if(spleen_process) //monkestation addition for spleens
-				SEND_SIGNAL(src, COMSIG_SPLEEN_MULT_BLOODGEN, src, blood_volume, nutrition_ratio, seconds_per_tick) //does blood generation process in spleen instead of below in else
+				SEND_SIGNAL(src, COMSIG_SPLEEN_MULT_BLOODGEN, humantarget, blood_volume, nutrition_ratio, seconds_per_tick) //does blood generation process in spleen instead of below in else
 			else
 				blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
 

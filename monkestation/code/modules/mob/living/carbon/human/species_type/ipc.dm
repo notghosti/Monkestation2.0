@@ -23,6 +23,7 @@
 		TRAIT_NO_DNA_COPY,
 		TRAIT_NO_TRANSFORMATION_STING,
 		TRAIT_NO_HUSK,
+
 	)
 
 	mutant_organs = list(

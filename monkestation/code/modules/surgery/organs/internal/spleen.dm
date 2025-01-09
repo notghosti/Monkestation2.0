@@ -31,6 +31,7 @@ If you have > 135 toxin damage and dont have spleenless/liverless metabolism you
 	food_reagents = list(/datum/reagent/consumable/nutriment = 2, /datum/reagent/iron = 2, /datum/reagent/blood = 10)
 	grind_results = list(/datum/reagent/consumable/nutriment/peptides = 4)
 
+	var/blood_regen_mult = 0.10 //how much the spleen will multiply your blood regen
 	var/operated = FALSE //whether the spleens been repaired with surgery and can be fixed again or not
 	var/internal_blood_buffer_max = 24 //a buffer that hold blood unside the spleen, when you get low on blood it releases this and takes a while to regenerate it fully
 	var/stored_blood = 24 //current blood in your spleen buffer
@@ -55,12 +56,12 @@ If you have > 135 toxin damage and dont have spleenless/liverless metabolism you
  * Used for multiplying or acting on blood generation amounts in blood.dm
  * overide in new spleen organs for different effects
  **/
-/obj/item/organ/internal/spleen/proc/blood_generation(var/mob/living/carbon/organ_owner, blud_volume, nutrition_ratio, seconds_per_tick)
+/obj/item/organ/internal/spleen/proc/blood_generation(datum/source, mob/living/carbon/organ_owner, blood_volume, nutrition_ratio, seconds_per_tick)
 	SIGNAL_HANDLER
-	var/efficiency = ((maxHealth - damage)/maxHealth) + 0.10 //regular spleen gives you 10% boost to blood gen yay
-	organ_owner.blood_volume = min(blud_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick * efficiency), BLOOD_VOLUME_NORMAL)
+	var/efficiency = ((maxHealth - damage)/maxHealth) + blood_regen_mult //regular spleen gives you 10% boost to blood gen yay
+	organ_owner.blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick * efficiency), BLOOD_VOLUME_NORMAL)
 
-/obj/item/organ/internal/spleen/proc/emergency_release(var/mob/living/carbon/organ_owner)
+/obj/item/organ/internal/spleen/proc/emergency_release(mob/living/carbon/organ_owner)
 	SIGNAL_HANDLER
 	if(stored_blood < (internal_blood_buffer_max - 2))
 		return
@@ -91,20 +92,21 @@ If you have > 135 toxin damage and dont have spleenless/liverless metabolism you
 /obj/item/organ/internal/spleen/on_life(seconds_per_tick, times_fired)
 	. = ..()
 	if(damage > 99)
+
 		return
-	var/mob/living/carbon/organ_owner = src
+	var/mob/living/carbon/organ_owner = src.owner
 	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM && !HAS_TRAIT(src, TRAIT_LIVERLESS_METABOLISM)))
 		if(organ_owner.getToxLoss() >= toxLimit)
 			if(!isnull(organ_owner.dna.species.mutantliver) && !organ_owner.get_organ_slot(ORGAN_SLOT_LIVER))
 				var/obj/item/organ/organ = organ_owner.get_organ_slot(ORGAN_SLOT_LIVER)
 				if(organ.damage < 70)
-					damage += 3
-					organ_owner.adjustToxLoss(toxResistance)
-				else
 					damage += 2
 					organ_owner.adjustToxLoss(toxResistance)
+				else
+					damage += 1
+					organ_owner.adjustToxLoss(toxResistance)
 			else
-				damage += 4
+				damage += 3
 				organ_owner.adjustToxLoss(toxResistance)
 
 /obj/item/organ/internal/spleen/get_availability(datum/species/owner_species, mob/living/owner_mob)
