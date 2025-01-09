@@ -16,16 +16,16 @@
 	var/sigreturn = SEND_SIGNAL(src, COMSIG_HUMAN_ON_HANDLE_BLOOD, seconds_per_tick, times_fired)
 	if(sigreturn & HANDLE_BLOOD_HANDLED)
 		return
-
-	var/spleen_efficiency = 1
-	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM))
-		if(blood_volume < BLOOD_VOLUME_NORMAL)
-			var/mob/living/carbon/human/H = src
-			spleen_efficiency = SEND_SIGNAL(src, HANDLE_SPLEEN_MULT_BLOODGEN)
-			if(blood_volume < BLOOD_VOLUME_BAD)
-				var/emergency = SEND_SIGNAL(src, HANDLE_SPLEEN_EMERGENCY)
-				if(emergency)
-					blood_volume += emergency
+	//begin Monkestation addition
+	//This is processing for spleen organ which effects blood regen
+	var/mob/living/carbon/human/humantarget = src
+	var/spleen_process = 0
+	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM) && !src.get_organ_slot(ORGAN_SLOT_SPLEEN) && !isnull(humantarget.dna.species.mutantspleen))
+		spleen_process = 1
+	if(blood_volume < BLOOD_VOLUME_OKAY)
+		if(spleen_process)
+			SEND_SIGNAL(src, COMSIG_SPLEEN_EMERGENCY, src)
+	//End Monkestation addition
 
 	if(!(sigreturn & HANDLE_BLOOD_NO_NUTRITION_DRAIN))
 		if(blood_volume < BLOOD_VOLUME_NORMAL && !HAS_TRAIT(src, TRAIT_NOHUNGER))
@@ -44,7 +44,10 @@
 			if(satiety > 80)
 				nutrition_ratio *= 1.25
 			adjust_nutrition(-nutrition_ratio * HUNGER_FACTOR * seconds_per_tick)
-			blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick * spleen_efficiency), BLOOD_VOLUME_NORMAL)
+			if(spleen_process) //monkestation addition for spleens
+				SEND_SIGNAL(src, COMSIG_SPLEEN_MULT_BLOODGEN, src, blood_volume, nutrition_ratio, seconds_per_tick) //does blood generation process in spleen instead of below in else
+			else
+				blood_volume = min(blood_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick), BLOOD_VOLUME_NORMAL)
 
 	// // we call lose_blood() here rather than quirk/process() to make sure that the blood loss happens in sync with life()
 	// if(HAS_TRAIT(src, TRAIT_BLOOD_DEFICIENCY))

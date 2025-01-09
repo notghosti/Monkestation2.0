@@ -1,6 +1,20 @@
-#define SPLEEN_DEFAULT_BLOOD_REGEN //the rate at which blood regen is modified
-#undef SPLEEN_DEFAULT_BLOOD_REGEN
+/*
+SPLEEN (natural)
 
+Modifies natural blood regeneration by a %
+
+SPLEENLESS ANATOMY = 100% regen
+
+If you are a spleenoid you get 110% blood regen for having a spleen (basically unobservable)
+If your spleens fucking DEAD you have 30% blood regen rate
+
+If your blood goes below 336 blood spleen will release 24 units of stored blood (which takes like 10 minutes to regenerate)
+
+If you have > 135 toxin damage and dont have spleenless/liverless metabolism your spleen will try to heal some toxin damage at the cost of itself
+	-if your liver is below 70 damage the spleen will take 2 damage on life tick and heal 0.2 toxin
+	-If you have 70 and above liverdamage the spleen will take 3 damage on life tick and heal 0.2 toxin
+	-if you have no liver the spleen will take 4 damage and heal 0.2 damage on life tick
+*/
 /obj/item/organ/internal/spleen
 	name = "spleen"
 	icon_state = "spleen"
@@ -19,39 +33,40 @@
 
 	var/operated = FALSE //whether the spleens been repaired with surgery and can be fixed again or not
 	var/internal_blood_buffer_max = 24 //a buffer that hold blood unside the spleen, when you get low on blood it releases this and takes a while to regenerate it fully
-	var/stored_blood = 0 //current blood in your spleen buffer
+	var/stored_blood = 24 //current blood in your spleen buffer
+	var/toxResistance = -0.2 //how much the spleen will heal when you are messed up from toxins (damages iteself in process)
+	var/toxLimit = 135 //how high tox can get before spleen starts sacrificing itself
 
 /obj/item/organ/internal/spleen/Initialize(mapload)
 	. = ..()
 
-
 /// Registers HANDLE_SPLEEN_MULT_BLOODGEN to owner
 /obj/item/organ/internal/spleen/on_insert(mob/living/carbon/organ_owner, special)
 	. = ..()
-	RegisterSignal(organ_owner, HANDLE_SPLEEN_MULT_BLOODGEN, PROC_REF(blood_generation))
-	RegisterSignal(organ_owner, HANDLE_SPLEEN_EMERGENCY, PROC_REF(emergency_release))
+	RegisterSignal(organ_owner, COMSIG_SPLEEN_MULT_BLOODGEN, PROC_REF(blood_generation))
+	RegisterSignal(organ_owner, COMSIG_SPLEEN_EMERGENCY, PROC_REF(emergency_release))
 
 /// Unregisters HANDLE_SPLEEN_MULT_BLOODGEN from owner
 /obj/item/organ/internal/spleen/on_remove(mob/living/carbon/organ_owner, special)
 	. = ..()
-	UnregisterSignal(organ_owner, HANDLE_SPLEEN_MULT_BLOODGEN)
-	UnregisterSignal(organ_owner, HANDLE_SPLEEN_EMERGENCY, PROC_REF(emergency_release))
+	UnregisterSignal(organ_owner, COMSIG_SPLEEN_MULT_BLOODGEN)
+	UnregisterSignal(organ_owner, COMSIG_SPLEEN_EMERGENCY, PROC_REF(emergency_release))
 /**
  * Used for multiplying or acting on blood generation amounts in blood.dm
  * overide in new spleen organs for different effects
  **/
-/obj/item/organ/internal/spleen/proc/blood_generation()
+/obj/item/organ/internal/spleen/proc/blood_generation(var/mob/living/carbon/organ_owner, blud_volume, nutrition_ratio, seconds_per_tick)
 	SIGNAL_HANDLER
-	var/efficiency = (damage / maxHealth) + 0.10 //regular spleen gives you 10% boost to blood gen yay
-	return efficiency
+	var/efficiency = ((maxHealth - damage)/maxHealth) + 0.10 //regular spleen gives you 10% boost to blood gen yay
+	organ_owner.blood_volume = min(blud_volume + (BLOOD_REGEN_FACTOR * nutrition_ratio * seconds_per_tick * efficiency), BLOOD_VOLUME_NORMAL)
 
-/obj/item/organ/internal/spleen/proc/emergency_release()
+/obj/item/organ/internal/spleen/proc/emergency_release(var/mob/living/carbon/organ_owner)
 	SIGNAL_HANDLER
 	if(stored_blood < (internal_blood_buffer_max - 2))
-		return 0
+		return
 	var/released_blood = stored_blood
 	stored_blood = 0
-	return released_blood
+	organ_owner.blood_volume += released_blood
 
 /obj/item/organ/internal/spleen/on_life(seconds_per_tick, times_fired)
 	. = ..()
@@ -73,16 +88,24 @@
 			continue
 		ADD_TRAIT(replacement, readded_trait, JOB_TRAIT)
 
-#define HAS_SILENT_TOXIN 0 //don't provide a feedback message if this is the only toxin present
-#define HAS_NO_TOXIN 1
-#define HAS_PAINFUL_TOXIN 2
-
 /obj/item/organ/internal/spleen/on_life(seconds_per_tick, times_fired)
 	. = ..()
-	//If your liver is failing, then we use the liverless version of metabolize
-	//We don't check for TRAIT_LIVERLESS_METABOLISM here because we do want a functional liver if somehow we have one inserted
+	if(damage > 99)
+		return
+	var/mob/living/carbon/organ_owner = src
+	if(!HAS_TRAIT(src, TRAIT_SPLEENLESS_METABOLISM && !HAS_TRAIT(src, TRAIT_LIVERLESS_METABOLISM)))
+		if(organ_owner.getToxLoss() >= toxLimit)
+			if(!isnull(organ_owner.dna.species.mutantliver) && !organ_owner.get_organ_slot(ORGAN_SLOT_LIVER))
+				var/obj/item/organ/organ = organ_owner.get_organ_slot(ORGAN_SLOT_LIVER)
+				if(organ.damage < 70)
+					damage += 3
+					organ_owner.adjustToxLoss(toxResistance)
+				else
+					damage += 2
+					organ_owner.adjustToxLoss(toxResistance)
+			else
+				damage += 4
+				organ_owner.adjustToxLoss(toxResistance)
 
 /obj/item/organ/internal/spleen/get_availability(datum/species/owner_species, mob/living/owner_mob)
 	return owner_species.mutantliver
-
-#undef SPLEEN_DEFAULT_BLOOD_REGEN
