@@ -26,6 +26,7 @@
 		TRAIT_NO_UNDERWEAR,
 		TRAIT_NOHUNGER,
 		TRAIT_NO_BLOODLOSS_DAMAGE, //we handle that species-side.
+		TRAIT_SPLEENLESS_METABOLISM,
 	)
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_cookie = /obj/item/food/energybar
