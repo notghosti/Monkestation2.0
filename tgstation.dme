@@ -6216,6 +6216,7 @@
 #include "monkestation\code\modules\a_ship_in_need_of_breaking\ships\torus.dm"
 #include "monkestation\code\modules\a_ship_in_need_of_breaking\ships\wanglius.dm"
 #include "monkestation\code\modules\a_ship_in_need_of_breaking\tool\raynewelder.dm"
+#include "monkestation\code\modules\a_ship_in_need_of_breaking\tool\sledgehammer.dm"
 #include "monkestation\code\modules\abberant_organs\organ_process.dm"
 #include "monkestation\code\modules\abberant_organs\components\abberant_organ.dm"
 #include "monkestation\code\modules\abberant_organs\custom_organs\drunkards_liver.dm"
