@@ -48,7 +48,7 @@
 
 	if(target.uses_integrity)
 		if(!QDELETED(target))
-			if(!istype(get_area(target), /area/shipbreak))
+			if(istype(get_area(target), /area/shipbreak))
 				if(istype(target, /obj/structure/window)) // Sledgehammer really good at smashing windows. 2-7 hits to kill a window
 					target.take_damage(force * demolition_mod, BRUTE, MELEE, FALSE, null, 20)
 				if(isstructure(target))
