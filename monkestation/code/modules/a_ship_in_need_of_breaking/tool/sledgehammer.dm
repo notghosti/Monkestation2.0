@@ -36,7 +36,11 @@
 		/// This will already do low damage, so it doesn't need to be intercepted earlier
 		to_chat(user, span_danger("\The [src] is too heavy to attack effectively without being wielded!"))
 		return
-
+	if(istype(target, /mob/living/carbon/human))
+		var/mob/living/carbon/human/humantarget = target
+		if(!HAS_TRAIT(target, TRAIT_SPLEENLESS_METABOLISM) && humantarget.get_organ_slot(ORGAN_SLOT_SPLEEN) && !isnull(humantarget.dna.species.mutantspleen))
+			var/obj/item/organ/internal/spleen/target_spleen = humantarget.get_organ_slot(ORGAN_SLOT_SPLEEN)
+			target_spleen.apply_organ_damage(5)
 	if(!proximity_flag)
 		return
 
