@@ -22,13 +22,7 @@
 
 /obj/item/melee/sledgehammer/Initialize(mapload)
 	. = ..()
-	AddComponent(/datum/component/two_handed, \
-		force_wielded = 15, \
-		wield_callback = CALLBACK(src, PROC_REF(on_wield)), \
-		unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), \
-		require_twohands = TRUE, \
-		wielded_stats = list(SWING_SPEED = 1.5, ENCUMBRANCE = 0.5, ENCUMBRANCE_TIME = 1 SECONDS, REACH = 1, DAMAGE_LOW = 0, DAMAGE_HIGH = 0), \
-	)
+	AddComponent(/datum/component/two_handed, force_wielded = 15, wield_callback = CALLBACK(src, PROC_REF(on_wield)), unwield_callback = CALLBACK(src, PROC_REF(on_unwield)), require_twohands = TRUE)
 
 /obj/item/melee/sledgehammer/proc/on_wield(atom/source, mob/living/user)
 	hitsound = "swing_hit"
@@ -49,8 +43,6 @@
 	if(target.uses_integrity)
 		if(!QDELETED(target))
 			if(istype(get_area(target), /area/shipbreak))
-				if(istype(target, /obj/structure/window)) // Sledgehammer really good at smashing windows. 2-7 hits to kill a window
-					target.take_damage(force * demolition_mod, BRUTE, MELEE, FALSE, null, 20)
 				if(isstructure(target))
 					target.take_damage(force * demolition_mod, BRUTE, MELEE, FALSE, null, 20) // Breaks "structures pretty good"
 				if(ismachinery(target))
