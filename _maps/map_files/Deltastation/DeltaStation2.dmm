@@ -839,8 +839,13 @@
 /turf/open/floor/iron,
 /area/station/maintenance/department/eva/abandoned)
 "ajt" = (
-/turf/open/floor/plating/airless,
-/area/station/engineering/shipbreaker_hut)
+/obj/machinery/light/directional/west,
+/obj/machinery/conveyor{
+	id = "shitbreaker";
+	dir = 4
+	},
+/turf/open/floor/iron,
+/area/space)
 "ajG" = (
 /obj/effect/turf_decal/tile/purple/half/contrasted{
 	dir = 8
@@ -9835,15 +9840,8 @@
 /turf/open/floor/iron/dark,
 /area/station/hallway/secondary/exit/departure_lounge)
 "ckI" = (
-/obj/machinery/light/directional/west{
-	dir = 4
-	},
-/obj/machinery/conveyor/inverted{
-	dir = 10;
-	id = "shitbreaker"
-	},
-/turf/open/floor/plating/airless,
-/area/station/engineering/shipbreaker_hut)
+/turf/closed/wall,
+/area/space)
 "ckP" = (
 /turf/open/floor/plating,
 /area/station/maintenance/starboard/aft)
@@ -12056,13 +12054,8 @@
 /turf/open/floor/wood,
 /area/station/service/theater)
 "cMz" = (
-/obj/machinery/conveyor{
-	id = "shitbreaker";
-	dir = 4
-	},
-/obj/machinery/shipbreaker,
-/turf/open/floor/plating/airless,
-/area/station/engineering/shipbreaker_hut)
+/turf/open/floor/iron,
+/area/space)
 "cMA" = (
 /obj/effect/turf_decal/trimline/yellow/warning{
 	dir = 8
@@ -43258,6 +43251,16 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/station/security/detectives_office/private_investigators_office)
+"kfc" = (
+/obj/machinery/light/directional/west{
+	dir = 4
+	},
+/obj/machinery/conveyor/inverted{
+	dir = 10;
+	id = "shitbreaker"
+	},
+/turf/open/floor/iron,
+/area/space)
 "kff" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /turf/open/floor/plating,
@@ -57513,8 +57516,8 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "nBA" = (
-/obj/machinery/light/directional/west,
-/turf/open/floor/plating/airless,
+/obj/structure/closet/secure_closet/shipbreaker,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "nBC" = (
 /obj/item/kirbyplants/random,
@@ -59799,7 +59802,9 @@
 /area/station/maintenance/disposal)
 "oeZ" = (
 /obj/structure/cable,
-/turf/open/floor/plating/airless,
+/obj/machinery/door/airlock/engineering,
+/obj/structure/fans/tiny,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "ofa" = (
 /obj/machinery/light/small/directional/west,
@@ -60562,11 +60567,8 @@
 /turf/open/floor/iron,
 /area/station/security/execution/transfer)
 "onz" = (
-/obj/structure/window,
-/obj/machinery/conveyor_switch/oneway{
-	id = "shitbreaker"
-	},
-/turf/open/floor/plating/airless,
+/obj/effect/spawner/structure/window,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "onK" = (
 /obj/structure/cable,
@@ -61289,7 +61291,7 @@
 /area/station/medical/medbay)
 "oyK" = (
 /obj/machinery/computer/shipbreaker,
-/turf/open/floor/plating/airless,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "oyY" = (
 /obj/effect/landmark/event_spawn,
@@ -63021,7 +63023,7 @@
 /obj/effect/mapping_helpers/apc/full_charge,
 /obj/structure/cable,
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/open/floor/plating/airless,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "oUU" = (
 /obj/effect/decal/cleanable/dirt,
@@ -63618,6 +63620,14 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
+"pdk" = (
+/obj/machinery/conveyor{
+	id = "shitbreaker";
+	dir = 4
+	},
+/obj/machinery/shipbreaker,
+/turf/open/floor/iron,
+/area/space)
 "pdl" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -65417,6 +65427,10 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/customs/aft)
+"pzq" = (
+/obj/effect/spawner/structure/window,
+/turf/open/floor/iron,
+/area/space)
 "pzr" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -80328,7 +80342,7 @@
 /obj/item/weldingtool/electric/raynewelder{
 	pixel_y = -5
 	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/iron,
 /area/station/engineering/shipbreaker_hut)
 "sZC" = (
 /obj/structure/disposalpipe/segment{
@@ -87579,13 +87593,9 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
 "uNL" = (
-/obj/machinery/light/directional/west,
-/obj/machinery/conveyor{
-	id = "shitbreaker";
-	dir = 4
-	},
+/obj/effect/spawner/structure/window,
 /turf/open/floor/plating/airless,
-/area/station/engineering/shipbreaker_hut)
+/area/space)
 "uNQ" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -94653,6 +94663,13 @@
 /obj/item/radio/intercom/directional/east,
 /turf/open/floor/iron/dark,
 /area/station/security/checkpoint/arrivals)
+"wuH" = (
+/obj/structure/window,
+/obj/machinery/conveyor_switch/oneway{
+	id = "shitbreaker"
+	},
+/turf/open/floor/iron,
+/area/space)
 "wuZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -115355,12 +115372,12 @@ qYo
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+ckI
+ckI
+ckI
+ckI
+pzq
+ckI
 aaa
 efQ
 qYo
@@ -115613,12 +115630,12 @@ qYo
 hcH
 hcH
 hNL
-hcH
-lxy
-lxy
-aaa
-aaa
-aaa
+nBA
+nBA
+nBA
+cMz
+ckI
+ckI
 efQ
 aaa
 efQ
@@ -115869,13 +115886,13 @@ qYo
 aaa
 hcH
 oyK
-nBA
+iyd
+cSQ
+cSQ
+cSQ
+cMz
 ajt
-uNL
-lxy
-aaa
-aaa
-aaa
+ckI
 efQ
 aaa
 qYo
@@ -116126,13 +116143,13 @@ qYo
 qYo
 hNL
 oUJ
-oeZ
-onz
-cMz
-lxy
-aaa
-aaa
-aaa
+wij
+cSQ
+cSQ
+cSQ
+wuH
+pdk
+ckI
 qYo
 aaa
 efQ
@@ -116383,13 +116400,13 @@ qYo
 aaa
 hcH
 sZB
-oeZ
-ajt
+wij
+cSQ
+cSQ
+cSQ
+cMz
+kfc
 ckI
-lxy
-aaa
-aaa
-aaa
 efQ
 qYo
 efQ
@@ -116641,12 +116658,12 @@ aaa
 hcH
 hcH
 oeZ
-hcH
 lxy
 lxy
-aaa
-aaa
-aaa
+onz
+uNL
+ckI
+ckI
 efQ
 aaa
 efQ
