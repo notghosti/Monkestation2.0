@@ -35,6 +35,7 @@
 	///our failed attempts
 	var/failed_attempts = 0
 	var/atom/movable/failed_item
+	active_power_usage = 10
 
 /obj/machinery/big_manipulator/Initialize(mapload)
 	. = ..()
