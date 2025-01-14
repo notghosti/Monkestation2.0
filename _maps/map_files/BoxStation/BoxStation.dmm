@@ -32106,7 +32106,6 @@
 	c_tag = "Engineering - Shipbreaking, Storage Room";
 	name = "engineering camera"
 	},
-/obj/structure/closet/emcloset/wall/directional/north,
 /obj/structure/closet/secure_closet/shipbreaker,
 /turf/open/floor/iron/dark/side/airless{
 	dir = 1

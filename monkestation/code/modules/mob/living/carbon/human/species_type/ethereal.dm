@@ -7,6 +7,7 @@
 	mutanteyes = /obj/item/organ/internal/eyes/ethereal
 	mutanttongue = /obj/item/organ/internal/tongue/ethereal
 	mutantheart = /obj/item/organ/internal/heart/ethereal
+	mutantspleen = null
 	external_organs = list(
 		/obj/item/organ/external/ethereal_horns = "None",
 		/obj/item/organ/external/tail/ethereal = "None")
