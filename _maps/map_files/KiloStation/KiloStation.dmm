@@ -50567,7 +50567,6 @@
 	dir = 9
 	},
 /obj/structure/cable,
-/obj/effect/landmark/start/scientist,
 /turf/open/floor/stone,
 /area/station/science/xenobiology)
 "pQh" = (
@@ -53252,6 +53251,13 @@
 "qIE" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/closed/wall/r_wall,
+/area/station/science/xenobiology)
+"qIG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/start/xenobiologist,
+/turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "qIR" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
@@ -62232,7 +62238,7 @@
 /area/station/maintenance/abandon_wrestle)
 "tyx" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/scientist,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "tyI" = (
@@ -62461,8 +62467,8 @@
 /area/station/maintenance/department/cargo)
 "tCH" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/scientist,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "tCQ" = (
@@ -71465,7 +71471,7 @@
 /obj/structure/cable,
 /obj/machinery/duct,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/scientist,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/stone,
 /area/station/science/xenobiology)
 "wpM" = (
@@ -71680,6 +71686,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
 "wsX" = (
@@ -76255,12 +76262,13 @@
 /turf/open/floor/iron,
 /area/station/security/brig)
 "xTF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/landmark/start/scientist,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/line,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
 	},
-/turf/open/floor/iron/showroomfloor,
+/obj/effect/landmark/start/xenobiologist,
+/turf/open/floor/carpet/neon/simple/green,
 /area/station/science/xenobiology)
 "xTG" = (
 /turf/closed/wall,
@@ -113931,7 +113939,7 @@ vJc
 yal
 xHA
 bwn
-nTK
+qIG
 rhE
 mrL
 qmW
@@ -114188,7 +114196,7 @@ vJc
 ixb
 xHA
 bwn
-xTF
+nJj
 rhE
 mrL
 qmW
@@ -116262,7 +116270,7 @@ xHa
 oYp
 qmW
 qmW
-ccu
+xTF
 paV
 wuc
 jOZ

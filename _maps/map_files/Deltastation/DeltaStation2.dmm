@@ -39707,6 +39707,7 @@
 /obj/effect/turf_decal/tile/neutral/half/contrasted{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "jqs" = (
@@ -62914,6 +62915,7 @@
 	dir = 1
 	},
 /obj/structure/sink/directional/west,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "oSV" = (
@@ -70881,6 +70883,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/purple,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "qLw" = (

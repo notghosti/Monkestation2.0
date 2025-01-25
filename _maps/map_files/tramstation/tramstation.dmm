@@ -7609,6 +7609,11 @@
 	},
 /turf/open/floor/plating,
 /area/station/medical/pharmacy)
+"bqr" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/effect/landmark/start/xenobiologist,
+/turf/open/floor/stone,
+/area/station/science/xenobiology)
 "bqu" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -21912,6 +21917,12 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/catwalk_floor,
 /area/station/maintenance/tram/mid)
+"fOg" = (
+/obj/effect/turf_decal/trimline/purple/filled/line,
+/obj/machinery/duct,
+/obj/effect/landmark/start/xenobiologist,
+/turf/open/floor/stone,
+/area/station/science/xenobiology)
 "fOs" = (
 /obj/structure/table/wood,
 /obj/item/flashlight/lamp,
@@ -60014,6 +60025,7 @@
 /obj/structure/chair/office/light{
 	dir = 1
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/glass/reinforced,
 /area/station/science/xenobiology)
 "rQt" = (
@@ -125228,7 +125240,7 @@ uyb
 xuI
 qYk
 qYk
-qYk
+bqr
 qYk
 njf
 bfH
@@ -126253,7 +126265,7 @@ uqB
 rdU
 uon
 whd
-dtN
+fOg
 keT
 whn
 fof

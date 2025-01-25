@@ -34598,7 +34598,7 @@
 /turf/open/floor/iron,
 /area/station/commons/fitness/recreation/entertainment)
 "jMH" = (
-/obj/effect/landmark/start/scientist,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/xenobiology)
 "jMI" = (
@@ -65086,6 +65086,7 @@
 	dir = 4
 	},
 /obj/machinery/duct,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/xenobiology)
 "shi" = (
@@ -78310,8 +78311,8 @@
 /turf/open/floor/iron/textured_large,
 /area/station/science/circuits)
 "vJY" = (
-/obj/effect/landmark/start/scientist,
 /obj/structure/cable,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/xenobiology)
 "vKh" = (
