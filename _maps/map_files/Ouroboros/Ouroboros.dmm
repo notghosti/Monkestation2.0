@@ -8644,7 +8644,7 @@
 "cDu" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/left/directional/east{
-	req_access = list("captain");
+	req_access = list("rd");
 	name = "High-Risk Modules"
 	},
 /obj/effect/spawner/random/aimodule/harmful,
@@ -23768,7 +23768,7 @@
 "het" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/window/brigdoor/left/directional/west{
-	req_access = list("captain");
+	req_access = list("rd");
 	name = "Low-Risk Modules"
 	},
 /obj/effect/spawner/random/aimodule/neutral,
@@ -24318,7 +24318,7 @@
 /obj/effect/turf_decal/bot,
 /obj/structure/table/glass,
 /obj/item/clothing/gloves/latex,
-/obj/item/clothing/glasses/science{
+/obj/item/clothing/glasses/pathology{
 	pixel_y = 6
 	},
 /obj/item/clothing/glasses/hud/health,
@@ -31759,10 +31759,10 @@
 "jux" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable,
-/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/turf_decal/stripes/line{
 	dir = 8
 	},
+/obj/machinery/rnd/production/circuit_imprinter/department/engineering,
 /turf/open/floor/iron/dark/smooth_large,
 /area/station/engineering/lobby)
 "juy" = (

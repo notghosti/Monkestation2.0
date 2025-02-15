@@ -975,7 +975,7 @@
 /turf/open/floor/iron/grimy,
 /area/station/tcommsat/computer)
 "arW" = (
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "ase" = (
@@ -10067,7 +10067,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood/large,
 /area/station/commons/lounge)
 "dJK" = (
@@ -16327,7 +16327,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood/large,
 /area/station/commons/lounge)
 "fTE" = (
@@ -24627,12 +24627,12 @@
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "iHy" = (
-/obj/machinery/rnd/production/circuit_imprinter,
 /obj/effect/turf_decal/bot,
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/east,
+/obj/machinery/rnd/production/circuit_imprinter/department/engineering,
 /turf/open/floor/iron/dark/corner,
 /area/station/engineering/storage_shared)
 "iHD" = (
@@ -27469,9 +27469,6 @@
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/carpet,
 /area/station/security/detectives_office)
-"jzp" = (
-/turf/closed/wall,
-/area/station/commons/vacant_room/office)
 "jzw" = (
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
@@ -32391,9 +32388,9 @@
 /obj/structure/closet/secure_closet/wall/directional/west{
 	name = "Pathologist Equipment"
 	},
-/obj/item/clothing/glasses/science,
-/obj/item/clothing/glasses/science,
-/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
+/obj/item/clothing/glasses/pathology,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/gloves/latex,
 /obj/item/clothing/gloves/latex,
@@ -34065,7 +34062,6 @@
 	req_access = list("xenobiology");
 	pixel_x = -24
 	},
-/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "lOZ" = (
@@ -38406,7 +38402,7 @@
 /area/station/security/office)
 "nlu" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "nlL" = (
@@ -38937,7 +38933,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/wood,
 /area/station/commons/lounge)
 "ntk" = (
@@ -43666,6 +43662,11 @@
 	},
 /turf/open/floor/iron/white,
 /area/station/medical/chemistry)
+"pbB" = (
+/obj/machinery/duct,
+/obj/machinery/light/floor/has_bulb,
+/turf/open/floor/iron/white,
+/area/station/science/xenobiology)
 "pbL" = (
 /obj/machinery/door/firedoor,
 /turf/open/floor/iron/white/side,
@@ -52163,7 +52164,7 @@
 /obj/machinery/door/window/brigdoor/left/directional/south{
 	dir = 8;
 	name = "High-Risk Modules";
-	req_access = list("captain")
+	req_access = list("rd")
 	},
 /obj/item/ai_module/reset/purge{
 	pixel_y = 11
@@ -58798,7 +58799,7 @@
 /area/station/security/prison/mess)
 "umP" = (
 /obj/structure/window/spawner/directional/west,
-/obj/machinery/light/floor,
+/obj/machinery/light/floor/has_bulb,
 /turf/open/floor/carpet,
 /area/station/service/theater)
 "umS" = (
@@ -66456,7 +66457,7 @@
 	dir = 4;
 	icon_state = "right";
 	name = "Core Modules";
-	req_access = list("captain")
+	req_access = list("rd")
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/item/ai_module/core/freeformcore,
@@ -86549,9 +86550,9 @@ crr
 qyT
 rZT
 lQW
-jzp
-jzp
-jzp
+fjD
+fjD
+fjD
 pOa
 pOa
 pOa
@@ -118457,7 +118458,7 @@ mtu
 vHm
 fHs
 ycv
-kCw
+pbB
 kCw
 gRY
 xCA

@@ -225,7 +225,10 @@
 
 	var/mob/dead/new_player/new_player = hud.mymob
 
-	if(SSticker.queued_players.len || (relevant_cap && living_player_count() >= relevant_cap && !(ckey(new_player.key) in GLOB.admin_datums)))
+	//Allow admins and Patreon supporters to bypass the cap/queue
+	if ((relevant_cap && living_player_count() >= relevant_cap) && (get_player_details(new_player)?.patreon?.is_donator() || is_admin(new_player.client) || new_player.client?.is_mentor()))
+		to_chat(new_player, span_notice("The server is currently overcap, but you are a(n) patreon/mentor/admin!"))
+	else if (SSticker.queued_players.len || (relevant_cap && living_player_count() >= relevant_cap))
 		to_chat(new_player, span_danger("[CONFIG_GET(string/hard_popcap_message)]"))
 
 		var/queue_position = SSticker.queued_players.Find(new_player)
@@ -457,11 +460,6 @@
 	var/mob/dead/new_player/new_player = hud.mymob
 	new_player.handle_player_polling()
 
-#define NRP_PORT		2102
-#define MRP_PORT		3121
-#define HRP_PORT		1342
-#define VANDERLIN_PORT	1541
-
 //This is the changing You are here Button
 /atom/movable/screen/lobby/youarehere
 	var/vanderlin = 0
@@ -482,7 +480,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby/youarehere)
 			screen_loc = "TOP:-32,CENTER:+215"
 		if(MRP_PORT) //MRP
 			screen_loc = "TOP:-65,CENTER:+215"
-		if(NRP_PORT) //NRP
+		if(MRP2_PORT) //MRP2
 			screen_loc = "TOP:-98,CENTER:+215"
 		else     //Sticks it in the middle, "TOP:0,CENTER:+128" will point at the MonkeStation logo itself.
 			screen_loc = "TOP:0,CENTER:+128"
@@ -537,7 +535,7 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby/button/server)
 /atom/movable/screen/lobby/button/server/hrp/should_be_up(day, hour)
 	return day == SATURDAY && ISINRANGE(hour, 12, 18)
 
-//MAIN MONKE
+//MAIN MONKE (MEDIUM RARE)
 /atom/movable/screen/lobby/button/server/mrp
 	base_icon_state = "mrp"
 	screen_loc = "TOP:-77,CENTER:+173"
@@ -545,20 +543,19 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby/button/server)
 	server_name = "Medium-Rare Roleplay (MRP)"
 	server_port = MRP_PORT
 
-//NRP MONKE
-/*
-/atom/movable/screen/lobby/button/server/nrp
+//MRP 2 MONKE (MEDIUM WELL)
+/atom/movable/screen/lobby/button/server/mrp2
 	screen_loc = "TOP:-110,CENTER:+173"
-	base_icon_state = "nrp"
-	server_name = "Raw Roleplay (NRP)"
-	server_port = NRP_PORT
-*/
+	base_icon_state = "mrp2"
+	server_name = "Medium-Well (MRP)"
+	server_port = MRP2_PORT
+
 //bottom button is "TOP:-140,CENTER:+177"
 //The Vanderlin Project
 /atom/movable/screen/lobby/button/server/vanderlin
 	icon = 'icons/hud/lobby/vanderlin_button.dmi'
 	base_icon_state = "vanderlin"
-	screen_loc = "TOP:-137,CENTER:+177"
+	screen_loc = "TOP:-140,CENTER:+183"
 	server_name = "Vanderlin"
 	server_port = VANDERLIN_PORT
 
@@ -572,11 +569,6 @@ INITIALIZE_IMMEDIATE(/atom/movable/screen/lobby/button/server)
 			return TRUE
 	return FALSE
 */
-
-#undef VANDERLIN_PORT
-#undef HRP_PORT
-#undef MRP_PORT
-#undef NRP_PORT
 
 //Monke button
 /atom/movable/screen/lobby/button/ook
