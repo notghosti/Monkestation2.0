@@ -24668,11 +24668,16 @@
 	pixel_x = -4;
 	pixel_y = 4
 	},
+/obj/machinery/light/directional/north,
 /obj/item/clothing/glasses/science{
 	pixel_x = 4;
-	pixel_y = -4
+	pixel_y = 8
 	},
-/obj/machinery/light/directional/north,
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "hSq" = (
@@ -52589,6 +52594,9 @@
 /obj/item/scalpel{
 	pixel_x = 2;
 	pixel_y = 6
+	},
+/obj/machinery/sparker/directional/north{
+	id = "Xenobio"
 	},
 /turf/open/floor/engine,
 /area/station/science/xenobiology)

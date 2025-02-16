@@ -73571,13 +73571,20 @@
 /obj/machinery/button/door{
 	id = "xenosecure";
 	name = "Containment Control";
-	pixel_y = -3;
-	req_access = list("xenobiology")
+	pixel_y = 1;
+	req_access = list("xenobiology");
+	pixel_x = -5
 	},
 /obj/item/radio/intercom{
-	pixel_y = 5
+	pixel_y = 9;
+	pixel_x = 1
 	},
 /obj/effect/turf_decal/tile/neutral/anticorner/contrasted,
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = 6;
+	pixel_y = 0
+	},
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "rvu" = (
@@ -95929,6 +95936,13 @@
 /obj/structure/sign/poster/contraband/random/directional/north,
 /turf/open/floor/iron,
 /area/station/maintenance/port/fore)
+"wIG" = (
+/obj/effect/turf_decal/tile/neutral/fourcorners,
+/obj/machinery/sparker/directional/north{
+	id = "Xenobio"
+	},
+/turf/open/floor/iron/dark,
+/area/station/science/xenobiology)
 "wIJ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -120607,7 +120621,7 @@ vVc
 bDe
 udp
 nCi
-sfN
+wIG
 sfN
 sfN
 sfN

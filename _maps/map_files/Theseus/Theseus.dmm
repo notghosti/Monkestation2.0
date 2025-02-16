@@ -10759,8 +10759,9 @@
 /obj/machinery/button/door{
 	id = "xenosecure";
 	name = "Containment Control";
-	pixel_y = 4;
-	req_access = list("xenobiology")
+	pixel_y = 1;
+	req_access = list("xenobiology");
+	pixel_x = -5
 	},
 /obj/structure/window/reinforced/spawner/directional/south,
 /obj/structure/table/reinforced,
@@ -10771,8 +10772,8 @@
 /obj/structure/cable,
 /obj/machinery/button/ignition{
 	id = "Xenobio";
-	pixel_x = 7;
-	pixel_y = -3
+	pixel_x = 6;
+	pixel_y = 0
 	},
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology/hallway)
@@ -34593,10 +34594,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/station/security/bitden)
-"knJ" = (
-/obj/effect/landmark/start/hangover,
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
 "knK" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -35299,6 +35296,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable,
 /obj/effect/landmark/navigate_destination,
+/obj/effect/mapping_helpers/airlock/access/any/science/general,
 /turf/open/floor/iron/white,
 /area/station/science/breakroom)
 "kzK" = (
@@ -58377,6 +58375,10 @@
 /obj/effect/turf_decal/bot,
 /turf/open/floor/iron/white,
 /area/station/science/robotics/lab)
+"rlj" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "rlk" = (
 /obj/effect/turf_decal/tile/yellow/anticorner{
 	dir = 4
@@ -104837,7 +104839,7 @@ pFC
 lav
 eei
 vUc
-knJ
+rlj
 gbL
 iZm
 mhO
