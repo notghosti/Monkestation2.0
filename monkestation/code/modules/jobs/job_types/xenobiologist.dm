@@ -9,7 +9,7 @@
 	exp_requirements = 60
 	exp_required_type = EXP_TYPE_CREW
 	exp_granted_type = EXP_TYPE_CREW
-	config_tag = "SCIENTIST"
+	config_tag = "XENOBIOLOGIST"
 
 	outfit = /datum/outfit/job/xenobiologist
 	plasmaman_outfit = /datum/outfit/plasmaman/science
