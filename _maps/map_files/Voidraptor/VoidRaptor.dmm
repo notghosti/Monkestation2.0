@@ -17228,6 +17228,16 @@
 	dir = 1
 	},
 /area/station/commons/vacant_room)
+"eUU" = (
+/obj/machinery/status_display/ai/directional/north,
+/obj/machinery/power/shieldwallgen/xenobiologyaccess,
+/obj/structure/cable,
+/obj/structure/window/reinforced/spawner/directional/east{
+	layer = 2.9;
+	pixel_x = 4
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "eVk" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/marker_beacon/burgundy,
@@ -59266,12 +59276,6 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
-"qxu" = (
-/obj/machinery/atmospherics/components/tank/air{
-	dir = 8
-	},
-/turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/maintenance/department/science/xenobiology)
 "qxI" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
@@ -69090,6 +69094,12 @@
 /obj/effect/spawner/random/trash/garbage,
 /turf/open/floor/plating,
 /area/station/maintenance/port/aft)
+"tgX" = (
+/obj/machinery/atmospherics/components/tank/air{
+	dir = 8
+	},
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/station/maintenance/department/science/xenobiology)
 "thd" = (
 /obj/structure/cable,
 /obj/effect/turf_decal/trimline/yellow/filled/warning{
@@ -75763,15 +75773,10 @@
 /turf/open/floor/wood/large,
 /area/station/service/library)
 "uWl" = (
-/obj/machinery/status_display/ai/directional/north,
-/obj/machinery/power/shieldwallgen/xenobiologyaccess,
 /obj/structure/cable,
-/obj/structure/window/reinforced/spawner/directional/east{
-	layer = 2.9;
-	pixel_x = 4
-	},
-/turf/open/floor/engine,
-/area/station/science/xenobiology)
+/obj/machinery/atmospherics/pipe/smart/manifold/supply/visible,
+/turf/open/floor/catwalk_floor/iron_smooth,
+/area/station/maintenance/department/science/xenobiology)
 "uWo" = (
 /obj/machinery/status_display/evac/directional/north,
 /turf/open/floor/carpet/purple,
@@ -76383,6 +76388,15 @@
 	},
 /turf/open/floor/iron/grimy,
 /area/station/commons/vacant_room/office)
+"vgr" = (
+/obj/effect/spawner/structure/window/reinforced,
+/obj/machinery/door/poddoor/preopen{
+	id = "Xtestlab";
+	name = "Test Chamber Blast Door"
+	},
+/obj/structure/cable,
+/turf/open/floor/plating,
+/area/station/science/xenobiology)
 "vgt" = (
 /turf/open/floor/wood/large,
 /area/station/service/forge)
@@ -84550,11 +84564,6 @@
 /obj/machinery/light/cold/directional/south,
 /turf/open/floor/iron/white,
 /area/station/medical/office)
-"xwM" = (
-/obj/structure/cable,
-/obj/machinery/atmospherics/pipe/smart/manifold/supply/visible,
-/turf/open/floor/catwalk_floor/iron_smooth,
-/area/station/maintenance/department/science/xenobiology)
 "xwO" = (
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
@@ -105350,7 +105359,7 @@ lkR
 dWX
 oMA
 odG
-xwM
+uWl
 kVR
 uiw
 axD
@@ -105863,7 +105872,7 @@ xtW
 iGR
 djc
 djc
-qxu
+tgX
 sOy
 kVR
 uiw
@@ -105871,7 +105880,7 @@ uiw
 uiw
 uiw
 kSV
-oMs
+vgr
 gUA
 jRN
 dfq
@@ -106129,7 +106138,7 @@ oMs
 oMs
 oMs
 oMs
-uWl
+eUU
 iMC
 tDI
 rjU
