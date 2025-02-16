@@ -3754,6 +3754,7 @@
 /area/station/tcommsat/server)
 "bgs" = (
 /obj/structure/chair/stool/bar/directional/south,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/glass/reinforced,
 /area/station/science/xenobiology)
 "bgt" = (
@@ -8458,6 +8459,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/station/maintenance/fore/lesser)
+"cAV" = (
+/obj/machinery/sparker/directional/north{
+	id = "Xenobio"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "cAZ" = (
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 1
@@ -18667,6 +18674,7 @@
 /area/station/command/heads_quarters/blueshield)
 "fAx" = (
 /obj/structure/chair/stool/bar/directional/north,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/glass/reinforced,
 /area/station/science/xenobiology)
 "fAH" = (
@@ -20188,7 +20196,7 @@
 /obj/effect/turf_decal/tile/blue/diagonal_centre,
 /obj/effect/turf_decal/tile/purple/diagonal_centre,
 /obj/structure/chair/sofa/right,
-/obj/effect/landmark/start/scientist,
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/iron/white/diagonal,
 /area/station/science/breakroom)
 "fZR" = (
@@ -44712,13 +44720,20 @@
 	id = "Xtestlab";
 	layer = 4;
 	name = "Secure Creature Pen Blast Door";
-	req_access = list("xenobiology")
+	req_access = list("xenobiology");
+	pixel_x = -24;
+	pixel_y = 4
 	},
 /obj/machinery/power/shieldwallgen/xenobiologyaccess,
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
 	},
 /obj/machinery/light/cold/directional/south,
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = -24;
+	pixel_y = -6
+	},
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "ndH" = (
@@ -96106,7 +96121,7 @@ xuB
 xuB
 jNA
 iTV
-wLx
+cAV
 hXW
 oXy
 eqL

@@ -25,7 +25,10 @@
 		/datum/job_department/science,
 		)
 
-	family_heirlooms = list(/obj/item/toy/plush/slimeplushie)
+	family_heirlooms = list(
+		/obj/item/book/manual/wiki/cytology,
+		/obj/item/toy/plush/slimeplushie
+	)
 
 	mail_goodies = list(
 		/obj/item/toy/plush/slimeplushie = 10,
@@ -41,11 +44,12 @@
 
 	id_trim = /datum/id_trim/job/xenobiologist
 	uniform = /obj/item/clothing/under/rank/rnd/scientist
-	suit = /obj/item/clothing/suit/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/hooded/wintercoat/science
 	belt = /obj/item/modular_computer/pda/science
 	ears = /obj/item/radio/headset/headset_sci
-	shoes = /obj/item/clothing/shoes/sneakers/white
+	shoes = /obj/item/clothing/shoes/winterboots
 	glasses = /obj/item/clothing/glasses/science
+	gloves = /obj/item/clothing/gloves/color/grey/protects_cold
 
 	backpack = /obj/item/storage/backpack/science
 	satchel = /obj/item/storage/backpack/satchel/science

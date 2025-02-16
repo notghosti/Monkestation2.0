@@ -9478,7 +9478,6 @@
 	name = "Xenobiology Lab"
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
-/obj/effect/mapping_helpers/airlock/access/any/science/genetics,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/liquid_barrier,
 /turf/open/floor/iron/dark,
@@ -24325,8 +24324,9 @@
 /obj/machinery/button/door{
 	id = "Xenolab";
 	name = "Containment Chamber Toggle";
-	pixel_y = 4;
-	req_access = list("xenobiology")
+	pixel_y = 0;
+	req_access = list("xenobiology");
+	pixel_x = 5
 	},
 /obj/effect/turf_decal/tile/neutral/half/contrasted,
 /obj/structure/cable,
@@ -24335,6 +24335,11 @@
 	},
 /obj/effect/turf_decal/tile/purple{
 	dir = 4
+	},
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = -6;
+	pixel_y = 0
 	},
 /turf/open/floor/iron/showroomfloor,
 /area/station/science/xenobiology)
@@ -43939,6 +43944,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/commons/storage/primary)
+"nHi" = (
+/obj/machinery/sparker/directional/north{
+	id = "Xenobio"
+	},
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "nHv" = (
 /obj/structure/sign/poster/contraband/random/directional/south,
 /turf/closed/wall/r_wall,
@@ -115728,7 +115739,7 @@ aeU
 aeu
 aeu
 vJc
-qmW
+nHi
 oQl
 qmW
 vJc

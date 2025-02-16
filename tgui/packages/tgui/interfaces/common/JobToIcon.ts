@@ -64,6 +64,7 @@ const BASEICONS = {
   'Syndicate Operative': 'dragon',
   Virologist: 'virus',
   Warden: 'handcuffs',
+  Xenobiologist: 'spaghetti-monster-flying', // Monkestation addition: Xenobio Job
   'Yellow Clown': 'lemon', // yellow lemon.
 } as const;
 
@@ -303,9 +304,8 @@ const ALTTITLES = {
   'Brig Governor': BASEICONS['Warden'],
   Jailer: BASEICONS['Warden'],
   // Xenobiologist -
-  Xenobiologist: BASEICONS['Scientist'],
-  Cytologist: BASEICONS['Scientist'],
-  Cryptozoologist: BASEICONS['Scientist'],
+  Cytologist: BASEICONS['Xenobiologist'],
+  Cryptozoologist: BASEICONS['Xenobiologist'],
 } as const;
 
 // Combine the Base icons and ALt titles

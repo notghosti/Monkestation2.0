@@ -7327,6 +7327,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "bjR" = (
@@ -16398,6 +16399,7 @@
 /area/station/maintenance/department/cargo)
 "ebs" = (
 /obj/structure/cable,
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "ebw" = (
@@ -38014,7 +38016,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 8
 	},
-/obj/effect/landmark/start/scientist,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "kPT" = (
@@ -48707,6 +48708,7 @@
 	c_tag = "Science - Break Room";
 	network = list("ss13","rd")
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "okn" = (
@@ -71591,6 +71593,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "vml" = (

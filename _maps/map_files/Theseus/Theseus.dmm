@@ -9695,6 +9695,7 @@
 	icon_state = "pink2_1"
 	},
 /obj/machinery/newscaster/directional/east,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/carpet,
 /area/station/science/breakroom)
 "cTf" = (
@@ -22452,7 +22453,6 @@
 /area/station/medical/cryo)
 "gJX" = (
 /obj/structure/chair/sofa/corner/brown,
-/obj/effect/landmark/start/scientist,
 /obj/machinery/light/neon_lining{
 	dir = 4;
 	icon_state = "pink2_1"
@@ -22462,6 +22462,7 @@
 	icon_state = "pink2_1"
 	},
 /obj/structure/sign/poster/official/no_erp/directional/east,
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/carpet,
 /area/station/science/breakroom)
 "gKe" = (
@@ -34592,6 +34593,10 @@
 	},
 /turf/open/floor/carpet/black,
 /area/station/security/bitden)
+"knJ" = (
+/obj/effect/landmark/start/hangover,
+/turf/open/floor/engine,
+/area/station/science/xenobiology)
 "knK" = (
 /obj/effect/turf_decal/stripes/line,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -41182,6 +41187,7 @@
 	dir = 8;
 	icon_state = "pink2_1"
 	},
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/carpet,
 /area/station/science/breakroom)
 "mfB" = (
@@ -43491,6 +43497,7 @@
 /obj/effect/turf_decal/trimline/orange/corner{
 	dir = 1
 	},
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
 "mRh" = (
@@ -57755,8 +57762,6 @@
 /obj/machinery/plumbing/ooze_sucker{
 	mapping_id = "2"
 	},
-/obj/effect/landmark/start/hangover,
-/obj/effect/landmark/start/hangover,
 /obj/effect/landmark/start/hangover,
 /turf/open/floor/engine,
 /area/station/science/xenobiology)
@@ -104832,7 +104837,7 @@ pFC
 lav
 eei
 vUc
-iZm
+knJ
 gbL
 iZm
 mhO

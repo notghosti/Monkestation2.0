@@ -18552,8 +18552,8 @@
 /obj/structure/chair/comfy{
 	dir = 1
 	},
-/obj/effect/landmark/start/scientist,
 /obj/machinery/newscaster/directional/east,
+/obj/effect/landmark/start/geneticist,
 /turf/open/floor/carpet/purple,
 /area/station/science/breakroom)
 "dBr" = (
@@ -56806,9 +56806,9 @@
 /obj/structure/chair/comfy{
 	dir = 1
 	},
-/obj/effect/landmark/start/scientist,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/carpet/purple,
 /area/station/science/breakroom)
 "kYe" = (
@@ -98439,6 +98439,7 @@
 /obj/effect/turf_decal/stripes/white/corner{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/dark,
 /area/station/science/xenobiology/control)
 "tbl" = (
@@ -99971,6 +99972,7 @@
 "tqE" = (
 /obj/structure/chair/comfy,
 /obj/structure/cable,
+/obj/effect/landmark/start/roboticist,
 /turf/open/floor/carpet/purple,
 /area/station/science/breakroom)
 "tqF" = (
