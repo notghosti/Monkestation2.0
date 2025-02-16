@@ -44142,7 +44142,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
-/obj/effect/landmark/start/scientist,
+/obj/effect/landmark/start/research_director,
 /turf/open/floor/wood/parquet,
 /area/station/science/breakroom)
 "iAI" = (
@@ -85048,6 +85048,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/wood/parquet,
 /area/station/science/breakroom)
 "qyx" = (
