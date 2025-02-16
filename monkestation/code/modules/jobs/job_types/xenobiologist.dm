@@ -34,7 +34,7 @@
 		/obj/item/toy/plush/slimeplushie = 10,
 		/obj/item/disk/design_disk/bepis = 2,
 	)
-	rpg_title = "Beastiary"
+	rpg_title = "Warlock"
 	job_flags = STATION_JOB_FLAGS
 
 
