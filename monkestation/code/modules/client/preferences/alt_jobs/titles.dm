@@ -80,6 +80,16 @@
 		"Honor Guard",
 	)
 
+/datum/job/blueshield
+	alt_titles = list(
+		"Blueshield",
+		"Corporate Henchman",
+		"Bodyguard",
+		"Revolutionary Repellent",
+		"Heavily Armed Butler",
+		"Honor Guard",
+	)
+
 /datum/job/brig_physician
 	alt_titles = list(
 		"Brig Physician",
@@ -386,5 +396,4 @@
 		"Xenobiologist",
 		"Cytologist",
 		"Cryptozoologist",
-
 	)
