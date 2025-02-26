@@ -29446,6 +29446,7 @@
 	name = "science camera";
 	network = list("ss13","rd")
 	},
+/obj/machinery/vending/wardrobe/xeno_wardrobe,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "jBr" = (
@@ -66749,6 +66750,7 @@
 /obj/structure/chair{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobiologist,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
 "vFa" = (

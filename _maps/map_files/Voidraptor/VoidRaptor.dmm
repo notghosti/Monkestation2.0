@@ -15720,6 +15720,7 @@
 "eyR" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/structure/bed/dogbed,
+/mob/living/basic/pet/dog/corgi/puppy/slime,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 1
 	},
@@ -54287,8 +54288,8 @@
 "pgM" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/effect/turf_decal/stripes/red/box,
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/turf_decal/box,
+/obj/machinery/vending/wardrobe/xeno_wardrobe,
 /turf/open/floor/iron/white/textured_edge{
 	dir = 1
 	},

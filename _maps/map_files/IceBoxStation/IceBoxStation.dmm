@@ -68657,13 +68657,10 @@
 /turf/open/floor/iron,
 /area/station/security/brig/upper)
 "vTJ" = (
-/obj/structure/table,
-/obj/item/toy/plush/slimeplushie{
-	name = "Gish"
-	},
 /obj/effect/turf_decal/stripes/line{
 	dir = 9
 	},
+/obj/machinery/vending/wardrobe/xeno_wardrobe,
 /turf/open/floor/iron,
 /area/station/science/xenobiology)
 "vTN" = (

@@ -51714,6 +51714,10 @@
 	},
 /turf/open/floor/cult,
 /area/station/service/library/private)
+"plq" = (
+/obj/machinery/vending/wardrobe/xeno_wardrobe,
+/turf/open/floor/plating,
+/area/station/science/xenobiology)
 "plQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave,
@@ -97153,7 +97157,7 @@ jNA
 hrW
 hrW
 hrW
-xMC
+plq
 hrW
 hrW
 hrW
