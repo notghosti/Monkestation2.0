@@ -43,15 +43,15 @@
 	jobtype = /datum/job/xenobiologist
 
 	id_trim = /datum/id_trim/job/xenobiologist
-	uniform = /obj/item/clothing/under/rank/rnd/scientist
-	suit = /obj/item/clothing/suit/hooded/wintercoat/science
-	belt = /obj/item/modular_computer/pda/science
+	uniform = /obj/item/clothing/under/rank/rnd/xenobiologist
+	suit = /obj/item/clothing/suit/toggle/labcoat/xenobiologist
+	belt = /obj/item/modular_computer/pda/xenobiologist
 	ears = /obj/item/radio/headset/headset_sci
 	shoes = /obj/item/clothing/shoes/winterboots
 	glasses = /obj/item/clothing/glasses/science
 	gloves = /obj/item/clothing/gloves/color/grey/protects_cold
 
-	backpack = /obj/item/storage/backpack/science
-	satchel = /obj/item/storage/backpack/satchel/science
-	duffelbag = /obj/item/storage/backpack/duffelbag/science
+	backpack = /obj/item/storage/backpack/xenobiologist
+	satchel = /obj/item/storage/backpack/satchel/xenobiologist
+	duffelbag = /obj/item/storage/backpack/duffelbag/xenobiologist
 
