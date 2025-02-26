@@ -16,8 +16,8 @@
 	/obj/item/clothing/mask/gas = 2,
 	/obj/item/clothing/gloves/color/grey/protects_cold = 2,
 	)
-	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
-	payment_department = ACCOUNT_MED
+	refill_canister = /obj/item/vending_refill/wardrobe/xeno_wardrobe
+	payment_department = ACCOUNT_SCI
 
 /obj/item/vending_refill/wardrobe/xeno_wardrobe
 	machine_name = "xenoDrobe"

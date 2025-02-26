@@ -15,22 +15,3 @@
 	desc = "A large duffel bag for holding extra hazardous components."
 	icon_state = "duffel-xenobio"
 	inhand_icon_state = "duffel-xenobio"
-
-/obj/item/storage/backpack/roboticist
-	name = "robotics backpack"
-	desc = "A backpack specially designed to hide the oil stains."
-	icon_state = "backpack-robo"
-	inhand_icon_state = "robopack"
-
-/obj/item/storage/backpack/satchel/roboticist
-	name = "roboticist satchel"
-	desc = "Useful for holding various mechanical compentents."
-	icon_state = "satchel-robo"
-	inhand_icon_state = "satchel-robo"
-
-/obj/item/storage/backpack/duffelbag/roboticist
-	name = "roboticist's duffel bag"
-	desc = "A large duffel bag for holding extra robots and parts."
-	icon_state = "duffel-robo"
-	inhand_icon_state = "duffel-robo"
-
