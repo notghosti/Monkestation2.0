@@ -21365,7 +21365,7 @@
 /obj/effect/turf_decal/tile/red/diagonal_centre,
 /obj/machinery/duct,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/landmark/start/hangover,
+/obj/effect/landmark/start/scientist,
 /turf/open/floor/iron/diagonal,
 /area/station/science/breakroom)
 "fbg" = (
@@ -28384,6 +28384,7 @@
 	normaldoorcontrol = 1;
 	specialfunctions = 4
 	},
+/obj/effect/landmark/start/hangover,
 /turf/open/floor/iron/cafeteria,
 /area/station/science/breakroom)
 "gHh" = (
@@ -38949,7 +38950,6 @@
 /obj/machinery/duct,
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/landmark/start/scientist,
 /turf/open/floor/iron/diagonal,
 /area/station/science/breakroom)
 "jhh" = (
