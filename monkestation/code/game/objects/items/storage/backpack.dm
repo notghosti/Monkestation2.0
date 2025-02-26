@@ -1,7 +1,7 @@
 /obj/item/storage/backpack/xenobiologist
 	name = "xenobio backpack"
 	desc = "A backpack specially designed with a seal to keep ooze from leaking in."
-	icon_state = "backpack-xeno"
+	icon_state = "backpack-xenobio"
 	inhand_icon_state = "xenopack"
 
 /obj/item/storage/backpack/satchel/xenobiologist
@@ -13,13 +13,13 @@
 /obj/item/storage/backpack/duffelbag/xenobiologist
 	name = "xenobiologist's duffel bag"
 	desc = "A large duffel bag for holding extra hazardous components."
-	icon_state = "duffel-xeno"
-	inhand_icon_state = "duffel-xeno"
+	icon_state = "duffel-xenobio"
+	inhand_icon_state = "duffel-xenobio"
 
 /obj/item/storage/backpack/roboticist
 	name = "robotics backpack"
 	desc = "A backpack specially designed to hide the oil stains."
-	icon_state = "backpack-xeno"
+	icon_state = "backpack-robo"
 	inhand_icon_state = "robopack"
 
 /obj/item/storage/backpack/satchel/roboticist

@@ -55,3 +55,7 @@
 	satchel = /obj/item/storage/backpack/satchel/xenobiologist
 	duffelbag = /obj/item/storage/backpack/duffelbag/xenobiologist
 
+	backpack_contents = list(
+		/obj/item/storage/box/swab = 1,
+		/obj/item/biopsy_tool = 1,
+	)

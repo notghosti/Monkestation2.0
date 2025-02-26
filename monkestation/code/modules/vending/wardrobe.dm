@@ -4,12 +4,17 @@
 	icon_state = "xenodrobe"
 	product_ads = "Pesky aliens eating away at your flesh? Dress for the job!"
 	vend_reply = "Thank you for using the XenoDrobe"
+	icon = 'monkestation/icons/obj/vending.dmi'
 	products = list(
+	/obj/item/storage/backpack/xenobiologist = 2,
+	/obj/item/storage/backpack/satchel/xenobiologist = 2,
+	/obj/item/storage/backpack/duffelbag/xenobiologist = 2,
 	/obj/item/clothing/under/rank/rnd/xenobiologist = 2,
 	/obj/item/clothing/under/rank/rnd/xenobiologist/skirt = 2,
 	/obj/item/clothing/suit/toggle/labcoat/xenobiologist = 2,
-	/obj/item/clothing/mask/gas = 2,
 	/obj/item/clothing/shoes/winterboots = 2,
+	/obj/item/clothing/mask/gas = 2,
+
 	)
 	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
 	payment_department = ACCOUNT_MED
