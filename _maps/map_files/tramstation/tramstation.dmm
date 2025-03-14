@@ -10513,7 +10513,6 @@
 /obj/machinery/door/airlock/research{
 	name = "Ordnance Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/ordnance_storage,
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/effect/turf_decal/trimline/purple/filled/line{
@@ -10526,6 +10525,7 @@
 	dir = 4
 	},
 /obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/any/science/ordnance_storage,
 /turf/open/floor/iron/white/side{
 	dir = 8
 	},
@@ -38518,6 +38518,19 @@
 /obj/effect/turf_decal/tile/purple/fourcorners,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
+"kXh" = (
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "mixingastew";
+	name = "Mixing Site Shutters"
+	},
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/science/ordnance,
+/turf/open/floor/plating,
+/area/station/science/ordnance)
 "kXi" = (
 /obj/effect/turf_decal/sand/plating,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -42251,19 +42264,6 @@
 	},
 /turf/open/floor/glass/reinforced,
 /area/station/security/brig)
-"mfO" = (
-/obj/machinery/door/firedoor/heavy,
-/obj/machinery/door/poddoor/shutters/preopen{
-	dir = 4;
-	id = "mixingastew";
-	name = "Mixing Site Shutters"
-	},
-/obj/machinery/door/airlock/research{
-	name = "Ordnance Lab"
-	},
-/obj/effect/mapping_helpers/airlock/access/any/science/ordnance,
-/turf/open/floor/plating,
-/area/station/science/ordnance)
 "mfT" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -130430,7 +130430,7 @@ vrS
 xwt
 iix
 sNS
-mfO
+kXh
 sNS
 wBV
 dIK
