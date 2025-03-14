@@ -147,3 +147,4 @@
 
 /obj/effect/landmark/start/xenobiologist
 	name = "Xenobiologist"
+	icon_state = "Xenobiologist"

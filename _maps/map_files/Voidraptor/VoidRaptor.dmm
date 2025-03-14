@@ -24446,8 +24446,8 @@
 /obj/machinery/door/airlock/research{
 	name = "Aux Nanite Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/iron/white/textured_large,
 /area/station/science/auxlab)
 "gZD" = (
@@ -51023,8 +51023,8 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
-/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/machinery/door/firedoor,
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/catwalk_floor/iron_smooth,
 /area/station/science/auxlab)
 "ooU" = (

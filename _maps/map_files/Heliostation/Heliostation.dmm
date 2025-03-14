@@ -75548,7 +75548,6 @@
 /turf/open/floor/engine,
 /area/station/science/ordnance/burnchamber)
 "wbG" = (
-/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /obj/structure/disposalpipe/segment{
@@ -75560,6 +75559,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Nanite Lab"
 	},
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/circuits)
 "wbW" = (

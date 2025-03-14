@@ -7610,7 +7610,6 @@
 	name = "Testing Lab"
 	},
 /obj/machinery/door/firedoor/heavy,
-/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
@@ -7621,6 +7620,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/iron/white,
 /area/station/science/lower)
 "bpR" = (
@@ -9913,21 +9913,10 @@
 /turf/open/floor/iron,
 /area/station/commons/dorms)
 "bZp" = (
-/obj/structure/table,
-/obj/item/transfer_valve{
-	pixel_x = -5
-	},
-/obj/item/transfer_valve,
-/obj/item/transfer_valve{
-	pixel_x = 5
-	},
-/obj/item/transfer_valve{
-	pixel_x = -5
-	},
-/obj/item/transfer_valve{
-	pixel_x = 5
-	},
 /obj/structure/sign/clock/directional/west,
+/obj/machinery/modular_computer/preset/civilian{
+	dir = 4
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "bZA" = (
@@ -10536,6 +10525,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/iron/white/side{
 	dir = 8
 	},
@@ -15440,31 +15430,12 @@
 /turf/open/floor/iron,
 /area/station/engineering/main)
 "dNH" = (
-/obj/structure/table,
-/obj/item/computer_disk{
-	pixel_x = -8;
-	pixel_y = -3
-	},
-/obj/item/computer_disk{
-	pixel_x = -9;
-	pixel_y = 9
-	},
-/obj/item/computer_disk/ordnance{
-	pixel_x = -8;
-	pixel_y = 5
-	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
 /obj/machinery/light/directional/north,
-/obj/item/storage/box/disks_nanite{
-	pixel_x = 6;
-	pixel_y = 9
-	},
-/obj/item/storage/box/disks_nanite{
-	pixel_x = 6;
-	pixel_y = 1
-	},
+/obj/machinery/computer/nanite_cloud_controller,
+/obj/structure/sign/poster/random/directional/north,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "dNT" = (
@@ -16099,6 +16070,13 @@
 /area/station/security/brig)
 "dWM" = (
 /obj/structure/table,
+/obj/effect/turf_decal/stripes/line{
+	dir = 8
+	},
+/obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver{
+	pixel_x = 7;
+	pixel_y = 5
+	},
 /obj/item/radio{
 	pixel_x = -7;
 	pixel_y = 6
@@ -16106,13 +16084,6 @@
 /obj/item/binoculars{
 	pixel_x = -3;
 	pixel_y = -2
-	},
-/obj/effect/turf_decal/stripes/line{
-	dir = 8
-	},
-/obj/machinery/computer/pod/old/mass_driver_controller/ordnancedriver{
-	pixel_x = 7;
-	pixel_y = 5
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
@@ -20668,14 +20639,33 @@
 /turf/open/floor/iron,
 /area/station/hallway/secondary/service)
 "ftM" = (
-/obj/structure/table,
-/obj/item/pipe_dispenser{
-	pixel_x = 3;
-	pixel_y = 7
-	},
-/obj/item/pipe_dispenser,
 /obj/effect/turf_decal/trimline/purple/filled/line,
 /obj/item/radio/intercom/directional/south,
+/obj/item/nanite_remote{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/nanite_remote{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/item/nanite_remote{
+	pixel_x = -5;
+	pixel_y = 5
+	},
+/obj/structure/rack,
+/obj/item/nanite_scanner{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/obj/item/nanite_scanner{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/obj/item/nanite_scanner{
+	pixel_x = 6;
+	pixel_y = -4
+	},
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "ftQ" = (
@@ -30718,24 +30708,39 @@
 "iGL" = (
 /obj/structure/table,
 /obj/item/assembly/timer{
-	pixel_x = -4;
+	pixel_x = 6;
 	pixel_y = 2
 	},
 /obj/item/assembly/timer{
-	pixel_x = 6;
+	pixel_x = 8;
 	pixel_y = -4
 	},
 /obj/item/assembly/timer{
-	pixel_x = 5;
+	pixel_x = 9;
+	pixel_y = 8
+	},
+/obj/item/assembly/timer{
+	pixel_x = 7;
 	pixel_y = 4
 	},
-/obj/item/assembly/timer,
 /obj/machinery/camera/directional/west{
 	c_tag = "Science - Ordnance Launch Bay";
 	network = list("ss13","rd")
 	},
 /obj/machinery/light/directional/west,
 /obj/item/radio/intercom/directional/west,
+/obj/item/computer_disk{
+	pixel_x = -9;
+	pixel_y = 9
+	},
+/obj/item/computer_disk{
+	pixel_x = -8;
+	pixel_y = -3
+	},
+/obj/item/computer_disk/ordnance{
+	pixel_x = -8;
+	pixel_y = 5
+	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
 "iGM" = (
@@ -33055,7 +33060,6 @@
 /obj/machinery/door/airlock/research{
 	name = "Ordnance Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/ordnance_storage,
 /obj/machinery/door/firedoor/heavy,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 4
@@ -33068,6 +33072,7 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "jqd" = (
@@ -42246,6 +42251,19 @@
 	},
 /turf/open/floor/glass/reinforced,
 /area/station/security/brig)
+"mfO" = (
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/door/poddoor/shutters/preopen{
+	dir = 4;
+	id = "mixingastew";
+	name = "Mixing Site Shutters"
+	},
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/any/science/ordnance,
+/turf/open/floor/plating,
+/area/station/science/ordnance)
 "mfT" = (
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 8
@@ -43446,13 +43464,20 @@
 /obj/structure/cable,
 /obj/structure/table,
 /obj/item/raw_anomaly_core/random{
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/obj/item/raw_anomaly_core/random,
-/obj/item/raw_anomaly_core/random{
 	pixel_x = 7;
 	pixel_y = 9
+	},
+/obj/item/raw_anomaly_core/random{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/raw_anomaly_core/random{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/book/manual/wiki/ordnance{
+	pixel_x = -8;
+	pixel_y = -2
 	},
 /turf/open/floor/iron,
 /area/station/science/ordnance/testlab)
@@ -48783,12 +48808,21 @@
 /area/station/engineering/atmos)
 "okA" = (
 /obj/structure/table,
-/obj/item/computer_disk{
-	pixel_x = -2
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 4;
+	pixel_y = 11
 	},
-/obj/item/computer_disk{
-	pixel_x = 7;
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/pipe_dispenser{
+	pixel_x = 2;
 	pixel_y = 2
+	},
+/obj/item/pipe_dispenser{
+	pixel_x = 0;
+	pixel_y = -1
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
@@ -57176,19 +57210,10 @@
 /turf/open/floor/iron/cafeteria,
 /area/station/security/prison/mess)
 "qPX" = (
-/obj/item/storage/box/nanitecontrol{
-	pixel_x = -5;
-	pixel_y = 11
-	},
-/obj/item/book/manual/wiki/ordnance{
-	pixel_x = 5;
-	pixel_y = 1
-	},
-/obj/item/analyzer,
-/obj/structure/table,
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 1
 	},
+/obj/machinery/nanite_program_hub,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "qQc" = (
@@ -59425,7 +59450,6 @@
 /area/station/cargo/office)
 "ryT" = (
 /obj/effect/turf_decal/trimline/purple/filled/line,
-/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "rzd" = (
@@ -62057,7 +62081,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/nanite_program_hub,
+/obj/machinery/nanite_programmer,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "stL" = (
@@ -63868,20 +63892,20 @@
 "sUV" = (
 /obj/structure/table,
 /obj/item/assembly/prox_sensor{
-	pixel_x = 5;
-	pixel_y = 7
+	pixel_x = -3;
+	pixel_y = 9
 	},
 /obj/item/assembly/prox_sensor{
-	pixel_x = -4;
-	pixel_y = 1
+	pixel_x = -9;
+	pixel_y = 8
 	},
 /obj/item/assembly/prox_sensor{
-	pixel_x = 2;
-	pixel_y = -2
+	pixel_x = -9;
+	pixel_y = -3
 	},
 /obj/item/assembly/prox_sensor{
-	pixel_x = 9;
-	pixel_y = -2
+	pixel_x = -2;
+	pixel_y = -1
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
@@ -66683,6 +66707,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/nanite_chamber,
+/obj/structure/sign/poster/random/directional/west,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "tPb" = (
@@ -68081,7 +68106,6 @@
 	c_tag = "Science - Ordnance Lab";
 	network = list("ss13","rd")
 	},
-/obj/machinery/modular_computer/preset/civilian,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "ulJ" = (
@@ -70330,7 +70354,15 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
-/obj/machinery/computer/nanite_cloud_controller,
+/obj/structure/table,
+/obj/item/poster/random_official{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/clothing/glasses/hud/diagnostic{
+	pixel_x = 3;
+	pixel_y = 9
+	},
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "uTN" = (
@@ -71999,20 +72031,20 @@
 /area/station/hallway/secondary/construction/engineering)
 "vri" = (
 /obj/structure/table,
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/storage/toolbox/mechanical{
-	pixel_x = -2;
-	pixel_y = 8
-	},
 /obj/effect/turf_decal/trimline/purple/filled/line{
 	dir = 6
 	},
 /obj/machinery/button/door/directional/south{
 	id = "ordnancestorage";
 	name = "Ordance Storage Shutters"
+	},
+/obj/item/storage/box/disks_nanite{
+	pixel_x = 6;
+	pixel_y = 9
+	},
+/obj/item/food/cherrycupcake{
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
@@ -77821,19 +77853,33 @@
 "xjx" = (
 /obj/structure/table,
 /obj/item/assembly/signaler{
+	pixel_y = 9;
+	pixel_x = -22
+	},
+/obj/item/assembly/signaler{
+	pixel_x = -27;
 	pixel_y = 8
 	},
 /obj/item/assembly/signaler{
-	pixel_x = -8;
-	pixel_y = 5
+	pixel_x = -27;
+	pixel_y = 3
 	},
 /obj/item/assembly/signaler{
-	pixel_x = -2;
-	pixel_y = -2
+	pixel_x = -19;
+	pixel_y = -1
 	},
-/obj/item/assembly/signaler{
-	pixel_x = 6;
-	pixel_y = 5
+/obj/item/transfer_valve{
+	pixel_x = 5
+	},
+/obj/item/transfer_valve{
+	pixel_x = 5
+	},
+/obj/item/transfer_valve{
+	pixel_x = -5
+	},
+/obj/item/transfer_valve,
+/obj/item/transfer_valve{
+	pixel_x = -5
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/testlab)
@@ -130384,7 +130430,7 @@ vrS
 xwt
 iix
 sNS
-sNS
+mfO
 sNS
 wBV
 dIK
