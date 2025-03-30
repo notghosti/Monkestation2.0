@@ -225,9 +225,6 @@ If you create T5+ please take a pass at mech_fabricator.dm. The parts being good
 	atom_storage.max_slots = 200
 	atom_storage.max_total_storage = 400
 
-	RegisterSignal(src, COMSIG_ATOM_ENTERED, PROC_REF(on_part_entered))
-	RegisterSignal(src, COMSIG_ATOM_EXITED, PROC_REF(on_part_exited))
-
 /obj/item/storage/part_replacer/proc/get_sorted_parts(ignore_stacks = FALSE)
 	var/list/part_list = list()
 	//Assemble a list of current parts, then sort them by their rating!
