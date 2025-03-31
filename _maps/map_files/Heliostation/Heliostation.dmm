@@ -27269,9 +27269,6 @@
 	dir = 4
 	},
 /area/station/ai_monitored/turret_protected/aisat_interior)
-"dju" = (
-/turf/open/space/basic,
-/area/station/maintenance/port/fore)
 "djX" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/trimline/yellow/filled/corner{
@@ -109518,7 +109515,7 @@ aCR
 hsq
 aGU
 aCR
-dju
+aCR
 aCR
 azQ
 hax
