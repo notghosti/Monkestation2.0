@@ -59377,7 +59377,6 @@
 /obj/machinery/door/airlock/maintenance_hatch{
 	name = "Robotics Maintenance"
 	},
-/obj/item/tank/jetpack/oxygen,
 /turf/open/floor/iron,
 /area/station/science/robotics/lab)
 "nYC" = (
