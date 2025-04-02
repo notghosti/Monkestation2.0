@@ -81,3 +81,4 @@
 	inhand_icon_state = "dg_suit"
 	icon = 'monkestation/icons/obj/clothing/uniforms.dmi'
 	worn_icon = 'monkestation/icons/mob/clothing/uniform.dmi'
+	female_sprite_flags = FEMALE_UNIFORM_TOP_ONLY
