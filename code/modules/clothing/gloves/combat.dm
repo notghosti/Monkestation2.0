@@ -23,16 +23,3 @@
 	icon_state = "wizard"
 	greyscale_colors = null
 	inhand_icon_state = null
-
-/obj/item/clothing/gloves/tackler/combat/insulated/admiral // Reskin for Abraxis's Admiral set
-	icon_state = "admiral"
-	worn_icon = 'monkestation/icons/mob/clothing/gloves.dmi'
-	icon = 'monkestation/icons/obj/clothing/gloves.dmi'
-	alternate_worn_layer = ABOVE_SUIT_LAYER
-
-/obj/item/clothing/gloves/admiral // Loadout version of the Abraxis Centcom Admiral gloves
-	name = "black gloves"
-	icon_state = "admiral"
-	worn_icon = 'monkestation/icons/mob/clothing/gloves.dmi'
-	icon = 'monkestation/icons/obj/clothing/gloves.dmi'
-	alternate_worn_layer = ABOVE_SUIT_LAYER
