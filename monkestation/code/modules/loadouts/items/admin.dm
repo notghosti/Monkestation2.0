@@ -26,7 +26,6 @@
 	admin_only = TRUE
 	item_path = /obj/item/clothing/under/rank/centcom/officer_skirt
 
-
 // Abraxis's loadout
 
 /datum/loadout_item/head/cent_admiral_hat  //
@@ -61,3 +60,17 @@
 	item_path = /obj/item/clothing/shoes/admiral
 	requires_purchase = FALSE
 	ckeywhitelist = list("Plejek", "abraxis12gaming")
+
+// Sprungle's loadout
+
+/datum/loadout_item/mask/sprungle_mask
+	name = "Porcelain Facemask"
+	requires_purchase = FALSE
+	ckeywhitelist = list("speebusdageebus", "plejek")
+	item_path = /obj/item/clothing/mask/sprungle
+
+/datum/loadout_item/mask/sprungle_golden_mask
+	name = "Golden Facemask"
+	requires_purchase = FALSE
+	ckeywhitelist = list("speebusdageebus", "plejek")
+	item_path = /obj/item/clothing/mask/sprungle/personal
