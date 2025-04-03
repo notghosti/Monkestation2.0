@@ -312,11 +312,3 @@
 	worn_icon = 'icons/mob/clothing/head/straw.dmi'
 	icon_state = "straw_hat"
 
-/obj/item/clothing/head/hats/warden/drill/centcom_admiral // Abraxis wanted the functionality. This is just easier.
-	name = "\improper CentCom Admiral's campaign hat"
-	icon_state = "admiral"
-	desc = "Worn by the best of the best.. And that best is <i>you!</i>"
-	armor_type = /datum/armor/hats_centcom_cap // same as centcom cap
-	strip_delay = (8 SECONDS) // same as centcom cap
-	icon = 'monkestation/icons/obj/clothing/hats.dmi'
-	worn_icon = 'monkestation/icons/mob/clothing/head.dmi'
