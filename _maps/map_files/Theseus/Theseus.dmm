@@ -25065,6 +25065,7 @@
 /obj/machinery/computer/teleporter{
 	dir = 1
 	},
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "huY" = (
@@ -43677,8 +43678,6 @@
 /obj/structure/showcase/cyborg/old{
 	pixel_y = 20
 	},
-/obj/machinery/light/directional/north,
-/obj/machinery/camera/autoname/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
@@ -47312,6 +47311,7 @@
 "nQR" = (
 /obj/structure/cable,
 /obj/machinery/teleport/hub,
+/obj/effect/turf_decal/bot,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "nQV" = (
@@ -61599,9 +61599,9 @@
 /turf/open/floor/iron/dark,
 /area/station/science/lab)
 "rXR" = (
-/obj/effect/turf_decal/bot,
-/obj/machinery/camera/directional/east,
-/obj/machinery/teleport/hub,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "rXS" = (
@@ -80211,6 +80211,7 @@
 "xoA" = (
 /obj/machinery/firealarm/directional/east,
 /obj/machinery/camera/directional/east,
+/obj/machinery/light/directional/north,
 /turf/open/floor/iron/dark,
 /area/station/ai_monitored/turret_protected/aisat/foyer)
 "xoK" = (
