@@ -12366,7 +12366,8 @@
 "dXi" = (
 /obj/machinery/camera/autoname/directional/west,
 /obj/structure/extinguisher_cabinet/directional/west,
-/turf/open/floor/wood,
+/obj/structure/railing/wooden_fencing,
+/turf/open/floor/carpet/green,
 /area/station/service/library)
 "dXk" = (
 /obj/structure/cable,
@@ -28179,6 +28180,13 @@
 /obj/effect/mapping_helpers/airlock/access/all/supply/general,
 /turf/open/floor/iron/dark/textured,
 /area/station/cargo/storage)
+"jax" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/railing/wooden_fencing,
+/turf/open/floor/carpet/green,
+/area/station/service/library)
 "jay" = (
 /obj/effect/spawner/random/structure/girder,
 /turf/open/floor/plating,
@@ -41324,11 +41332,6 @@
 /area/station/commons/fitness)
 "npc" = (
 /obj/machinery/light/directional/west,
-/obj/structure/bed/dogbed{
-	anchored = 1;
-	name = "Daisy's bed"
-	},
-/mob/living/basic/rabbit/daisy,
 /turf/open/floor/iron/vaporwave,
 /area/station/service/library/printer)
 "npm" = (
@@ -48159,10 +48162,6 @@
 /obj/structure/sign/painting/library{
 	pixel_y = 32
 	},
-/obj/structure/chair/comfy/black{
-	dir = 8
-	},
-/obj/effect/landmark/start/hangover,
 /turf/open/floor/wood,
 /area/station/service/library)
 "pzI" = (
@@ -55172,10 +55171,8 @@
 	dir = 10
 	},
 /obj/machinery/newscaster/directional/west,
-/obj/structure/chair/sofa/corp/right{
-	dir = 4
-	},
 /obj/effect/landmark/start/hangover,
+/obj/structure/bed/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "rQA" = (
@@ -58325,10 +58322,7 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/item/radio/intercom/directional/west,
-/obj/structure/chair/sofa/corp{
-	dir = 4
-	},
-/obj/effect/landmark/start/assistant,
+/obj/structure/bed/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "sUK" = (
@@ -69921,19 +69915,7 @@
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/central)
 "wxl" = (
-/obj/structure/closet/crate/secure/science{
-	req_access = list("robotics");
-	name = "MOD Core Crate"
-	},
-/obj/item/mod/core/standard{
-	pixel_x = -4
-	},
-/obj/item/mod/core/standard{
-	pixel_x = 4
-	},
-/obj/item/mod/core/standard{
-	pixel_y = 4
-	},
+/obj/structure/closet/crate/mod,
 /turf/open/floor/iron,
 /area/station/science/robotics/mechbay)
 "wxo" = (
@@ -70068,11 +70050,12 @@
 	},
 /area/station/tcommsat/computer)
 "wzA" = (
-/obj/structure/chair/comfy/black{
-	dir = 4
+/obj/structure/bed/dogbed{
+	anchored = 1;
+	name = "Daisy's bed"
 	},
-/obj/effect/landmark/start/assistant,
-/turf/open/floor/wood,
+/mob/living/basic/rabbit/daisy,
+/turf/open/floor/carpet/green,
 /area/station/service/library)
 "wzI" = (
 /obj/structure/chair/plastic,
@@ -70271,10 +70254,8 @@
 /obj/effect/turf_decal/trimline/blue/filled/line{
 	dir = 8
 	},
-/obj/structure/chair/sofa/corp/left{
-	dir = 4
-	},
 /obj/effect/landmark/start/hangover,
+/obj/structure/bed/medical,
 /turf/open/floor/iron/white,
 /area/station/medical/medbay/lobby)
 "wDy" = (
@@ -74034,6 +74015,14 @@
 /obj/effect/mapping_helpers/airlock/access/all/medical/pharmacy,
 /turf/open/floor/iron/white/textured,
 /area/station/medical/pharmacy)
+"xQU" = (
+/obj/machinery/light/directional/north,
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/item/toy/plush/goatplushie,
+/turf/open/floor/carpet/green,
+/area/station/service/library)
 "xQX" = (
 /obj/effect/turf_decal/trimline/dark_blue/filled/line{
 	dir = 1
@@ -119552,8 +119541,8 @@ lLd
 nte
 jCx
 qnE
-eqe
-ccp
+xQU
+jax
 ccp
 ccp
 rIx
