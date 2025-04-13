@@ -51,7 +51,7 @@
 		/datum/job/janitor,
 		/datum/job/mime,
 		/datum/job/lawyer,
-		/datum/job/barber,
+		/datum/job/barber, // Monkestation Addition
 		// Cargo
 		/datum/job/cargo_technician,
 		// Science
@@ -93,7 +93,7 @@
 		/datum/job/cook,
 		/datum/job/curator,
 		// Science
-		/datum/job/xenobiologist,
+		/datum/job/xenobiologist, //monkestation addition
 		// Security
 		/datum/job/security_assistant,
 		// Engineering
@@ -125,7 +125,7 @@
 	target_jobs = list(
 		/datum/job/head_of_security,
 		/datum/job/captain,
-		/datum/job/blueshield,
+		/datum/job/blueshield, //,Monkestation additon:
 	)
 
 /datum/traitor_objective/destroy_heirloom/New(datum/uplink_handler/handler)
