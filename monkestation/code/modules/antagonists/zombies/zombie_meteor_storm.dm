@@ -23,7 +23,6 @@
 	required_enemies = 5
 
 /datum/round_event/zombie_meteor_wave
-	role_name = "Infectous Zombies"
 	start_when = 1
 	end_when = 3
 	var/meteor_count = 3
