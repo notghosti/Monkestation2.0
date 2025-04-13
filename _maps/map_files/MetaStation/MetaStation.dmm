@@ -42728,9 +42728,6 @@
 	name = "Nanites and Circuits Lab"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/research{
-	name = "Ordnance Lab"
-	},
 /obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
 /turf/open/floor/iron/white,
 /area/station/science/circuits)
