@@ -1,10 +1,10 @@
 /datum/round_event_control/blob
 	name = "Blob"
 	typepath = /datum/round_event/ghost_role/blob
-	weight = 4 //monkie edit: 10 to 4
+	weight = 7 //monkie edit: 10 to 4
 	max_occurrences = 1
 	min_players = 35  //monkie edit: 20 to 35
-	earliest_start = 80 MINUTES //monkie edit: 20 to 80
+	earliest_start = 70 MINUTES //monkie edit: 20 to 60
 	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns a new blob overmind."

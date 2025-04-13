@@ -1,10 +1,10 @@
 /datum/round_event_control/spider_infestation
 	name = "Spider Infestation"
 	typepath = /datum/round_event/spider_infestation
-	weight = 7 //monkestation edit: from 10 to 6
+	weight = 7 //monkestation edit: from 10 to 7
 	max_occurrences = 1
 	min_players = 35 //monkie edit: 20 to 35
-	earliest_start = 60 MINUTES //monke edit: 20 to 60
+	earliest_start = 55 MINUTES //monke edit: 20 to 55
 	//dynamic_should_hijack = TRUE
 	category = EVENT_CATEGORY_ENTITIES
 	description = "Spawns spider eggs, ready to hatch."

@@ -1,7 +1,7 @@
 /datum/round_event_control/spacevine
 	name = "Space Vines"
 	typepath = /datum/round_event/spacevine
-	weight = 15
+	weight = 20 // Monkestation Edit: 15 ==> 20
 	max_occurrences = 3
 	min_players = 25 //MONKESTATION CHANGE: 10 ==> 25
 	category = EVENT_CATEGORY_ENTITIES

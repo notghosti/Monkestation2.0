@@ -1,13 +1,13 @@
 /datum/round_event_control/antagonist/solo/blob_infection
 	name = "Blob Infection"
-	weight = 6
+	weight = 5
 	tags = list(TAG_DESTRUCTIVE, TAG_COMBAT, TAG_EXTERNAL, TAG_ALIEN, TAG_CREW_ANTAG)
 	antag_flag = ROLE_BLOB_INFECTION
 	antag_datum = /datum/antagonist/blob/infection
 	min_players = 35
 	maximum_antags = 1
 	max_occurrences = 1
-	earliest_start = 80 MINUTES
+	earliest_start = 60 MINUTES
 	checks_antag_cap = TRUE
 	protected_roles = list(
 		JOB_CAPTAIN,
