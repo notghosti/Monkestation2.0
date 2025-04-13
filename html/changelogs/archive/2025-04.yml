@@ -257,3 +257,22 @@
   - rscadd: Added tgui ticket panel
   flleeppyy:
   - admin: You can now restart the MC/Failsafe from the discord with /restartcontroller
+2025-04-13:
+  DexeeXI:
+  - rscdel: Removal of unused assets
+  - rscdel: Cleanup of items on Centcom
+  Gw0sty:
+  - bugfix: IPC chests will no longer become dislocated
+  - qol: Heliostation distro has been slightly adjusted to create less unnecessary
+      snags. Actual distro is unaffected.
+  - balance: Maintenace drone's inbuilt tools are now considered Bulky storage, the
+      same as a normal bag. Normal -> Bulky
+  - balance: Cyborg RPED's have now received additional storage capacity. 50 parts
+      -> 200 Parts
+  - bugfix: All stations merged have a proper preloaded Maintenace drone spawner
+  - bugfix: DeltaStation Cargo now has a distro that is connected to the atmospherics
+      and can properly restore air.
+  - bugfix: Deltastation robotics airlock will no longer spawn with a oxygen tank
+  - bugfix: Deltratstation PTL now has a connected distro
+  - bugfix: Theseus AI sat now functional
+  - bugfix: Tramstation arrivals is now connected to distro
