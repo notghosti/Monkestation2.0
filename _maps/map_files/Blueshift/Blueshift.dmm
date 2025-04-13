@@ -2352,6 +2352,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/medical,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "axS" = (
@@ -14615,6 +14616,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/engineering)
 "cLd" = (
@@ -23305,6 +23307,7 @@
 /obj/effect/turf_decal/tile/blue{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/medical,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "exv" = (
@@ -27345,6 +27348,7 @@
 /area/station/cargo/quartermaster)
 "fiI" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science/research)
 "fiM" = (
@@ -43749,6 +43753,12 @@
 	},
 /turf/open/floor/engine,
 /area/station/science/ordnance/burnchamber)
+"iwp" = (
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/effect/landmark/start/depsec/engineering,
+/turf/open/floor/iron,
+/area/station/security/checkpoint/engineering)
 "iwq" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable,
@@ -50586,7 +50596,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/white/side{
 	dir = 4
 	},
@@ -53918,6 +53928,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science/research)
 "ksV" = (
@@ -60129,6 +60140,7 @@
 "lFy" = (
 /obj/structure/chair/office,
 /obj/structure/cable,
+/obj/effect/landmark/start/depsec/supply,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/supply)
 "lFz" = (
@@ -61692,6 +61704,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /obj/effect/turf_decal/tile/yellow/half/contrasted,
+/obj/effect/landmark/start/depsec/engineering,
 /turf/open/floor/iron/dark/side{
 	dir = 1
 	},
@@ -68177,6 +68190,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 1
 	},
+/obj/effect/landmark/start/depsec/science,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/science/research)
 "nkI" = (
@@ -96963,6 +96977,7 @@
 /area/station/engineering/storage/tcomms)
 "sNu" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
+/obj/effect/landmark/start/depsec/supply,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/supply)
 "sNw" = (
@@ -98660,6 +98675,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/tile/blue,
+/obj/effect/landmark/start/depsec/medical,
 /turf/open/floor/iron,
 /area/station/security/checkpoint/medical)
 "tcS" = (
@@ -106840,7 +106856,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/white/side{
 	dir = 8
 	},
@@ -106874,6 +106890,7 @@
 /obj/effect/turf_decal/tile/brown/half/contrasted{
 	dir = 8
 	},
+/obj/effect/landmark/start/depsec/supply,
 /turf/open/floor/iron/dark/side{
 	dir = 4
 	},
@@ -153571,7 +153588,7 @@ oWx
 kKN
 jQH
 cLc
-cMt
+iwp
 sKA
 aAS
 bKr

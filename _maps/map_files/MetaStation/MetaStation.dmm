@@ -6687,11 +6687,11 @@
 /turf/open/floor/iron,
 /area/mine/maintenance/public)
 "cuO" = (
-/obj/effect/turf_decal/stripes/corner{
-	dir = 1
-	},
 /obj/structure/closet/firecloset,
 /obj/structure/sign/warning/secure_area/directional/west,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "cuR" = (
@@ -11487,11 +11487,8 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
-/obj/effect/spawner/random/trash/garbage{
-	spawn_scatter_radius = 1
-	},
 /obj/structure/disposalpipe/segment,
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "egO" = (
 /obj/machinery/mineral/stacking_unit_console{
@@ -11950,6 +11947,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
 /obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/turf_decal/stripes/line{
 	dir = 1
 	},
 /turf/open/floor/plating,
@@ -21041,7 +21041,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 9
 	},
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "hxo" = (
 /obj/effect/spawner/structure/window/reinforced,
@@ -24857,7 +24857,7 @@
 /area/station/science/lab)
 "iLw" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "iLH" = (
 /obj/machinery/flasher/directional/west{
@@ -30892,7 +30892,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "kMk" = (
 /turf/open/floor/glass/reinforced,
@@ -34677,7 +34677,7 @@
 	dir = 1
 	},
 /obj/effect/mapping_helpers/mail_sorting/science/ordnance,
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "lYx" = (
 /obj/machinery/power/apc/auto_name/directional/west,
@@ -38184,6 +38184,12 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/courtroom)
+"nhO" = (
+/obj/effect/spawner/random/trash/garbage{
+	spawn_scatter_radius = 1
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
 "nhP" = (
 /turf/open/floor/circuit/green,
 /area/station/ai_monitored/turret_protected/ai_upload)
@@ -42603,6 +42609,9 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/structure/cable,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
 /turf/open/floor/plating,
 /area/station/maintenance/aft/lesser)
 "oGr" = (
@@ -42719,7 +42728,10 @@
 	name = "Nanites and Circuits Lab"
 	},
 /obj/machinery/door/firedoor,
-/obj/effect/mapping_helpers/airlock/access/all/science/research,
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
 /turf/open/floor/iron/white,
 /area/station/science/circuits)
 "oIG" = (
@@ -49110,7 +49122,7 @@
 /area/station/science/lobby)
 "qUE" = (
 /obj/effect/spawner/random/structure/crate_loot,
-/turf/open/floor/plating,
+/turf/open/floor/iron/dark,
 /area/station/maintenance/aft/lesser)
 "qUQ" = (
 /obj/structure/chair{
@@ -63882,6 +63894,18 @@
 /obj/machinery/vending/coffee,
 /turf/open/floor/iron,
 /area/station/hallway/secondary/entry)
+"wbE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
+/obj/structure/cable,
+/obj/effect/turf_decal/stripes/corner{
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/station/maintenance/aft/lesser)
 "wbF" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -103322,7 +103346,7 @@ svS
 qUE
 iLw
 oGn
-nFa
+nhO
 mHy
 mHy
 eSh
@@ -103578,7 +103602,7 @@ uvh
 uvh
 uvh
 svS
-oGn
+wbE
 sMN
 svS
 svS

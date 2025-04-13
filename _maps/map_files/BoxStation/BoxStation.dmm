@@ -39033,7 +39033,7 @@
 /obj/machinery/door/airlock/research/glass{
 	name = "Nanite Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/any/science/research,
 /turf/open/floor/iron/white/textured,
 /area/station/science/auxlab)
 "mzC" = (
@@ -52237,7 +52237,7 @@
 /obj/machinery/door/airlock/research/glass{
 	name = "Circuit Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/any/science/research,
 /turf/open/floor/iron/white/textured,
 /area/station/science/circuits)
 "qTm" = (

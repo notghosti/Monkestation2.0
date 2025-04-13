@@ -3774,7 +3774,7 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /obj/machinery/door/firedoor,
 /obj/effect/landmark/navigate_destination,
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/white,
 /area/station/science/circuits)
 "beu" = (
@@ -34938,6 +34938,11 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/cyborg,
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	frequency = 1449;
+	name = "Xenobio and Nanite Zone"
+	},
 /turf/open/floor/circuit/green,
 /area/station/science/robotics/mechbay)
 "knL" = (
@@ -65421,6 +65426,11 @@
 	},
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/recharge_station,
+/obj/machinery/door/airlock/research{
+	autoclose = 0;
+	frequency = 1449;
+	name = "Xenobio and Nanite Zone"
+	},
 /turf/open/floor/circuit/green,
 /area/station/science/robotics/mechbay)
 "tfF" = (

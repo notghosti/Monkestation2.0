@@ -31554,6 +31554,10 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
 /turf/open/floor/iron/white/smooth_half,
 /area/station/science/xenobiology)
 "eYW" = (
@@ -47248,6 +47252,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/research{
+	name = "Ordnance Lab"
+	},
+/obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
 /turf/open/floor/iron/white/smooth_half,
 /area/station/science/xenobiology)
 "lfj" = (
@@ -75559,7 +75567,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Nanite Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/dark/herringbone,
 /area/station/science/circuits)
 "wbW" = (

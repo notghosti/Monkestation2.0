@@ -7620,7 +7620,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/white,
 /area/station/science/lower)
 "bpR" = (
@@ -10524,8 +10524,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
-/obj/effect/mapping_helpers/airlock/access/any/science/ordnance_storage,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
+/obj/effect/mapping_helpers/airlock/access/all/science/ordnance_storage,
 /turf/open/floor/iron/white/side{
 	dir = 8
 	},
@@ -33061,7 +33061,7 @@
 /obj/structure/cable,
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment,
-/obj/effect/mapping_helpers/airlock/access/any/science/circuitry,
+/obj/effect/mapping_helpers/airlock/access/all/science/research,
 /turf/open/floor/iron/white,
 /area/station/science/ordnance/office)
 "jqd" = (
@@ -64748,6 +64748,7 @@
 	},
 /obj/machinery/atmospherics/pipe/smart/manifold4w/general/visible,
 /obj/effect/turf_decal/delivery,
+/obj/effect/mapping_helpers/airlock/access/all/science/ordnance_storage,
 /turf/open/floor/iron/dark,
 /area/station/science/lower)
 "tiG" = (

@@ -867,7 +867,6 @@
 		ACCESS_TECH_STORAGE,
 		ACCESS_TELEPORTER,
 		ACCESS_XENOBIOLOGY,
-		ACCESS_CIRCUITRY // Monkestation Addition:
 		)
 	minimal_wildcard_access = list(
 		ACCESS_RD,
@@ -899,7 +898,6 @@
 	extra_access = list(
 		ACCESS_GENETICS,
 		ACCESS_XENOBIOLOGY,
-		ACCESS_CIRCUITRY // Monkestation Addition:
 		)
 	template_access = list(
 		ACCESS_CAPTAIN,
@@ -922,7 +920,6 @@
 		ACCESS_ORDNANCE_STORAGE,
 		ACCESS_RESEARCH,
 		ACCESS_SCIENCE,
-		ACCESS_CIRCUITRY // Monkestation Addition:
 		)
 	extra_access = list(
 		ACCESS_GENETICS,
@@ -1057,7 +1054,6 @@
 		ACCESS_ORDNANCE,
 		ACCESS_ROBOTICS,
 		ACCESS_XENOBIOLOGY,
-		ACCESS_CIRCUITRY // Monkestation Addition:
 	)
 
 /datum/id_trim/job/shaft_miner
