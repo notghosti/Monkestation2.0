@@ -72,6 +72,9 @@
 	HUD_type = DATA_HUD_MEDICAL_ADVANCED
 	HUD_trait = TRAIT_MEDICAL_HUD
 
+/obj/item/organ/internal/cyberimp/eyes/hud/medical/cmo
+	encode_info = AUGMENT_NO_REQ
+
 /obj/item/organ/internal/cyberimp/eyes/hud/security
 	name = "security HUD implant"
 	desc = "These cybernetic eye implants will display a security HUD over everything you see."
@@ -118,7 +121,7 @@
 		return
 	ADD_TRAIT(eye_owner, TRAIT_REAGENT_SCANNER, ORGAN_TRAIT)
 	ADD_TRAIT(eye_owner, TRAIT_RESEARCH_SCANNER, ORGAN_TRAIT)
-	
+
 /obj/item/organ/internal/cyberimp/eyes/fakehud/science/Remove(mob/living/carbon/eye_owner, special = FALSE)
 	. = ..()
 	REMOVE_TRAIT(eye_owner, TRAIT_REAGENT_SCANNER, ORGAN_TRAIT)

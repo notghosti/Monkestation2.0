@@ -179,3 +179,6 @@
 
 /obj/item/autosurgeon/organ/syndicate/deepvien/l
 	starting_organ = /obj/item/organ/internal/cyberimp/leg/chemplant/drugs/l
+
+/obj/item/autosurgeon/medical_hud/cmo
+	starting_organ = /obj/item/organ/internal/cyberimp/eyes/hud/medical/cmo
