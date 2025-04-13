@@ -180,13 +180,15 @@
 	incompatible_modules = list(/obj/item/mod/module/jump_jet)
 
 /obj/item/mod/module/jump_jet/on_use()
+	. = ..()
+	if(!.)
+		return
 	if (DOING_INTERACTION(mod.wearer, mod.wearer))
 		balloon_alert(mod.wearer, "busy!")
 		return
 	balloon_alert(mod.wearer, "launching...")
 	mod.wearer.Shake(duration = 1 SECONDS)
 	if (!do_after(mod.wearer, 1 SECONDS, target = mod.wearer))
-		start_cooldown(FAILED_ACTIVATION_COOLDOWN) // Don't go on full cooldown if we failed to launch
 		return FALSE
 	playsound(mod.wearer, 'sound/vehicles/rocketlaunch.ogg', 100, TRUE)
 	mod.wearer.apply_status_effect(/datum/status_effect/jump_jet)
