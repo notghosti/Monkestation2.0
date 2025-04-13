@@ -9,11 +9,9 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "e" = (
 /obj/item/gun/ballistic/shotgun/lethal,
-/obj/structure/closet/crate/preopen,
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "h" = (
-/obj/structure/closet/crate/preopen,
 /obj/item/gun/ballistic/automatic/mini_uzi,
 /obj/item/gun/ballistic/revolver{
 	pixel_x = 2;
@@ -71,10 +69,6 @@
 /mob/living/basic/mimic/crate,
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
-"s" = (
-/mob/living/basic/mimic/crate/crate,
-/turf/open/indestructible/dark,
-/area/ruin/space/has_grav/powered/virtual_domain)
 "t" = (
 /turf/template_noop,
 /area/virtual_domain/safehouse)
@@ -85,7 +79,6 @@
 "x" = (
 /obj/item/gun/ballistic/shotgun/lethal,
 /obj/item/gun/ballistic/revolver/mateba,
-/obj/structure/closet/crate/preopen,
 /turf/open/indestructible/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "B" = (
@@ -138,7 +131,6 @@
 /area/virtual_domain/safehouse)
 "X" = (
 /obj/item/gun/ballistic/shotgun/lethal,
-/obj/structure/closet/crate/preopen,
 /obj/projectile/bullet/shotgun_frag12,
 /obj/projectile/bullet/shotgun_frag12,
 /obj/projectile/bullet/shotgun_frag12,
@@ -881,7 +873,7 @@ Y
 Q
 Q
 Q
-s
+Q
 M
 Q
 Q
@@ -919,7 +911,7 @@ Q
 F
 Q
 Y
-s
+Q
 Q
 Q
 a
@@ -992,11 +984,11 @@ o
 Y
 a
 Q
-s
+Q
 Y
 Y
 Y
-s
+Q
 Q
 Q
 Q
