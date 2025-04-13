@@ -3,7 +3,7 @@
 
 /datum/antagonist/cyber_police
 	name = ROLE_CYBER_POLICE
-	antagpanel_category = ANTAG_GROUP_CYBERAUTH
+	antagpanel_category = ANTAG_GROUP_GLITCH
 	job_rank = ROLE_CYBER_POLICE
 	preview_outfit = /datum/outfit/cyber_police
 	show_name_in_check_antagonists = TRUE
