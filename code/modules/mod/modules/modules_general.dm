@@ -773,13 +773,11 @@
 	incompatible_modules = list(/obj/item/mod/module/shock_absorber)
 
 /obj/item/mod/module/shock_absorber/on_suit_activation()
-	. = ..()
-	ADD_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, REF(src))
+	ADD_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, MOD_TRAIT)
 	RegisterSignal(mod.wearer, COMSIG_LIVING_MINOR_SHOCK, PROC_REF(mob_batoned))
 
 /obj/item/mod/module/shock_absorber/on_suit_deactivation(deleting)
-	. = ..()
-	REMOVE_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, REF(src))
+	REMOVE_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, MOD_TRAIT)
 	UnregisterSignal(mod.wearer, COMSIG_LIVING_MINOR_SHOCK)
 
 /obj/item/mod/module/shock_absorber/proc/mob_batoned(datum/source)
