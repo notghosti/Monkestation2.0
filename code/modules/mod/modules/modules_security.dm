@@ -412,7 +412,6 @@
 	removable = FALSE
 	complexity = 0
 	idle_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
-	incompatible_modules = list(/obj/item/mod/module/quick_carry, /obj/item/mod/module/constructor, /obj/item/mod/module/quick_cuff)
 
 /obj/item/mod/module/quick_cuff/on_suit_activation()
 	ADD_TRAIT(mod.wearer, TRAIT_FAST_CUFFING, MOD_TRAIT)
