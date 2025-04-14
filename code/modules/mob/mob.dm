@@ -114,6 +114,17 @@
 	. = ..()
 	tag = "mob_[next_mob_id++]"
 
+/// Assigns a (c)key to this mob.
+/mob/proc/PossessByPlayer(ckey)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	if(isnull(ckey))
+		return
+
+	if(!istext(ckey))
+		CRASH("Tried to assign a mob a non-text ckey, wtf?!")
+
+	src.ckey = ckey(ckey)
+
 /mob/serialize_list(list/options, list/semvers)
 	. = ..()
 

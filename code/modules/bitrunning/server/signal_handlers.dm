@@ -41,6 +41,8 @@
 	if(!is_ready)
 		examine_text += span_notice("It is currently cooling down. Give it a few moments.")
 		return
+	if(isobserver(examiner) && (obj_flags & EMAGGED))
+		. += span_notice("Ominous warning lights are blinking red. This server has been tampered with.")
 
 /// Whenever something enters the send tiles, check if it's a loot crate. If so, alert players.
 /obj/machinery/quantum_server/proc/on_goal_turf_entered(datum/source, atom/movable/arrived, atom/old_loc, list/atom/old_locs)
