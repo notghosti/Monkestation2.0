@@ -38,7 +38,7 @@ export const AntagInfoGlitch = (props) => {
             </Stack.Item>
             <SpecificInfo />
             <Stack.Item>
-              <marquee scrollamount="2">{objectives[0]?.explanation}</marquee>
+              <marquee scrollamount="2">{objectives[0].explanation}</marquee>
             </Stack.Item>
             <Divider />
             <Stack.Item>
@@ -98,7 +98,7 @@ const SpecificInfo = (props) => {
     case 'NetGuardian Prime':
       return (
         <Stack.Item grow>
-          <span style={{ ...textStyles.danger, fontSize: '16px' }}>
+          <span style={textStyles.danger, fontSize = '16px' }>
             ORGANIC LIFE MUST BE TERMINATED.
           </span>
         </Stack.Item>
