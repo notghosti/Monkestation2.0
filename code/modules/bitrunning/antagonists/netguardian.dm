@@ -10,7 +10,7 @@
 	icon_state = "netguardian"
 	icon_living = "netguardian"
 	icon_dead = "crash"
-	base_pixel_x = -5
+	base_pixel_x = -10
 
 	gender = NEUTER
 	mob_biotypes = MOB_ROBOTIC

@@ -124,7 +124,7 @@
 		check_jobban = ROLE_PAI,
 		poll_time = 7.5 SECONDS,
 		ignore_category = POLL_IGNORE_SPLITPERSONALITY,
-		alert_pic = /datum/antagonist/cyber_police,
+		alert_pic = /datum/antagonist/bitrunning_glitch/cyber_police,
 		role_name_text = role_name
 	)
 
@@ -149,7 +149,7 @@
 	player_mind.transfer_to(new_agent)
 	player_mind.set_assigned_role(SSjob.GetJobType(/datum/job/cyber_police))
 	player_mind.special_role = ROLE_CYBER_POLICE
-	player_mind.add_antag_datum(/datum/antagonist/cyber_police)
+	player_mind.add_antag_datum(/datum/antagonist/bitrunning_glitch/cyber_police)
 
 	return new_agent
 

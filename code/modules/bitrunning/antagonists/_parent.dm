@@ -14,6 +14,7 @@
 	ui_name = "AntagInfoGlitch"
 	/// Minimum Qserver threat required to spawn this mob. This is subtracted (x/2) from the server thereafter.
 	var/threat = 0
+	antag_flags = FLAG_ANTAG_CAP_IGNORE // monkestation addition
 
 /datum/antagonist/bitrunning_glitch/greet()
 	. = ..()
