@@ -110,6 +110,7 @@
 
 	mutation_target.gib(DROP_ALL_REMAINS)
 
+	var/datum/mind/ghost_mind = ghost.mind
 	new_mob.key = ghost.key
 
 	if(ghost_mind)
