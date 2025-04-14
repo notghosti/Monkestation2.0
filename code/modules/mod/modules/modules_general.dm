@@ -763,3 +763,28 @@
 	if(forced || wearer.throwing || wearer.body_position == LYING_DOWN || wearer.buckled || CHECK_MOVE_LOOP_FLAGS(wearer, MOVEMENT_LOOP_OUTSIDE_CONTROL))
 		return
 	mod.core.add_charge(power_per_step)
+
+/obj/item/mod/module/shock_absorber
+	name = "MOD shock absorption module"
+	desc = "A module that makes the user resistant to the knockdown inflicted by Stun Batons."
+	icon_state = "no_baton"
+	complexity = 1
+	use_power_cost = DEFAULT_CHARGE_DRAIN
+	incompatible_modules = list(/obj/item/mod/module/shock_absorber)
+
+/obj/item/mod/module/shock_absorber/on_suit_activation()
+	. = ..()
+	ADD_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, REF(src))
+	RegisterSignal(mod.wearer, COMSIG_LIVING_MINOR_SHOCK, PROC_REF(mob_batoned))
+
+/obj/item/mod/module/shock_absorber/on_suit_deactivation(deleting)
+	. = ..()
+	REMOVE_TRAIT(mod.wearer, TRAIT_BATON_RESISTANCE, REF(src))
+	UnregisterSignal(mod.wearer, COMSIG_LIVING_MINOR_SHOCK)
+
+/obj/item/mod/module/shock_absorber/proc/mob_batoned(datum/source)
+	SIGNAL_HANDLER
+	drain_power(use_power_cost)
+	var/datum/effect_system/lightning_spread/sparks = new /datum/effect_system/lightning_spread
+	sparks.set_up(number = 5, cardinals_only = TRUE, location = mod.wearer.loc)
+	sparks.start()
