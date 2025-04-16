@@ -296,7 +296,6 @@
 #include "code\__DEFINES\atmospherics\atmos_mob_interaction.dm"
 #include "code\__DEFINES\atmospherics\atmos_piping.dm"
 #include "code\__DEFINES\color_matrix\lizard_matrix.dm"
-#include "code\__DEFINES\dcs\declarations.dm"
 #include "code\__DEFINES\dcs\flags.dm"
 #include "code\__DEFINES\dcs\helpers.dm"
 #include "code\__DEFINES\dcs\signals\mapping.dm"

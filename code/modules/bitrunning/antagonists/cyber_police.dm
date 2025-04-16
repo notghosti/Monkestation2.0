@@ -5,7 +5,7 @@
 	name = ROLE_CYBER_POLICE
 	job_rank = ROLE_CYBER_POLICE
 	show_to_ghosts = TRUE
-	ui_name = "AntagInfoCyberAuth"
+	ui_name = "AntagInfoGlitch"
 
 /datum/antagonist/bitrunning_glitch/cyber_police/greet()
 	. = ..()
