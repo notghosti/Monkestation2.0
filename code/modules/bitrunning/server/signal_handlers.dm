@@ -52,6 +52,15 @@
 	if(isnull(chosen_forge))
 		return
 
+	if((obj_flags & EMAGGED) && isliving(arrived))
+		var/mob/living/creature = arrived
+
+		if(!creature.mind?.has_antag_datum(/datum/antagonist/bitrunning_glitch, check_subtypes = TRUE))
+			return
+
+		INVOKE_ASYNC(src, PROC_REF(station_spawn), arrived, chosen_forge)
+		return
+
 	if(istype(arrived, /obj/structure/closet/crate/secure/bitrunning/encrypted))
 		generate_loot(arrived, chosen_forge)
 		return
