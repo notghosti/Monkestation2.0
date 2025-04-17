@@ -20,6 +20,7 @@
 		var/can_view_reward = initial(domain.difficulty) < (scanner_tier + 1) && initial(domain.cost) <= points + 3
 
 		levels += list(list(
+			"announce_ghosts" = domain.announce_to_ghosts,
 			"cost" = initial(domain.cost),
 			"desc" = can_view ? initial(domain.desc) : "Limited scanning capabilities. Cannot infer domain details.",
 			"difficulty" = initial(domain.difficulty),
@@ -29,6 +30,48 @@
 		))
 
 	return levels
+
+
+/// I grab the atom here so I can signal it / manipulate spawners etc
+/obj/machinery/quantum_server/proc/get_avatar_destination() as /atom
+	// Branch A: Custom spawns
+	if(length(generated_domain.custom_spawns))
+		var/atom/valid_spawner
+
+		while(isnull(valid_spawner))
+			var/atom/chosen = pick(generated_domain.custom_spawns)
+			if(QDELETED(chosen))
+				generated_domain.custom_spawns -= chosen
+				continue
+
+			valid_spawner = chosen
+			break
+
+		return valid_spawner
+
+	// Branch B: Hololadders
+	if(!length(exit_turfs))
+		return
+
+	if(retries_spent >= length(exit_turfs))
+		return
+
+	var/turf/exit_tile
+	for(var/turf/dest_turf in exit_turfs)
+		if(!locate(/obj/structure/hololadder) in dest_turf)
+			exit_tile = dest_turf
+			break
+
+	if(isnull(exit_tile))
+		return
+
+	var/obj/structure/hololadder/wayout = new(exit_tile, src)
+	if(isnull(wayout))
+		return
+
+	retries_spent += 1
+
+	return wayout
 
 /// If there are hosted minds, attempts to get a list of their current virtual bodies w/ vitals
 /obj/machinery/quantum_server/proc/get_avatar_data()
@@ -140,6 +183,33 @@
 	var/datum/effect_system/spark_spread/quantum/sparks = new()
 	sparks.set_up(5, 1, get_turf(cache))
 	sparks.start()
+
+
+/// Starts building a new avatar for the player.
+/// Called by netpods when they don't have a current avatar.
+/// This is a procedural proc which links several others together.
+/obj/machinery/quantum_server/proc/start_new_connection(mob/living/carbon/human/neo, datum/outfit/netsuit) as /mob/living/carbon/human
+	var/atom/entry_atom = get_avatar_destination()
+	if(isnull(entry_atom))
+		return
+
+	var/mob/living/carbon/new_avatar = generate_avatar(get_turf(entry_atom), netsuit)
+	stock_gear(new_avatar, neo, generated_domain)
+
+	// Cleanup for domains with one time use custom spawns
+	if(!length(generated_domain.custom_spawns))
+		return new_avatar
+
+	// If we're spawning from some other fuckery, no need for this
+	if(istype(entry_atom, /obj/effect/mob_spawn/ghost_role/human/virtual_domain))
+		var/obj/effect/mob_spawn/ghost_role/human/virtual_domain/spawner = entry_atom
+		spawner.artificial_spawn(new_avatar)
+
+	if(!generated_domain.keep_custom_spawns)
+		generated_domain.custom_spawns -= entry_atom
+		qdel(entry_atom)
+
+	return new_avatar
 
 #undef REDACTED
 #undef MAX_DISTANCE

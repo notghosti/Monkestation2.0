@@ -348,6 +348,29 @@ LINEN BINS
 	light_power = 2
 	light_outer_range = 1.4
 
+/obj/item/bedsheet/pirate
+	name = "pirate's bedsheet"
+	desc = "It has a Jolly Roger emblem on it and has a faint scent of grog."
+	icon_state = "sheetpirate"
+	inhand_icon_state = "sheetpirate"
+	dream_messages = list(
+		"a buried treasure",
+		"an island",
+		"a monkey",
+		"a parrot",
+		"a swashbuckler",
+		"a talking skull",
+		"avast",
+		"being a pirate",
+		"'cause a pirate is free",
+		"doing whatever you want",
+		"gold",
+		"landlubbers",
+		"stealing",
+		"sailing the Seven Seas",
+		"yarr",
+	)
+
 /obj/item/bedsheet/random
 	icon_state = "random_bedsheet"
 	name = "random bedsheet"

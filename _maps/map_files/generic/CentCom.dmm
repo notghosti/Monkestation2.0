@@ -16558,7 +16558,7 @@
 /obj/structure/ai_core/deactivated{
 	desc = "The framework for an artificial intelligence core. You have a strange feeling it might start calling you darling any moment now"
 	},
-/turf/open/floor/bitrunning_transport,
+/turf/open/indestructible/bitrunning_transport,
 /area/centcom)
 "aSJ" = (
 /obj/machinery/light/directional/east,
@@ -19704,7 +19704,7 @@
 /obj/machinery/light/small/maintenance/directional/east{
 	color = "#ffcc66"
 	},
-/turf/open/floor/bitrunning_transport,
+/turf/open/indestructible/bitrunning_transport,
 /area/centcom)
 "bNV" = (
 /obj/machinery/light/directional/east{
@@ -21087,7 +21087,7 @@
 	name = "Kbity's bed :3";
 	desc = "A comfy-looking pet bed. This is where Kbity sleeps :3"
 	},
-/turf/open/floor/bitrunning_transport,
+/turf/open/indestructible/bitrunning_transport,
 /area/centcom)
 "eCc" = (
 /obj/structure/closet/crate/trashcart,

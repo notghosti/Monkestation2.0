@@ -80,3 +80,27 @@
 /turf/open/misc/ironsand/Initialize(mapload)
 	. = ..()
 	icon_state = "ironsand[rand(1,15)]"
+
+
+/turf/open/misc/beach/coast
+	name = "coastline"
+	desc = "Tide's high tonight. Charge your batons."
+	icon = 'icons/turf/beach.dmi'
+	icon_state = "beach"
+	base_icon_state = "beach"
+	footstep = FOOTSTEP_WATER
+	barefootstep = FOOTSTEP_WATER
+	clawfootstep = FOOTSTEP_WATER
+	heavyfootstep = FOOTSTEP_WATER
+
+/turf/open/misc/beach/coast/break_tile()
+	. = ..()
+	icon_state = "beach"
+
+/turf/open/misc/beach/coast/corner
+	icon_state = "beach-corner"
+	base_icon_state = "beach-corner"
+
+/turf/open/misc/beach/coast/corner/break_tile()
+	. = ..()
+	icon_state = "beach-corner"

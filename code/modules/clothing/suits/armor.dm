@@ -294,6 +294,28 @@
 	acid = 80
 	wound = 20
 
+/datum/armor/balloon_vest
+	melee = 10
+	laser = 10
+	energy = 10
+	fire = 60
+	acid = 50
+
+/obj/item/clothing/suit/armor/balloon_vest/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK, damage_type = BRUTE)
+	if(isitem(hitby))
+		var/obj/item/item_hit = hitby
+		if(item_hit.get_sharpness())
+			pop()
+
+	if(istype(hitby, /obj/projectile/bullet))
+		pop()
+
+	return ..()
+
+/obj/item/clothing/suit/armor/balloon_vest/proc/pop()
+	playsound(src, 'sound/effects/cartoon_pop.ogg', 50, vary = TRUE)
+	qdel(src)
+
 /obj/item/clothing/suit/armor/bone
 	name = "bone armor"
 	desc = "A tribal armor plate, crafted from animal bone."
