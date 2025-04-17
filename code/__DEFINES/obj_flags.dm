@@ -108,9 +108,6 @@
 #define SHARP_EDGED (1<<0)
 #define SHARP_POINTY (1<<1)
 
-/// This area does not allow virtual entities to enter.
-#define VIRTUAL_SAFE_AREA (1<<16)
-
 /// Flags for specifically what kind of items to get in get_equipped_items
 #define INCLUDE_POCKETS (1<<0)
 #define INCLUDE_ACCESSORIES (1<<1)
