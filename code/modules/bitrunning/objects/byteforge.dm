@@ -40,11 +40,13 @@
 	var/mutable_appearance/lighting = mutable_appearance(initial(icon), "on_overlay[angry ? "_angry" : ""]")
 	flick_overlay_view(lighting, 1 SECONDS)
 
-	set_light(l_range = 2, l_power = 1.5, l_color = angry ? LIGHT_COLOR_BUBBLEGUM : LIGHT_COLOR_BABY_BLUE, l_on = TRUE)
+	set_light(l_outer_range = 2, l_power = 1.5, l_color = angry ? LIGHT_COLOR_BUBBLEGUM : LIGHT_COLOR_BABY_BLUE, l_on = TRUE)
 
 /// Adds the particle overlays to the byteforge
-/obj/machinery/byteforge/proc/setup_particles()
-	cut_overlays()
+/obj/machinery/byteforge/proc/setup_particles(angry = FALSE)
+	cut_overlay(byteforge_particles)
+
+	byteforge_particles = mutable_appearance(initial(icon), "on_particles[angry ? "_angry" : ""]", ABOVE_MOB_LAYER)
 
 	if(is_operational)
 		add_overlay(byteforge_particles)
