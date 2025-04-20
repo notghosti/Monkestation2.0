@@ -12,18 +12,14 @@
 
 /area/virtual_domain
 	name = "Virtual Domain"
-	icon_state = "bit_ruin"
 	icon = 'icons/area/areas_station.dmi'
 	area_flags = UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | HIDDEN_AREA
 	has_gravity = STANDARD_GRAVITY
 
 /area/virtual_domain/powered
 	name = "Virtual Domain Ruins"
+	icon_state = "bit_ruin"
 	requires_power = FALSE
-	static_lighting = FALSE
-	base_lighting_alpha = 255
-
-/area/virtual_domain/fullbright
 	static_lighting = FALSE
 	base_lighting_alpha = 255
 
@@ -54,19 +50,3 @@
 	icon_state = "bit_space"
 	area_flags = UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | HIDDEN_AREA
 
-/area/space/virtual_domain
-	name = "Virtual Domain Space"
-	icon = 'icons/area/areas_station.dmi'
-	icon_state = "bit_space"
-	area_flags = UNIQUE_AREA | NOTELEPORT | EVENT_PROTECTED | HIDDEN_AREA | ABDUCTOR_PROOF
-
-///Areas that virtual entities should not be in
-
-/area/virtual_domain/protected_space
-	name = "Virtual Domain Safe Zone"
-	area_flags =  UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | VIRTUAL_SAFE_AREA
-	icon_state = "bit_safe"
-
-/area/virtual_domain/protected_space/fullbright
-	static_lighting = FALSE
-	base_lighting_alpha = 255

@@ -660,7 +660,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 /// Allows chef's to chefs kiss their food, to make them with love
 #define TRAIT_CHEF_KISS "chefs_kiss"
 /// Allows clowns to bend balloons into animals
-#define TRAIT_BALLOON_SUTRA "balloon_sutra"
+/* #define TRAIT_BALLOON_SUTRA "balloon_sutra" */
 /// Allows detectives to identify chemicals by taste
 /* #define TRAIT_DETECTIVES_TASTE "detectives_taste" */
 

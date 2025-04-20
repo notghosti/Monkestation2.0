@@ -462,6 +462,3 @@
 	if(item.ignition_effect(src, user))
 		ignite()
 	return ..()
-
-/obj/effect/decal/cleanable/fuel_pool/hivis
-	icon_state = "fuel_pool_hivis"

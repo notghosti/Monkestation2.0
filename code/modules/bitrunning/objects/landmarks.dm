@@ -49,11 +49,6 @@
 	name = "Bitrunning hololadder spawn"
 	icon_state = "hololadder"
 
-/// A permanent exit for the domain
-/obj/effect/landmark/bitrunning/permanent_exit
-	name = "Bitrunning permanent exit"
-	icon_state = "perm_exit"
-
 /// Where the crates need to be taken
 /obj/effect/landmark/bitrunning/cache_goal_turf
 	name = "Bitrunning goal turf"
@@ -107,15 +102,3 @@
 	selected_crate.abstract_move(original_location)
 
 	#endif
-
-/// A location for mobs to spawn.
-/obj/effect/landmark/bitrunning/mob_segment
-	name = "Bitrunning modular mob segment"
-	icon_state = "mob_segment"
-
-
-/// Bitrunning safehouses. Typically 7x6 rooms with a single entrance.
-/obj/modular_map_root/safehouse
-	config_file = "strings/modular_maps/safehouse.toml"
-	icon = 'icons/effects/bitrunning.dmi'
-	icon_state = "safehouse"

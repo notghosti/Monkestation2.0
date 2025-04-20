@@ -70,12 +70,6 @@
 	update_use_power(ACTIVE_POWER_USE)
 	update_appearance()
 
-	if(generated_domain.announce_to_ghosts)
-		notify_ghosts("Bitrunners have loaded a domain that offers ghost interactions. Check the spawners menu for more information.",
-			src,
-			"Matrix Glitch",
-		)
-
 	return TRUE
 
 /// Initializes a new domain if the given key is valid and the user has enough points
@@ -125,13 +119,6 @@
 			var/turf/signaler_turf = get_turf(thing)
 			signaler_turf.AddComponent(/datum/component/bitrunning_points, generated_domain)
 			qdel(thing)
-
-		if(istype(thing, /obj/effect/landmark/bitrunning/permanent_exit))
-			var/turf/tile = get_turf(thing)
-			exit_turfs += tile
-			qdel(thing)
-
-			new /obj/structure/hololadder(tile)
 
 	if(!length(exit_turfs))
 		CRASH("Failed to find exit turfs on generated domain.")

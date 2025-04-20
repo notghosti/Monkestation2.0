@@ -103,13 +103,6 @@
 	slice_type = /obj/item/food/pizzaslice/meat
 	boxtag = "Meatlovers' Supreme"
 
-/obj/item/food/pizzaslice/meat/pizzeria //Reward for pizzeria bitrunning domain
-	name = "pizzeria meatpizza slice"
-	desc = "An ostensibly nutritious slice of meatpizza from a long-closed pizzeria."
-	food_reagents = null
-	tastes = list("crust" = 1, "ketchup" = 1, "'cheese'" = 1, "mystery meat" = 1, "glue" = 1)
-	foodtypes = null
-
 /obj/item/food/pizza/meat/raw
 	name = "raw meatpizza"
 	icon_state = "meatpizza_raw"

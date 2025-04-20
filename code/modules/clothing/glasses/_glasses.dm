@@ -187,10 +187,6 @@
 	color_cutoffs = list(10, 30, 10)
 	glass_colour_type = /datum/client_colour/glass_colour/green
 
-/obj/item/clothing/glasses/night/colorless
-	desc = parent_type::desc + " Now with 50% less green!"
-	forced_glass_color = FALSE
-
 /obj/item/clothing/glasses/eyepatch
 	name = "eyepatch"
 	desc = "Yarr."
