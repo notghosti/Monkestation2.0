@@ -50,3 +50,7 @@
 	icon_state = "bit_space"
 	area_flags = UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | HIDDEN_AREA
 
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space
+	name = "Virtual Domain Safe Zone"
+	area_flags = UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | HIDDEN_AREA | VIRTUAL_SAFE_AREA
+	icon_state = "bit_safe"

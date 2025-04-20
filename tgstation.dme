@@ -20,6 +20,7 @@
 // BEGIN_INCLUDE
 #include "__odlint.dm"
 #include "_maps\_basemap.dm"
+#include "_maps\virtual_domains\fredingtonfastingbear.dmm"
 #include "code\__byond_version_compat.dm"
 #include "code\_compile_options.dm"
 #include "code\_experiments.dm"
@@ -3433,6 +3434,7 @@
 #include "code\modules\bitrunning\virtual_domain\domains\bubblegum.dm"
 #include "code\modules\bitrunning\virtual_domain\domains\clown_planet.dm"
 #include "code\modules\bitrunning\virtual_domain\domains\colossus.dm"
+#include "code\modules\bitrunning\virtual_domain\domains\fredingtonfastingbear.dm"
 #include "code\modules\bitrunning\virtual_domain\domains\gondola_asteroid.dm"
 #include "code\modules\bitrunning\virtual_domain\domains\hierophant.dm"
 #include "code\modules\bitrunning\virtual_domain\domains\pipedream.dm"
@@ -4279,6 +4281,7 @@
 #include "code\modules\library\skill_learning\skillchip.dm"
 #include "code\modules\library\skill_learning\job_skillchips\_job.dm"
 #include "code\modules\library\skill_learning\job_skillchips\chef.dm"
+#include "code\modules\library\skill_learning\job_skillchips\clown.dm"
 #include "code\modules\library\skill_learning\job_skillchips\janitor.dm"
 #include "code\modules\library\skill_learning\job_skillchips\psychologist.dm"
 #include "code\modules\library\skill_learning\job_skillchips\research_director.dm"
