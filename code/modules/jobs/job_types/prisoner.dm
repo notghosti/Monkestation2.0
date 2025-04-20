@@ -54,6 +54,7 @@
 	monkestation end */
 	to_chat(crewmember, span_warning("You are imprisoned for \"[crime_name]\"."))
 	crewmember.add_mob_memory(/datum/memory/key/permabrig_crimes, crimes = crime_name)
+	crewmember.wanted_status = WANTED_PRISONER
 
 /datum/outfit/job/prisoner
 	name = "Prisoner"
