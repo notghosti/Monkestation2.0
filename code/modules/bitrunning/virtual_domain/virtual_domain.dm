@@ -8,6 +8,8 @@
 	map_name = "None"
 	key = "Virtual Domain"
 
+	/// Whether to tell observers this map is being used
+	var/announce_to_ghosts = FALSE
 	/// Cost of this map to load
 	var/cost = BITRUNNER_COST_NONE
 	/// The description of the map
