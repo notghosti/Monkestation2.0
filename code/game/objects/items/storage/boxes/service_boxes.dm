@@ -219,7 +219,7 @@
 /obj/item/storage/box/balloons/PopulateContents()
 	. = list()
 	for(var/i in 1 to 24)
-		/obj/item/toy/balloon/long
+		new /obj/item/toy/balloon/long(src)
 
 /obj/item/storage/box/stickers
 	name = "box of stickers"
