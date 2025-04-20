@@ -360,7 +360,7 @@
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "cF" = (
-/obj/machinery/hydroponics/constructable,
+/obj/machinery/growing,
 /turf/open/misc/dirt/jungle,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "cH" = (
@@ -862,10 +862,6 @@
 	},
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/powered/virtual_domain)
-"hk" = (
-/obj/effect/landmark/bitrunning/safehouse_spawn,
-/turf/template_noop,
-/area/virtual_domain/safehouse)
 "hp" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -2352,6 +2348,10 @@
 /obj/effect/turf_decal/tile/neutral/fourcorners,
 /turf/open/floor/iron/dark,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"tz" = (
+/obj/effect/landmark/bitrunning/safehouse_spawn,
+/turf/template_noop,
+/area/virtual_domain/safehouse)
 "tF" = (
 /obj/structure/fluff/paper/stack{
 	dir = 8
@@ -7157,7 +7157,7 @@ hX
 hX
 hX
 hX
-hk
+tz
 Fd
 ps
 HM
