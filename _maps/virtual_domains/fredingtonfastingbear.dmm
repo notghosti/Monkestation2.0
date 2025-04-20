@@ -28,8 +28,9 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/structure/table,
-/obj/item/food/pizza{
-	pixel_y = 6
+/obj/item/food/pizza/sassysage/raw{
+	pixel_x = -1;
+	pixel_y = 7
 	},
 /turf/open/floor/iron/kitchen,
 /area/ruin/space/has_grav/powered/virtual_domain)
@@ -226,9 +227,14 @@
 /obj/effect/turf_decal/tile/dark_red/opposingcorners,
 /obj/effect/turf_decal/tile/dark_red/opposingcorners,
 /obj/structure/table,
-/obj/item/food/pizza,
+/obj/item/food/pizza/meat/raw,
 /turf/open/floor/iron/kitchen,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"mU" = (
+/obj/structure/curtain/bounty/start_closed,
+/obj/effect/baseturf_helper/virtual_domain,
+/turf/closed/indestructible/binary,
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "mX" = (
 /obj/machinery/computer/arcade/amputation{
 	dir = 1
@@ -270,11 +276,6 @@
 /obj/effect/decal/cleanable/fuel_pool/hivis,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered/virtual_domain)
-"oB" = (
-/obj/structure/curtain/bounty/start_closed,
-/obj/effect/baseturf_helper/virtual_domain,
-/turf/closed/indestructible/binary,
-/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "oO" = (
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/effect/turf_decal/tile/blue/opposingcorners,
@@ -468,6 +469,10 @@
 /obj/effect/turf_decal/tile/blue/opposingcorners,
 /obj/structure/table,
 /obj/item/trash/tray,
+/obj/item/food/pizzaslice/moldy{
+	pixel_x = -4;
+	pixel_y = 6
+	},
 /turf/open/floor/iron/kitchen,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "vT" = (
@@ -521,6 +526,12 @@
 /obj/effect/decal/cleanable/blood/tracks,
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"zd" = (
+/obj/structure/chair/office{
+	dir = 1
+	},
+/turf/open/floor/iron/cafeteria,
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "zU" = (
 /obj/effect/turf_decal/tile/bar/opposingcorners,
 /obj/effect/turf_decal/tile/bar/opposingcorners,
@@ -1570,7 +1581,7 @@ Cm
 "}
 (12,1,1) = {"
 Cm
-oB
+mU
 Uj
 Uj
 Uj
@@ -1834,7 +1845,7 @@ sg
 ex
 jE
 VS
-Vd
+zd
 Vd
 Vd
 Vd

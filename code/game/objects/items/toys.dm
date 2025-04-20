@@ -209,6 +209,7 @@
 		name = "[chosen_balloon_color] [name]"
 		icon_state = "[icon_state]_[chosen_balloon_color]"
 		inhand_icon_state = icon_state
+		current_color = chosen_balloon_color
 
 /obj/item/toy/balloon/corgi
 	name = "corgi balloon"
