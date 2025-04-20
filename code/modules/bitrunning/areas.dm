@@ -39,6 +39,10 @@
 	icon_state = "bit_ruin"
 	area_flags = UNIQUE_AREA | NOTELEPORT | ABDUCTOR_PROOF | EVENT_PROTECTED | HIDDEN_AREA
 
+/area/lavaland/surface/outdoors/virtual_domain/fullbright
+	static_lighting = FALSE
+	base_lighting_alpha = 255
+
 /area/icemoon/underground/explored/virtual_domain
 	name = "Virtual Domain Ice Ruins"
 	icon_state = "bit_ice"

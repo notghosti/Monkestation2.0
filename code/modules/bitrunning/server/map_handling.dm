@@ -51,7 +51,7 @@
 	is_ready = FALSE
 	playsound(src, 'sound/machines/terminal_processing.ogg', 30, 2)
 
-	if(!initialize_domain(map_key) || !initialize_safehouse() || !initialize_map_items())
+	if(!initialize_domain(map_key) || !initialize_safehouse() || !initialize_map_items() || !load_mob_segments())
 		balloon_alert(user, "initialization failed.")
 		scrub_vdom()
 		is_ready = TRUE

@@ -45,6 +45,8 @@
 /// from /obj/structure/hololadder/disconnect()
 #define COMSIG_BITRUNNER_LADDER_SEVER "bitrunner_ladder_sever"
 
+/// from /obj/effect/landmark/bitrunning/mob_segment/proc/spawn_mobs() : (list/mob/living)
+#define COMSIG_BITRUNNING_MOB_SEGMENT_SPAWNED "bitrunner_mob_segment_spawned"
 
 /// deprecated
 #define COMSIG_BITRUNNER_SPAWN_GLITCH "bitrunner_spawn_glitch"
