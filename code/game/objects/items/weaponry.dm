@@ -78,9 +78,6 @@ for further reading, please see: https://github.com/tgstation/tgstation/pull/301
 		if (SANITY_NEUTRAL to SANITY_GREAT)
 			target.add_mood_event("humiliated", /datum/mood_event/mallet_humiliation)
 
-	if(user.combat_mode)
-		return ..(target, user)
-
 /obj/item/sord
 	name = "\improper SORD"
 	desc = "This thing is so unspeakably shitty you are having a hard time even holding it."
