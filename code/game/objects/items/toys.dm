@@ -110,7 +110,7 @@
 		inhand_icon_state = "balloon-empty"
 	return ..()
 
-#define BALLOON_COLORS list("red", "blue", "green", "yellow")
+#define BALLOON_COLORS list("red", "blue", "green", "yellow", "orange", "purple")
 
 /obj/item/toy/balloon
 	name = "balloon"
