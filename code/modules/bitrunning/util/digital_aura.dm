@@ -6,7 +6,7 @@
 
 	add_overlay(overlays)
 	alpha = 210
-	set_light(2, l_color = LIGHT_COLOR_BUBBLEGUM, l_on = TRUE)
+	set_light(2,1, l_color = LIGHT_COLOR_BUBBLEGUM, l_on = TRUE)
 	update_appearance()
 
 /// Removes the digital effect around the target

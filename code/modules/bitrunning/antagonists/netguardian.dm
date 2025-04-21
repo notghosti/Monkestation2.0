@@ -42,7 +42,6 @@
 		ROLE_SYNDICATE,
 	)
 
-	combat_mode = TRUE
 	speech_span = SPAN_ROBOT
 	death_message = "malfunctions!"
 
