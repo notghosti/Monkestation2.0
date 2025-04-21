@@ -21,6 +21,7 @@
 	pixel_y = 8;
 	light_on = 1
 	},
+/obj/structure/table/abductor,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "dM" = (
@@ -60,6 +61,10 @@
 	pixel_y = -1
 	},
 /turf/open/floor/plating/abductor,
+/area/ruin/space/has_grav/powered/virtual_domain)
+"jb" = (
+/obj/item/kirbyplants/photosynthetic,
+/turf/closed/indestructible/alien,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "kl" = (
 /obj/structure/table_frame/abductor,
@@ -186,6 +191,10 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"uB" = (
+/obj/item/kirbyplants/photosynthetic,
+/turf/template_noop,
+/area/virtual_domain/safehouse)
 "uD" = (
 /obj/machinery/computer/camera_advanced/abductor,
 /turf/open/floor/plating/abductor,
@@ -352,6 +361,7 @@
 	pixel_x = 2;
 	pixel_y = -2
 	},
+/obj/structure/table/abductor,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "Us" = (
@@ -842,12 +852,12 @@ WS
 oL
 pL
 pL
+pL
 WS
 WS
 WS
 WS
-WS
-WS
+pL
 pL
 pL
 WS
@@ -950,7 +960,7 @@ pL
 pL
 pL
 pL
-MC
+jb
 WS
 WS
 ge
@@ -960,8 +970,8 @@ ge
 ge
 rY
 WS
-WS
 MC
+pL
 pL
 pL
 pL
@@ -1068,7 +1078,7 @@ ge
 ge
 We
 Rg
-ge
+uB
 ge
 WS
 WS
@@ -1172,7 +1182,7 @@ pL
 pL
 pL
 pL
-MC
+jb
 WS
 WS
 ge
@@ -1182,8 +1192,8 @@ ge
 ge
 lR
 WS
-WS
 MC
+pL
 pL
 pL
 pL
@@ -1286,12 +1296,12 @@ WS
 WS
 pL
 pL
+pL
 WS
 WS
 WS
 WS
-WS
-WS
+pL
 pL
 pL
 Fy
@@ -1364,7 +1374,7 @@ pL
 MC
 WS
 WS
-WS
+MC
 pL
 nT
 WS
