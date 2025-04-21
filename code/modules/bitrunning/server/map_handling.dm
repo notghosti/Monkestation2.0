@@ -72,10 +72,10 @@
 
 	if(generated_domain.announce_to_ghosts)
 		notify_ghosts("Bitrunners have loaded a domain that offers ghost interactions. Check the spawners menu for more information.",
-			src,
-			"Matrix Glitch",
+			source = src,
+			header = "Matrix Glitch",
 		)
-	
+
 	return TRUE
 
 /// Initializes a new domain if the given key is valid and the user has enough points
