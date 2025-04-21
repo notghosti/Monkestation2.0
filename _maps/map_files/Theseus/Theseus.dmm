@@ -20499,6 +20499,7 @@
 	dir = 4;
 	invisibility = 101
 	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/carpet,
 /area/station/security/detectives_office)
 "gdk" = (
@@ -32725,6 +32726,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 8
 	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "jGH" = (
@@ -40609,6 +40611,7 @@
 /obj/structure/chair/comfy/brown{
 	dir = 4
 	},
+/obj/effect/landmark/start/detective,
 /turf/open/floor/wood,
 /area/station/security/detectives_office)
 "lPp" = (
@@ -48532,6 +48535,7 @@
 "oju" = (
 /obj/structure/chair/stool/bar/directional/north,
 /obj/structure/cable,
+/obj/effect/landmark/start/detective,
 /turf/open/floor/carpet,
 /area/station/service/cafeteria)
 "ojx" = (
