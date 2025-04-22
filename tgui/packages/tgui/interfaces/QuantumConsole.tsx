@@ -210,6 +210,8 @@ const DomainEntry = (props: DomainEntryProps) => {
     buttonName = 'Deploy';
   }
 
+  const canView = name !== '???';
+
   return (
     <Collapsible
       buttons={
