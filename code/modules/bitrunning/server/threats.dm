@@ -108,6 +108,7 @@
 		else // any other humanoid mob
 			new_mob = new /mob/living/carbon/human(mutation_target.loc)
 
+	mutation_target.gib()
 
 	var/datum/mind/ghost_mind = ghost.mind
 	new_mob.key = ghost.key
