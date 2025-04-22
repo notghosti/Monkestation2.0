@@ -232,6 +232,8 @@ Medical HUD! Basic mode needs suit sensors on.
 	else if(stat == DEAD || (HAS_TRAIT(src, TRAIT_FAKEDEATH)))
 		if((key || get_ghost(FALSE, TRUE)) && (can_defib() & DEFIB_REVIVABLE_STATES))
 			holder.icon_state = "huddefib"
+		else if(HAS_TRAIT(src, TRAIT_MIND_TEMPORARILY_GONE) || can_defib())
+			holder.icon_state = "huddefib"
 		else
 			holder.icon_state = "huddead"
 	else
