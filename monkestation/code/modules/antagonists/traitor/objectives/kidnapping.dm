@@ -71,6 +71,7 @@
 	given_contractor_rep = 2
 
 	target_jobs = list(
+		/datum/job/prisoner
 		// Cargo
 		/datum/job/quartermaster,
 		/datum/job/shaft_miner,
@@ -96,6 +97,7 @@
 		/datum/job/chief_medical_officer,
 		/datum/job/head_of_personnel,
 		/datum/job/research_director,
+		/datum/job/nanotrasen_representative
 		// Security
 		/datum/job/detective,
 		/datum/job/security_officer,
