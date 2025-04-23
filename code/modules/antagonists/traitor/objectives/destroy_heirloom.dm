@@ -85,8 +85,6 @@
 		/datum/job/curator,
 		// Monkestation edit: security assistants
 		/datum/job/security_assistant,
-		/datum/job/prisoner,
-		/datum/job/signal_technician,
 	)
 
 /datum/traitor_objective/destroy_heirloom/rare
@@ -100,12 +98,10 @@
 		/datum/job/security_officer,
 		/datum/job/warden,
 		/datum/job/detective,
-		/datum/job/brig_physician,
 		// Heads of staff
 		/datum/job/head_of_personnel,
 		/datum/job/chief_medical_officer,
 		/datum/job/research_director,
-		/datum/job/nanotrasen_representative,
 	)
 
 /datum/traitor_objective/destroy_heirloom/captain
@@ -114,8 +110,7 @@
 	telecrystal_reward = 4
 	target_jobs = list(
 		/datum/job/head_of_security,
-		/datum/job/captain,
-		/datum/job/blueshield,
+		/datum/job/captain
 	)
 
 /datum/traitor_objective/destroy_heirloom/New(datum/uplink_handler/handler)
