@@ -140,8 +140,6 @@
 		/obj/item/chainsaw,
 		/obj/item/gun/ballistic/automatic/pistol,
 		/obj/item/melee/energy/blade/hardlight,
-		/obj/item/reagent_containers/hypospray/medipen/survival/luxury,
-		/obj/item/clothing/suit/armor/vest,
 	)
 
 /// Tier 3 items. Very powerful, game breaking.
@@ -151,7 +149,4 @@
 		/obj/item/gun/energy/tesla_cannon,
 		/obj/item/dualsaber/green,
 		/obj/item/melee/beesword,
-		/obj/item/gun/energy/e_gun/nuclear,
-		/obj/item/dualsaber/green,
-		/obj/item/grenade/syndieminibomb,
 	)
