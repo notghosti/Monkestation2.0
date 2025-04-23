@@ -90,7 +90,6 @@
 	resistance_flags = NONE
 	clothing_traits = list(TRAIT_FAST_CUFFING)
 
-
 /datum/armor/captain_gloves
 	bio = 90
 	fire = 70

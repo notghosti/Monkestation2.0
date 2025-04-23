@@ -19,7 +19,6 @@
 
 	return 1
 
-
 /datum/action/item_action/chameleon/drone/togglehatmask
 	name = "Toggle Headgear Mode"
 	button_icon = 'icons/mob/actions/actions_silicon.dmi'
@@ -577,7 +576,6 @@
 
 // MONKESTATION ADDITION START
 /obj/item/clothing/gloves/chameleon
-
 	clothing_traits = list(TRAIT_CAN_SIGN_ON_COMMS, TRAIT_FAST_CUFFING)
 
 /obj/item/clothing/gloves/chameleon/attackby(obj/item/W, mob/user, params)
