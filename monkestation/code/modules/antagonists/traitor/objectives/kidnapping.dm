@@ -98,7 +98,7 @@
 		/datum/job/chief_medical_officer,
 		/datum/job/head_of_personnel,
 		/datum/job/research_director,
-		/datum/job/nanotrasen_representative
+		/datum/job/nanotrasen_representative,
 		// Security
 		/datum/job/detective,
 		/datum/job/security_officer,
