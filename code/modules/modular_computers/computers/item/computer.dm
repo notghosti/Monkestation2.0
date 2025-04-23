@@ -857,7 +857,7 @@
 #define ALERT_RELEVANCY_PERTINENT 2 /// * 2: Danger is around and the user is responsible for handling it.
 /obj/item/modular_computer/proc/get_security_level_relevancy()
 	switch(SSsecurity_level.get_current_level_as_number()) // all-hands-on-deck situations, everyone is responsible for combatting a threat
-		if(SEC_LEVEL_DELTA, SEC_LEVEL_RED, SEC_LEVEL_EPSILON, SEC_LEVEL_GAMMA)
+		if(SEC_LEVEL_DELTA, SEC_LEVEL_RED, SEC_LEVEL_EPSILON, SEC_LEVEL_GAMMA, SEC_LEVEL_LAMBDA,)
 			return ALERT_RELEVANCY_PERTINENT
 		if(SEC_LEVEL_AMBER) // Ongoing medical threat. Medical staff are to contribute.
 			if((ACCESS_SECURITY in computer_id_slot?.access) || (ACCESS_MEDICAL in computer_id_slot?.access))
