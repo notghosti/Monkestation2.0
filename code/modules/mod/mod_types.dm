@@ -227,7 +227,6 @@
 	applied_cell = /obj/item/stock_parts/cell/super
 	applied_modules = list(
 		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/shock_absorber,
 		/obj/item/mod/module/emp_shield,
 		/obj/item/mod/module/magnetic_harness,
 		/obj/item/mod/module/jetpack,

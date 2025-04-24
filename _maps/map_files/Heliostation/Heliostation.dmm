@@ -52176,11 +52176,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/duct,
 /obj/machinery/door/firedoor,
-/obj/machinery/computer/cryopod/directional/south{
-	dir = 1;
-	pixel_y = -22;
-	max_integrity = 10000
-	},
 /turf/open/floor/iron,
 /area/station/security/prison)
 "nbZ" = (
@@ -54443,10 +54438,6 @@
 	},
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
-"nRe" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/grimey,
-/area/station/commons/vacant_room/office)
 "nRg" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -67201,12 +67192,6 @@
 	},
 /turf/open/floor/engine,
 /area/station/engineering/supermatter/room)
-"sPh" = (
-/obj/machinery/cryopod{
-	dir = 8
-	},
-/turf/open/floor/iron,
-/area/station/security/prison)
 "sPi" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 5
@@ -102894,7 +102879,7 @@ fCF
 fyd
 fyd
 jQo
-sPh
+agM
 aqB
 bkM
 dOP
