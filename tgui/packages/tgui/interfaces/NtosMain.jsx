@@ -52,7 +52,6 @@ export const NtosMain = (props) => {
                     onClick={() =>
                       act('PC_runprogram', {
                         name: app.name,
-                        w,
                       })
                     }
                   />
