@@ -25573,10 +25573,6 @@
 /obj/machinery/smartfridge/extract/preloaded,
 /turf/open/floor/iron/white,
 /area/station/science/xenobiology)
-"cSD" = (
-/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
-/turf/closed/wall/r_wall,
-/area/station/maintenance/department/science/xenobiology)
 "cSE" = (
 /obj/effect/turf_decal/trimline/purple/filled/warning{
 	dir = 4
@@ -123222,7 +123218,7 @@ tFk
 acH
 ebB
 chn
-cSD
+chn
 chn
 cqP
 chn
