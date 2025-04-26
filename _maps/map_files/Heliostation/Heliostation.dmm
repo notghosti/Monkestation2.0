@@ -31553,7 +31553,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Ordnance Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
+/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
 /turf/open/floor/iron/white/smooth_half,
 /area/station/science/xenobiology)
 "eYW" = (
@@ -47258,7 +47258,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Ordnance Lab"
 	},
-/obj/effect/mapping_helpers/airlock/access/all/science/ordnance,
+/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
 /turf/open/floor/iron/white/smooth_half,
 /area/station/science/xenobiology)
 "lfj" = (
@@ -54421,9 +54421,9 @@
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance)
 "nRe" = (
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/carpet/grimey,
-/area/station/commons/vacant_room/office)
+/obj/effect/mapping_helpers/airlock/access/any/science/xenobio,
+/turf/closed/wall/r_wall,
+/area/station/maintenance/department/science/xenobiology)
 "nRg" = (
 /obj/structure/window/reinforced/plasma/spawner/directional/west,
 /obj/effect/turf_decal/tile/neutral/fourcorners,
@@ -123229,7 +123229,7 @@ tFk
 acH
 ebB
 chn
-chn
+nRe
 chn
 cqP
 chn
