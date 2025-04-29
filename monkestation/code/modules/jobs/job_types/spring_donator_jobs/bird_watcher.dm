@@ -29,6 +29,7 @@
 	job_flags = JOB_ANNOUNCE_ARRIVAL | JOB_CREW_MANIFEST | JOB_EQUIP_RANK | JOB_CREW_MEMBER | JOB_NEW_PLAYER_JOINABLE | JOB_REOPEN_ON_ROUNDSTART_LOSS | JOB_ASSIGN_QUIRKS | JOB_CAN_BE_INTERN
 	job_holiday_flags = list(SPRING)
 	job_donor_bypass = ACCESS_COMMAND_RANK
+	allow_overflow = FALSE
 
 ///This override checks specific config values as a final blocking check.
 //Used initially to check if spooktober events were enabled. Edit for your application.
