@@ -78,6 +78,7 @@
 	var/mob/chosen_one = SSpolling.poll_ghosts_for_target(
 		question = "<span class='ooc'>A temporary antagonist role is spawning in the virtual domain.</span>\
 		\n<span class='boldnotice'>You will return to your previous body on conclusion.</span>",
+		role = ROLE_GLITCH,
 		check_jobban = ROLE_GLITCH,
 		poll_time = 20 SECONDS,
 		checked_target = mutation_target,

@@ -74,6 +74,7 @@
 		notify_ghosts("Bitrunners have loaded a domain that offers ghost interactions. Check the spawners menu for more information.",
 			source = src,
 			header = "Matrix Glitch",
+			ignore_key = POLL_IGNORE_GLITCH,
 		)
 
 	return TRUE
