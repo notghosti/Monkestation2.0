@@ -115,6 +115,15 @@
 	},
 /turf/open/floor/grass,
 /area/lavaland/surface/outdoors/virtual_domain/fullbright)
+"gc" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 8
+	},
+/turf/open/indestructible/hotelwood,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright/protected_space)
 "gT" = (
 /obj/structure/table/wood,
 /obj/item/gun/ballistic/rifle/boltaction{
@@ -263,6 +272,12 @@
 /obj/structure/table/wood,
 /turf/template_noop,
 /area/virtual_domain/safehouse)
+"oo" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/turf/open/indestructible/hotelwood,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright/protected_space)
 "or" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 4
@@ -413,6 +428,15 @@
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/floor/grass,
 /area/lavaland/surface/outdoors/virtual_domain/fullbright)
+"vT" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/chair/wood/wings{
+	dir = 1
+	},
+/turf/open/indestructible/hotelwood,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright/protected_space)
 "we" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -637,6 +661,24 @@
 /obj/structure/flora/bush/stalky/style_random,
 /turf/open/water,
 /area/lavaland/surface/outdoors/virtual_domain/fullbright)
+"IZ" = (
+/obj/structure/railing/wooden_fencing{
+	dir = 1
+	},
+/obj/structure/railing/wooden_fencing{
+	dir = 4
+	},
+/obj/structure/table/wood,
+/obj/item/reagent_containers/cup/glass/bottle/beer/almost_empty{
+	pixel_x = -4;
+	pixel_y = 13
+	},
+/obj/item/binoculars{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/turf/open/indestructible/hotelwood,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright/protected_space)
 "Jr" = (
 /obj/structure/flora/tree/jungle/small/style_random,
 /obj/structure/flora/bush/sparsegrass/style_random,
@@ -680,6 +722,10 @@
 /obj/structure/flora/bush/reed/style_random,
 /turf/open/water,
 /area/lavaland/surface/outdoors/virtual_domain/fullbright)
+"Le" = (
+/obj/structure/fake_stairs/wood,
+/turf/open/misc/dirt/station,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright)
 "Lx" = (
 /turf/template_noop,
 /area/virtual_domain/safehouse)
@@ -709,6 +755,9 @@
 /obj/structure/flora/bush/fullgrass/style_random,
 /turf/open/misc/dirt/station,
 /area/lavaland/surface/outdoors/virtual_domain/fullbright)
+"Pa" = (
+/turf/open/indestructible/hotelwood,
+/area/lavaland/surface/outdoors/virtual_domain/fullbright/protected_space)
 "PA" = (
 /obj/effect/turf_decal/weather/dirt{
 	dir = 6
@@ -2243,7 +2292,7 @@ aD
 aD
 aD
 aD
-fm
+gc
 Lx
 gT
 lQ
@@ -2320,7 +2369,7 @@ kq
 aD
 sx
 Az
-sx
+oo
 Lx
 Lx
 Lx
@@ -2396,8 +2445,8 @@ PX
 PX
 ic
 PX
-PM
-PX
+Le
+Pa
 Lx
 Lx
 Lx
@@ -2474,7 +2523,7 @@ PX
 PX
 PX
 PX
-wq
+vT
 Lx
 Lx
 Lx
@@ -2551,7 +2600,7 @@ cL
 YF
 YF
 bd
-fm
+IZ
 Lx
 Dk
 Lx

@@ -794,7 +794,7 @@
 "gC" = (
 /obj/item/kirbyplants/synthetic,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/powered/virtual_domain)
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "gE" = (
 /turf/open/floor/wood,
 /area/ruin/space/has_grav/powered/virtual_domain)
@@ -4397,7 +4397,7 @@
 "LD" = (
 /obj/item/kirbyplants/random/dead/research_director,
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/powered/virtual_domain)
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "LG" = (
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -5946,6 +5946,10 @@
 /obj/structure/frame/machine/secured,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/powered/virtual_domain)
+"YC" = (
+/obj/effect/mapping_helpers/broken_floor,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "YD" = (
 /obj/item/clothing/head/cone{
 	pixel_y = 2;
@@ -7295,7 +7299,7 @@ mt
 EV
 zB
 Io
-vw
+YC
 hX
 hX
 fD

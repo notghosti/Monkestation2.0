@@ -10,20 +10,6 @@
 	},
 /turf/open/floor/plating/abductor,
 /area/ruin/space/has_grav/powered/virtual_domain)
-"cr" = (
-/obj/item/flashlight/lantern{
-	pixel_x = 4;
-	pixel_y = -8;
-	light_on = 1
-	},
-/obj/item/flashlight/lantern{
-	pixel_x = -9;
-	pixel_y = 8;
-	light_on = 1
-	},
-/obj/structure/table/abductor,
-/turf/template_noop,
-/area/virtual_domain/safehouse)
 "dM" = (
 /obj/item/storage/medkit/regular,
 /obj/item/storage/medkit/regular,
@@ -328,6 +314,10 @@
 	pixel_x = -5;
 	pixel_y = -5
 	},
+/obj/item/gun/ballistic/automatic/c20r/unrestricted{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /turf/template_noop,
 /area/virtual_domain/safehouse)
 "RI" = (
@@ -345,25 +335,8 @@
 /turf/open/floor/plating/abductor,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "Uf" = (
-/obj/item/flashlight/seclite{
-	pixel_x = 9;
-	pixel_y = -11
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_x = 10;
-	pixel_y = 8
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/item/clothing/suit/armor/vest/alt{
-	pixel_x = 2;
-	pixel_y = -2
-	},
-/obj/structure/table/abductor,
-/turf/template_noop,
-/area/virtual_domain/safehouse)
+/turf/open/floor/plating/abductor,
+/area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "Us" = (
 /obj/structure/table/abductor,
 /obj/item/abductor/mind_device{
@@ -396,12 +369,34 @@
 "We" = (
 /obj/structure/table/abductor,
 /obj/item/dualsaber/green{
-	pixel_x = -5;
-	pixel_y = 2
+	pixel_x = -4;
+	pixel_y = 0
 	},
-/obj/item/gun/ballistic/automatic/c20r/unrestricted{
-	pixel_x = 8;
+/obj/item/clothing/suit/armor/vest/alt{
+	pixel_x = 10;
+	pixel_y = 8
+	},
+/obj/item/clothing/suit/armor/vest/alt{
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/item/clothing/suit/armor/vest/alt{
+	pixel_x = 10;
 	pixel_y = -6
+	},
+/obj/item/flashlight/seclite{
+	pixel_x = -3;
+	pixel_y = -8
+	},
+/obj/item/flashlight/lantern{
+	pixel_x = -5;
+	pixel_y = 17;
+	light_on = 1
+	},
+/obj/item/flashlight/lantern{
+	pixel_x = -11;
+	pixel_y = 12;
+	light_on = 1
 	},
 /turf/template_noop,
 /area/virtual_domain/safehouse)
@@ -1036,14 +1031,14 @@ WS
 WS
 WS
 WS
-WS
+Uf
+ge
+ge
+ge
+ge
 ge
 ge
 Uf
-cr
-ge
-ge
-WS
 WS
 WS
 WS
@@ -1073,14 +1068,14 @@ WS
 WS
 WS
 WS
-WS
+Uf
 ge
 ge
 We
 Rg
 uB
 ge
-WS
+Uf
 WS
 WS
 oL
@@ -1110,14 +1105,14 @@ WS
 WS
 WS
 WS
-WS
+Uf
 ge
 ge
 ge
 ge
 ge
 ge
-WS
+Uf
 WS
 WS
 WS
