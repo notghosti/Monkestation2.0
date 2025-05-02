@@ -96,8 +96,7 @@
 		return
 
 	if(QDELETED(src) || isnull(ghost) || isnull(generated_domain) || !is_ready || !is_operational)
-		var/atom/thing = mutation_target
-		thing.remove_digital_aura()
+		mutation_target.remove_digital_aura()
 		return
 
 	var/role_name = initial(chosen_role.name)
