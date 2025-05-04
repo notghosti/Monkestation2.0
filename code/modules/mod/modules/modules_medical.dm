@@ -76,12 +76,10 @@
 	incompatible_modules = list(/obj/item/mod/module/quick_carry, /obj/item/mod/module/constructor)
 
 /obj/item/mod/module/quick_carry/on_suit_activation()
-	ADD_TRAIT(mod.wearer, TRAIT_QUICKER_CARRY, MOD_TRAIT)
-	ADD_TRAIT(mod.wearer, TRAIT_FASTMED, MOD_TRAIT)
+	mod.wearer.add_traits(list(TRAIT_FASTMED, TRAIT_QUICKER_CARRY), MOD_TRAIT)
 
 /obj/item/mod/module/quick_carry/on_suit_deactivation(deleting = FALSE)
-	REMOVE_TRAIT(mod.wearer, TRAIT_QUICKER_CARRY, MOD_TRAIT)
-	REMOVE_TRAIT(mod.wearer, TRAIT_FASTMED, MOD_TRAIT)
+	mod.wearer.remove_traits(list(TRAIT_FASTMED, TRAIT_QUICKER_CARRY), MOD_TRAIT)
 
 /obj/item/mod/module/quick_carry/advanced
 	name = "MOD advanced quick carry module"
