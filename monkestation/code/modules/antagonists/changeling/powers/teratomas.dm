@@ -23,7 +23,7 @@
 	if(!ling)
 		return FALSE
 	if(ling.births >= ling.true_absorbs)
-		to_chat(user, span_warning("You must absorb another creature to devide yourself further."))
+		to_chat(user, span_warning("You must absorb another creature to divide yourself further."))
 		return FALSE
 	ling.adjust_chemicals(-chemical_cost)
 	var/list/candidates = SSpolling.poll_ghost_candidates(
