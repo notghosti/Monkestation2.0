@@ -119,7 +119,7 @@
 	for(var/obj/item in person.get_equipped_items(include_pockets = FALSE, include_accessories = FALSE))
 		qdel(item)
 
-	var/datum/antagonist/bitrunning_glitch/antag_datum = locate() in person.mind?.antag_datums
+	var/datum/antagonist/bitrunning_glitch/antag_datum = person.mind?.has_antag_datum(/datum/antagonist/bitrunning_glitch)
 	if(isnull(antag_datum?.preview_outfit))
 		return
 
