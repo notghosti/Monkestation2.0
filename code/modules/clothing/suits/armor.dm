@@ -318,7 +318,7 @@
 		if(item_hit.get_sharpness())
 			pop()
 
-	if(istype(hitby, /obj/projectile/bullet))
+	else if(istype(hitby, /obj/projectile/bullet))
 		pop()
 
 	return ..()
