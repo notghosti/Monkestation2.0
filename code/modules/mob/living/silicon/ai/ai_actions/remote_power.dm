@@ -1,4 +1,4 @@
-/datum/ai_module/malf/power_apc
+/datum/ai_module/power_apc
 	name = "Remote Power"
 	description = "remotely powers an APC from a distance"
 	one_purchase = TRUE

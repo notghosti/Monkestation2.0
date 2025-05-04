@@ -97,7 +97,7 @@
 /obj/item/aiupgrade/surveillance_upgrade
 	name = "surveillance software upgrade"
 	desc = "An illegal software package that will allow an artificial intelligence to 'hear' from its cameras via lip reading and hidden microphones."
-	to_gift = /datum/ai_module/upgrade/eavesdrop
+	to_gift = /datum/ai_module/malf/upgrade/eavesdrop
 
 /obj/item/aiupgrade/power_transfer
 	name = "power transfer upgrade"
