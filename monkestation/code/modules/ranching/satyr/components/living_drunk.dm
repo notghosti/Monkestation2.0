@@ -48,21 +48,25 @@
 	if(!COOLDOWN_FINISHED(src, drank_grace))
 		return
 
-	current_drunkness = max(min_drunkness, (current_drunkness -= 0.15))
+	current_drunkness = max(min_drunkness, (current_drunkness -= 0.10))
 	drunkness_change_effects()
 
 /datum/component/living_drunk/proc/drunkness_change_effects()
 	var/mob/living/living = parent
-	if((current_drunkness <= 10) && drunk_state != 2)
+	if((current_drunkness <= 5) && drunk_state != 3)
 		living.apply_status_effect(/datum/status_effect/inebriated/drunk, 71)
+		drunk_state = 3
+		return
+	if((current_drunkness <= 10) && (drunk_state != 2 && drunk_state != 3))
+		living.apply_status_effect(/datum/status_effect/inebriated/drunk, 41)
 		drunk_state = 2
 		return
-	if((current_drunkness <= 30) && (drunk_state != 1 && drunk_state != 2))
+	if((current_drunkness <= 25) && (drunk_state != 1 && drunk_state != 2 && drunk_state != 3))
 		living.apply_status_effect(/datum/status_effect/inebriated/tipsy, 5)
 		drunk_state = 1
 		return
 
-	if(current_drunkness > 30)
+	if(current_drunkness > 25)
 		drunk_state = 0
 		living.remove_status_effect(/datum/status_effect/inebriated/tipsy)
 		living.remove_status_effect(/datum/status_effect/inebriated/drunk)
