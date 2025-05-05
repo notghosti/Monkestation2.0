@@ -20,7 +20,8 @@
 	else
 		total_healed += (heal_amt - current_health) * 0.2
 	mob.heal_overall_damage(brute = heal_amt, burn = heal_amt)
-	mob.adjustToxLoss(-heal_amt)
+	if(!(HAS_TRAIT(mob, TRAIT_TOXINLOVER) || HAS_TRAIT(mob, TRAIT_TOXIMMUNE)))
+		mob.adjustToxLoss(-heal_amt)
 
 /datum/symptom/immortal/deactivate(mob/living/carbon/mob)
 	if(ishuman(mob))
