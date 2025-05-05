@@ -53,11 +53,11 @@
 
 /datum/component/living_drunk/proc/drunkness_change_effects()
 	var/mob/living/living = parent
-	if((current_drunkness <= 5) && drunk_state != 3)
+	if((current_drunkness <= 10) && drunk_state != 3)
 		living.apply_status_effect(/datum/status_effect/inebriated/drunk, 71) //Third stage, Gain confusion and begin puking.
 		drunk_state = 3
 		return
-	if((current_drunkness <= 10) && (drunk_state != 2 && drunk_state != 3)) // Second stage, gain mood buff, slurring, jittering, ect.
+	if((current_drunkness <= 15) && (drunk_state != 2 && drunk_state != 3)) // Second stage, gain mood buff, slurring, jittering, ect.
 		living.apply_status_effect(/datum/status_effect/inebriated/drunk, 40)
 		drunk_state = 2
 		return
