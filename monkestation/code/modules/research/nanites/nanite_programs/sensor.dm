@@ -319,6 +319,7 @@
 		"Satyr" = /datum/species/satyr,
 		"Zombie" = /datum/species/zombie,
 		"Shadow" = /datum/species/shadow,
+		"Teratoma" = /datum/species/teratoma,
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()
