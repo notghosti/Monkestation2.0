@@ -20,10 +20,9 @@
 		return FALSE
 	var/mob/living/silicon/ai/ai_clicker = clicker
 
-/*	if(clicker.incapacitated)
+	if(clicker.incapacitated())
 		unset_ranged_ability(clicker)
 		return FALSE
-*/
 
 	if(!isapc(clicked_on))
 		clicked_on.balloon_alert(ai_clicker, "not an APC!")
