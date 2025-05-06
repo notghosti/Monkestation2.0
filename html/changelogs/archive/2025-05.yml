@@ -78,5 +78,11 @@
   Gw0sty:
   - balance: Birth teratoma is reduced to 1 absorb needed to purchase
   - balance: Birth teratoma can only be used once for each changeling absorption.
+  Shoddd:
+  - rscadd: Pubbystation
+  ThePooba:
+  - rscadd: Added minigun to Cybersun suit storage at syndi base
+  - balance: Cybersun suit key bumped to 25 tc
+  - bugfix: a spelling mistake
   steelphoenix4:
   - bugfix: Fixed the Recolorable Oversized Jacket not being recolorable on lizards.
