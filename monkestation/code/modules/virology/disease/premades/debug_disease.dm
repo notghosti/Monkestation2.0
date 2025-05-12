@@ -4,9 +4,8 @@
 	category = DISEASE_DEBUG
 
 	symptoms = list(
-		new /datum/symptom/dizzy,
-		new /datum/symptom/headache,
-		new /datum/symptom/flesh_death,
+		new /datum/symptom/alkali,
+		new /datum/symptom/fire,
 	)
 	spread_flags = DISEASE_SPREAD_BLOOD | DISEASE_SPREAD_CONTACT_SKIN | DISEASE_SPREAD_CONTACT_FLUIDS | DISEASE_SPREAD_AIRBORNE
 	strength = 100
