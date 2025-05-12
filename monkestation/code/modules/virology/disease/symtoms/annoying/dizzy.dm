@@ -14,6 +14,7 @@
 	illness = "Motion Sickness"
 	level = 4
 	severity = 2
+	badness = EFFECT_DANGER_ANNOYING
 	base_message_chance = 50
 	max_multiplier = 3
 
@@ -23,17 +24,13 @@
 	if(!.)
 		return
 
-/datum/symptom/dizzy/Activate(datum/disease/acute/A)
-	. = ..()
-	if(!.)
-		return
-	var/mob/living/M = A.affected_mob
-	switch(multiplier)
+/datum/symptom/dizzy/activate(mob/living/carbon/mob, datum/disease/acute/disease)
+	switch(round(multiplier))
 		if(1)
 			if(prob(base_message_chance) && !suppress_warning)
-				to_chat(M, span_warning("[pick("You feel dizzy.", "Your head spins.")]"))
-		else
-			to_chat(M, span_userdanger("A wave of dizziness washes over you!"))
-			M.adjust_dizzy_up_to(1 MINUTES, 140 SECONDS)
-			if(multiplier > 2)
-				M.set_drugginess(80 SECONDS)
+				to_chat(mob, span_warning("[pick("You feel dizzy.", "Your head spins.")]"))
+		if(2 to 3)
+			to_chat(mob, span_userdanger("A wave of dizziness washes over you!"))
+			mob.adjust_dizzy_up_to(1 MINUTES, 140 SECONDS)
+			if(round(multiplier) == 3)
+				mob.set_drugginess(80 SECONDS)

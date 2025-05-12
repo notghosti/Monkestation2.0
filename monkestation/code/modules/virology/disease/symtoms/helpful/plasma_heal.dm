@@ -13,14 +13,14 @@
 
 /datum/symptom/plasma_heal
 	name = "Plasma Fixation"
-	desc = "The virus draws plasma from the atmosphere and from inside the body to heal and stabilize body temperature."
+	desc = "The disease draws plasma from the atmosphere and from inside the body to heal and stabilize body temperature."
 
 	stage = 1
 	max_multiplier = 5
 	max_chance = 45
 	badness = EFFECT_DANGER_HELPFUL
 	severity = 0
-	
+
 	var/passive_message = span_notice("You feel an odd attraction to plasma.")
 	var/temp_rate = 1
 
