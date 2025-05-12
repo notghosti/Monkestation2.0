@@ -85,6 +85,7 @@
 	anchored = TRUE
 
 /obj/structure/bed/medical/anchored/Initialize(mapload) //loaded subtype for mapping use
+	. = ..()
 	update_appearance()
 
 /obj/structure/bed/medical/emergency
