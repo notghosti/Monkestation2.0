@@ -13,7 +13,7 @@
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SRV
-	allow_overflow = FALSE
+
 	mind_traits = list(TRAIT_NAIVE)
 	liver_traits = list(TRAIT_COMEDY_METABOLISM)
 
