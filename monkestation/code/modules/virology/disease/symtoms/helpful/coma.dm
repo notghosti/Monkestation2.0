@@ -1,7 +1,7 @@
 /datum/symptom/coma
 	name = "Regenerative Coma"
 	desc = "The virus causes the host to fall into a death-like coma when severely damaged, then rapidly fixes the damage."
-	max_multiplier = 15
+	max_multiplier = 12
 	max_chance = 100
 	stage = 3
 	badness = EFFECT_DANGER_HELPFUL
@@ -13,7 +13,7 @@
 
 /datum/symptom/coma/activate(mob/living/carbon/mob, datum/disease/acute/disease)
 	. = ..()
-	if(!added_to_mob && max_multiplier >= 12)
+	if(!added_to_mob && max_multiplier >= 10)
 		added_to_mob = TRUE
 		ADD_TRAIT(mob, TRAIT_NOCRITDAMAGE, type)
 
