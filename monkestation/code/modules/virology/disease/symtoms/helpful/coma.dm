@@ -13,7 +13,7 @@
 
 /datum/symptom/coma/activate(mob/living/carbon/mob, datum/disease/acute/disease)
 	. = ..()
-	if(!added_to_mob && max_multiplier >= 10)
+	if(!added_to_mob && max_multiplier >= 9)
 		added_to_mob = TRUE
 		ADD_TRAIT(mob, TRAIT_NOCRITDAMAGE, type)
 
@@ -36,7 +36,7 @@
 	if(HAS_TRAIT(victim, TRAIT_DEATHCOMA))
 		return multiplier
 	if(victim.IsSleeping())
-		return multiplier * 0.25 //Voluntary unconsciousness yields lower healing.
+		return multiplier * 0.3 //Voluntary unconsciousness yields lower healing.
 	switch(victim.stat)
 		if(UNCONSCIOUS, HARD_CRIT)
 			return multiplier * 0.9
