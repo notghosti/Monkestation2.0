@@ -49945,6 +49945,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 6
 	},
+/obj/structure/bed/dogbed{
+	anchored = 1;
+	name = "Daisy's bed"
+	},
+/mob/living/basic/rabbit/daisy,
 /turf/open/floor/carpet,
 /area/station/service/library/printer)
 "jHQ" = (
@@ -96559,11 +96564,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
-/mob/living/basic/rabbit/daisy,
-/obj/structure/bed/dogbed{
-	anchored = 1;
-	name = "Daisy's bed"
-	},
 /turf/open/floor/iron/dark,
 /area/station/service/library/private)
 "sJP" = (
