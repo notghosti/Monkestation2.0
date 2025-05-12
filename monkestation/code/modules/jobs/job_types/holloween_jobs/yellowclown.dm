@@ -13,11 +13,13 @@
 
 	paycheck = PAYCHECK_CREW
 	paycheck_department = ACCOUNT_SRV
-
+	allow_overflow = FALSE
 	mind_traits = list(TRAIT_NAIVE)
 	liver_traits = list(TRAIT_COMEDY_METABOLISM)
 
 	display_order = JOB_DISPLAY_ORDER_CLOWN
+	allow_overflow = FALSE
+
 	departments_list = list(
 		/datum/job_department/spooktober,
 		)
