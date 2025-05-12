@@ -23,7 +23,7 @@
 	if(!(cortical_owner.upgrade_flags & BORER_ALONE_PRODUCTION) && !cortical_owner.inside_human())
 		owner.balloon_alert(owner, "host required")
 		return
-	if((cortical_owner.upgrade_flags & BORER_ALONE_PRODUCTION) && !cortical_owner.inside_human())
+	else()
 		no_host_egg()
 		StartCooldown()
 		cortical_owner.chemical_storage -= chemical_cost
