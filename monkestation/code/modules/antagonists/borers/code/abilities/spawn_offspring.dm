@@ -24,12 +24,12 @@
 		owner.balloon_alert(owner, "host required")
 		return
 	else()
+		cortical_owner.chemical_storage -= chemical_cost
 		no_host_egg()
 		StartCooldown()
-		cortical_owner.chemical_storage -= chemical_cost
 		return
-	produce_egg()
 	cortical_owner.chemical_storage -= chemical_cost
+	produce_egg()
 	var/obj/item/organ/internal/brain/victim_brain = cortical_owner.human_host.get_organ_slot(ORGAN_SLOT_BRAIN)
 	if(victim_brain)
 		cortical_owner.human_host.adjustOrganLoss(ORGAN_SLOT_BRAIN, 25 * cortical_owner.host_harm_multiplier, maximum = BRAIN_DAMAGE_SEVERE)
