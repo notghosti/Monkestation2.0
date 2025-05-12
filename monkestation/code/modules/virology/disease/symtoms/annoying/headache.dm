@@ -28,6 +28,6 @@
 			to_chat(mob, span_warning("[pick("Your head hurts a lot.", "Your head pounds incessantly.")]"))
 			mob.stamina.adjust(-50)
 	else
-a		if(prob(base_message_chance))
+		if(prob(base_message_chance))
 			to_chat(mob, span_warning("[pick("Your head hurts.", "Your head pounds.")]"))
 
