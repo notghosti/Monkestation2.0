@@ -26,6 +26,21 @@
 	//PRESTO FUCKIN MAJESTO
 	C.gain_trauma(/datum/brain_trauma/special/obsessed)//ZAP
 
+/datum/antagonist/obsessed/antag_token(datum/mind/hosts_mind, mob/spender)
+	if(isliving(spender) && hosts_mind)
+		var/mob/living/carbon/C = hosts_mind.current
+		if(!istype(C))
+			message_admins("Tokener isn't a carbon mob, aborting...")
+			return
+		if(!C.get_organ_by_type(/obj/item/organ/internal/brain)) // If only I had a brain
+			message_admins("Tokener doesn't have a brain for a brain trauma, aborting...")
+			return
+		C.gain_trauma(/datum/brain_trauma/special/obsessed)//ZAP
+	if(isobserver(spender))
+		var/mob/living/carbon/human/new_mob = spender.change_mob_type(/mob/living/carbon/human, delete_old_mob = TRUE)
+		new_mob.equipOutfit(/datum/outfit/job/assistant)
+		new_mob.gain_trauma(/datum/brain_trauma/special/obsessed)//ZAP
+
 /datum/antagonist/obsessed/greet()
 	owner.current.playsound_local(get_turf(owner.current), 'sound/ambience/antag/creepalert.ogg', 100, FALSE, pressure_affected = FALSE, use_reverb = FALSE)
 	owner.announce_objectives()
