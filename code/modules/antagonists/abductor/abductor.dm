@@ -114,6 +114,17 @@
 	owner.remove_traits(list(TRAIT_ABDUCTOR_SCIENTIST_TRAINING, TRAIT_ALL_SURGERIES), ABDUCTOR_ANTAGONIST) // monke edit: TRAIT_ALL_SURGERIES
 	return ..()
 
+/datum/antagonist/abductor/scientist/onemanteam/antag_token(datum/mind/hosts_mind, mob/spender)
+	team = new
+	if(isliving(spender) && hosts_mind)
+		hosts_mind.current.unequip_everything()
+		new /obj/effect/holy(hosts_mind.current.loc)
+		hosts_mind.add_antag_datum(/datum/antagonist/abductor/scientist/onemanteam, team)
+	if(isobserver(spender))
+		var/mob/living/carbon/human/new_mob = spender.change_mob_type(/mob/living/carbon/human, delete_old_mob = TRUE)
+		var/datum/mind/new_mind = new_mob.mind
+		new_mind.add_antag_datum(/datum/antagonist/abductor/scientist/onemanteam, team)
+
 /datum/antagonist/abductor/admin_add(datum/mind/new_owner,mob/admin)
 	var/list/current_teams = list()
 	for(var/datum/team/abductor_team/T in GLOB.antagonist_teams)
