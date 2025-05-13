@@ -39,6 +39,35 @@
 	/// The outfit the contractor is equipped with
 	var/contractor_outfit = /datum/outfit/contractor
 
+/datum/antagonist/traitor/contractor/antag_token(datum/mind/hosts_mind, mob/spender)
+	if(isliving(spender) && hosts_mind)
+		hosts_mind.current.unequip_everything()
+		new /obj/effect/holy(hosts_mind.current.loc)
+		QDEL_IN(hosts_mind.current, 20)
+
+	var/list/spawn_locs = list()
+	for(var/obj/effect/landmark/carpspawn/carp_spawn in GLOB.landmarks_list)
+		if(!isturf(carp_spawn.loc))
+			stack_trace("Carp spawn found not on a turf: [carp_spawn.type] on [isnull(carp_spawn.loc) ? "null" : carp_spawn.loc.type]")
+			continue
+		spawn_locs += carp_spawn.loc
+	if(!spawn_locs.len)
+		message_admins("No valid spawn locations found, aborting...")
+		return MAP_ERROR
+
+	var/key = spender.ckey
+
+	//spawn the contractor and assign the candidate
+	var/mob/living/carbon/human/contractor = create_contractor(pick(spawn_locs))
+	contractor.PossessByPlayer(key)
+	contractor.mind.add_antag_datum(/datum/antagonist/traitor/contractor)
+
+/proc/create_contractor(spawn_loc)
+	var/mob/living/carbon/human/new_contractor = new(spawn_loc)
+	new_contractor.randomize_human_appearance(~(RANDOMIZE_SPECIES))
+	new_contractor.dna.update_dna_identity()
+	return new_contractor
+
 /datum/antagonist/traitor/contractor/proc/equip_guy()
 	if(!ishuman(owner.current))
 		return

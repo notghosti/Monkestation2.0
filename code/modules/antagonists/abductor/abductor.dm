@@ -125,6 +125,7 @@
 		team = current_teams[choice]
 	else
 		return
+	new_owner.current.unequip_everything()
 	new_owner.add_antag_datum(src)
 	log_admin("[key_name(usr)] made [key_name(new_owner)] [name] on [choice]!")
 	message_admins("[key_name_admin(usr)] made [key_name_admin(new_owner)] [name] on [choice] !")
