@@ -60589,6 +60589,7 @@
 /obj/structure/cable,
 /obj/machinery/duct,
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/open/floor/iron/white/textured,
 /area/station/science/xenobiology)
 "tCM" = (
@@ -117933,7 +117934,7 @@ hNt
 xoG
 ogZ
 fck
-qbm
+dQL
 hNt
 xoG
 ogZ
@@ -119989,7 +119990,7 @@ hNt
 xoG
 ogZ
 fck
-dQL
+qbm
 hNt
 xoG
 ogZ
