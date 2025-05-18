@@ -4383,10 +4383,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "Lz" = (
 /obj/effect/decal/cleanable/confetti,
-/obj/machinery/jukebox/disco{
-	anchored = 1;
-	req_access = null
-	},
+/obj/machinery/jukebox/unlocked,
 /turf/open/floor/iron,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "LB" = (
