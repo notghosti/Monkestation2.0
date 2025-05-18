@@ -28,6 +28,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain/protected_space)
 "h" = (
 /mob/living/basic/alien/sentinel,
+/obj/structure/alien/weeds,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "i" = (
@@ -69,9 +70,7 @@
 /area/ruin/space/has_grav/powered/virtual_domain)
 "p" = (
 /obj/structure/alien/weeds,
-/mob/living/basic/alien/drone{
-	plants_off = 1
-	},
+/mob/living/basic/alien/drone,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "q" = (
@@ -84,9 +83,7 @@
 /area/virtual_domain/safehouse)
 "s" = (
 /obj/structure/alien/weeds/node,
-/mob/living/basic/alien/drone{
-	plants_off = 1
-	},
+/mob/living/basic/alien/drone,
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/space/has_grav/powered/virtual_domain)
 "t" = (
@@ -174,8 +171,7 @@
 /mob/living/basic/alien/queen/large{
 	desc = "A gigantic alien who is in charge of the hive and all of its loyal servants.";
 	name = "alien queen";
-	pixel_x = -16;
-	plants_off = 1
+	pixel_x = -16
 	},
 /turf/open/misc/asteroid/basalt/lava_land_surface,
 /area/ruin/space/has_grav/powered/virtual_domain)
