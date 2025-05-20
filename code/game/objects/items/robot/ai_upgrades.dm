@@ -8,9 +8,7 @@
 	var/datum/ai_module/to_gift = /datum/ai_module
 
 /obj/item/aiupgrade/pre_attack(atom/target, mob/living/user, proximity)
-	if(!proximity)
-		return ..()
-	if(!isAI(target))
+	if(!proximity || !isAI(target))
 		return ..()
 	var/mob/living/silicon/ai/AI = target
 	var/datum/action/innate/ai/action = locate(to_gift.power_type) in AI.actions
