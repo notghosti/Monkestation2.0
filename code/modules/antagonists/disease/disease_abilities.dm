@@ -363,9 +363,10 @@ new /datum/disease_ability/symptom/powerful/heal/oxygen,
 /datum/disease_ability/symptom/powerful/heal/oxygen
 	symptoms = list(/datum/symptom/oxygen)
 
+/* While they are nonfunctional. Keep em codeblocked.
 /datum/disease_ability/symptom/medium/nano_boost
 	symptoms = list(/datum/symptom/nano_boost)
 
 /datum/disease_ability/symptom/medium/nano_destroy
 	symptoms = list(/datum/symptom/nano_destroy)
-
+*/
