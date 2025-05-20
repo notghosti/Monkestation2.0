@@ -31,7 +31,7 @@
 			if(gifted_ability.unlock_text)
 				to_chat(AI, gifted_ability.unlock_text)
 			if(gifted_ability.unlock_sound)
-				AI.playsound_local(AI, gifted_ability.unlock_sound, 50, 0)
+				AI.playsound_local(AI, gifted_ability.unlock_sound, vol = 50, vary = TRUE)
 		update_static_data(AI)
 	to_chat(user, span_notice("You install [src], upgrading [AI]."))
 	to_chat(AI, span_userdanger("[user] has upgraded you with [src]!"))
