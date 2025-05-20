@@ -13,12 +13,12 @@ new /datum/disease_ability/symptom/mild/sneeze,
 new /datum/disease_ability/symptom/medium/beard,
 new /datum/disease_ability/symptom/medium/choking,
 new /datum/disease_ability/symptom/medium/confusion,
-new /datum/disease_ability/symptom/medium/voice_change,
+/* new /datum/disease_ability/symptom/medium/voice_change,*/
 new /datum/disease_ability/symptom/powerful/narcolepsy,
-new /datum/disease_ability/symptom/medium/fever,
+/* new /datum/disease_ability/symptom/medium/fever, */
 new /datum/disease_ability/symptom/medium/headache,
-new /datum/disease_ability/symptom/medium/nano_boost,
-new /datum/disease_ability/symptom/medium/nano_destroy,
+/* new /datum/disease_ability/symptom/medium/nano_boost,
+new /datum/disease_ability/symptom/medium/nano_destroy, */
 new /datum/disease_ability/symptom/medium/disfiguration,
 new /datum/disease_ability/symptom/medium/polyvitiligo,
 new /datum/disease_ability/symptom/medium/itching,
