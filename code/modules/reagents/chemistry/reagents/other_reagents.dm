@@ -28,6 +28,7 @@
 	opacity = 230
 	turf_exposure = TRUE
 	chemical_flags = REAGENT_IGNORE_STASIS|REAGENT_DEAD_PROCESS
+	process_flags = ORGANIC | SYNTHETIC | MOB_MINERAL // So blood pills can be used to infect these for `monkestation\code\modules\virology\disease\symtoms\flavor\special_adaptation.dm`
 
 /datum/glass_style/shot_glass/blood
 	required_drink_type = /datum/reagent/blood
