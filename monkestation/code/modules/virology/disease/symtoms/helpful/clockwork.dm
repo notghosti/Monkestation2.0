@@ -1,5 +1,7 @@
-/* // This code techically works but I have a few edgecases to soften out
+// This code techically works but I have a few edgecases to soften out - until then keep it restricted - ghosti
+
 /datum/symptom/robotic_adaptation
+	restricted = TRUE // can remove once curing the disease is fully functional
 	name = "Biometallic Replication"
 	desc = "The disease can manipulate metal and silicate compounds, becoming able to infect robotic beings. The virus also provides a suitable substrate for nanites in otherwise inhospitable hosts"
 	illness = "Robotic evolution"
