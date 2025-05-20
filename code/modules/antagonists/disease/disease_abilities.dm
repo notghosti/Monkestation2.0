@@ -321,6 +321,7 @@ new /datum/disease_ability/symptom/powerful/heal/oxygen,
 	short_desc = "Cause victims to become confused."
 	long_desc = "Cause victims to become confused intermittently."
 
+/* While they are nonfunctional. Keep em codeblocked.
 /datum/disease_ability/symptom/medium/voice_change
 	symptoms = list(/datum/symptom/voice_change)
 	short_desc = "Change the voice of victims."
@@ -328,6 +329,7 @@ new /datum/disease_ability/symptom/powerful/heal/oxygen,
 
 /datum/disease_ability/symptom/medium/fever
 	symptoms = list(/datum/symptom/fever)
+*/
 
 /datum/disease_ability/symptom/medium/headache
 	symptoms = list(/datum/symptom/headache)
