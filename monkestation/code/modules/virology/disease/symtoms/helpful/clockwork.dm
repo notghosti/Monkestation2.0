@@ -218,5 +218,3 @@
 			if(!IS_ORGANIC_LIMB(Oldlimb))
 				Oldlimb.burn_modifier = initial(Oldlimb.burn_modifier)
 				Oldlimb.brute_modifier = initial(Oldlimb.brute_modifier)
-
-*/
