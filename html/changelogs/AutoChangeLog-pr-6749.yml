@@ -1,4 +1,0 @@
-author: "Absolucy"
-delete-after: True
-changes:
-  - bugfix: "Kicking someone now properly does 50% more damage than punching, as intended."

@@ -287,3 +287,7 @@
   - qol: Adds examine text for oozeling cores that cannot be plasma revived and better
       clarifies what type of plasma to use.
   - balance: Oozeling heads dismember as easily as their limbs.
+2025-05-20:
+  Absolucy:
+  - bugfix: Kicking someone now properly does 50% more damage than punching, as intended.
+  - bugfix: Charlie/Delta Station on icebox are no longer considered station areas.
