@@ -42,7 +42,7 @@
 			return multiplier * 0.9
 		if(SOFT_CRIT)
 			return multiplier * 0.5
-	if((victim.getBruteLoss() + victim.getFireLoss()) >= 70 && !active_coma)
+	if((victim.getBruteLoss() + victim.getFireLoss()) >= 80 && !active_coma)
 		to_chat(victim, span_warning("You feel yourself slip into a regenerative coma..."))
 		active_coma = TRUE
 		addtimer(CALLBACK(src, PROC_REF(coma), victim), 6 SECONDS)
