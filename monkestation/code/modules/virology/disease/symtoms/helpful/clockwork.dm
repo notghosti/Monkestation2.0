@@ -1,3 +1,4 @@
+/* // This code techically works but I have a few edgecases to soften out
 /datum/symptom/robotic_adaptation
 	name = "Biometallic Replication"
 	desc = "The disease can manipulate metal and silicate compounds, becoming able to infect robotic beings. The virus also provides a suitable substrate for nanites in otherwise inhospitable hosts"
@@ -216,3 +217,4 @@
 				Oldlimb.burn_modifier = initial(Oldlimb.burn_modifier)
 				Oldlimb.brute_modifier = initial(Oldlimb.brute_modifier)
 
+*/
