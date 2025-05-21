@@ -1,7 +1,6 @@
 
 // defines limbs/bodyparts.
 /obj/item/bodypart/head/ornithid
-	limb_id = SPECIES_ORNITHID
 	bodytype = BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
 
 /obj/item/bodypart/arm/left/ornithid
