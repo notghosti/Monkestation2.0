@@ -24,6 +24,7 @@
 
 /obj/item/bodypart/chest/ornithid
 	bodytype = BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
+	acceptable_bodytype = BODYTYPE_ORGANIC | BODYTYPE_DIGITIGRADE
 
 /obj/item/bodypart/leg/left/ornithid
 	limb_id = SPECIES_ORNITHID
