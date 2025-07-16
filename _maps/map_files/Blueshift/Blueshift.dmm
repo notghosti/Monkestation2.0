@@ -105392,6 +105392,11 @@
 /obj/structure/lattice,
 /turf/open/space/basic,
 /area/space/nearstation)
+"uqp" = (
+/obj/structure/cable,
+/obj/effect/landmark/navigate_destination/cryo,
+/turf/open/floor/iron/white/textured_large,
+/area/station/common/cryopods)
 "uqr" = (
 /obj/structure/chair,
 /obj/effect/landmark/start/assistant,
@@ -212475,7 +212480,7 @@ kTV
 kTV
 wxt
 tQZ
-tQZ
+uqp
 tQZ
 gTl
 hZy
