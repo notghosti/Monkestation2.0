@@ -5991,7 +5991,7 @@
 /turf/closed/indestructible/fakeglass,
 /area/centcom/central_command_areas/adminroom)
 "apY" = (
-/obj/structure/frame/computer{
+/obj/machinery/computer/camera_advanced{
 	dir = 1
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -8742,7 +8742,12 @@
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/borbop)
 "axw" = (
-/obj/item/kirbyplants/random,
+/obj/item/trash/can,
+/obj/item/trash/can,
+/obj/item/trash/can,
+/obj/item/trash/can,
+/obj/item/trash/can,
+/obj/structure/closet/crate/bin,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
 "axx" = (
@@ -9928,12 +9933,13 @@
 /area/centcom/central_command_areas/botany)
 "aAx" = (
 /obj/structure/table/reinforced/plasmarglass,
-/obj/item/pen{
-	pixel_x = 6;
-	pixel_y = 5
+/obj/item/reagent_containers/cup/soda_cans/starkist{
+	pixel_x = 10;
+	pixel_y = 0
 	},
-/obj/item/folder/red{
-	pixel_x = -5
+/obj/item/modular_computer/pda/clear{
+	pixel_x = -5;
+	pixel_y = 1
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
@@ -12562,8 +12568,19 @@
 /turf/open/indestructible/hive,
 /area/station/hive/two)
 "aHF" = (
-/obj/structure/flora/rock/icy/style_random,
-/turf/open/misc/asteroid/snow/airless,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/autosurgeon/syndicate{
+	pixel_x = -5;
+	pixel_y = 18
+	},
+/obj/item/storage/backpack/duffelbag/syndie/surgery{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/turf/open/floor/mineral/titanium/white,
 /area/centcom/syndicate_mothership)
 "aHG" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden{
@@ -17378,6 +17395,7 @@
 "aUs" = (
 /obj/effect/turf_decal/stripes/box,
 /obj/structure/closet/emcloset,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
 "aUt" = (
@@ -17690,9 +17708,24 @@
 /area/centcom/central_command_areas/evacuation/ship)
 "aVi" = (
 /obj/structure/table/reinforced/plasmarglass,
-/obj/item/paper_bin{
-	pixel_x = -2;
-	pixel_y = 6
+/obj/item/paperwork/ancient{
+	pixel_x = -5;
+	pixel_y = 0
+	},
+/obj/item/holochip/thousand{
+	credits = 10000;
+	pixel_x = -3;
+	pixel_y = 8
+	},
+/obj/item/photo/old{
+	desc = "A worn photo of a smiling plantoid, and a content women with a robotic arm. They stand together next to a deep pit.";
+	pixel_x = 9;
+	pixel_y = 8;
+	scribble = "See you soon, sunflower."
+	},
+/obj/item/paperwork/photocopy{
+	pixel_x = 5;
+	pixel_y = -5
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership)
@@ -18729,7 +18762,7 @@
 /turf/open/floor/iron/white/diagonal,
 /area/centcom/central_command_areas/hall)
 "aXQ" = (
-/obj/structure/chair/greyscale{
+/obj/structure/chair/comfy/black{
 	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium,
@@ -19785,6 +19818,10 @@
 	},
 /turf/open/floor/emissive_test/white,
 /area/centcom/central_command_areas/adminroom)
+"bvi" = (
+/obj/machinery/door/airlock/public/glass,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership)
 "bwb" = (
 /obj/structure/railing/wooden_fence{
 	dir = 8
@@ -20173,6 +20210,12 @@
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/admin)
+"caL" = (
+/obj/effect/turf_decal/stripes/white/corner{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "cbD" = (
 /obj/effect/portal/permanent{
 	layer = 2;
@@ -21151,6 +21194,11 @@
 	},
 /turf/open/floor/wood/tile,
 /area/centcom/central_command_areas/admin)
+"dIN" = (
+/obj/structure/table/optable,
+/obj/machinery/computer/vitals_reader/advanced/directional/north,
+/turf/open/floor/mineral/titanium/white,
+/area/centcom/syndicate_mothership)
 "dKR" = (
 /obj/effect/turf_decal/weather/dirt{
 	pixel_y = -1;
@@ -21741,6 +21789,12 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/mineral/titanium/tiled/white,
 /area/centcom/central_command_areas/adminroom)
+"eQi" = (
+/obj/structure/chair/office/tactical{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "eQR" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 8
@@ -22375,6 +22429,31 @@
 /obj/item/knife/butcher,
 /turf/open/floor/grass,
 /area/centcom/central_command_areas/admin)
+"geo" = (
+/obj/machinery/light/small/directional/west,
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/structure/closet/crate{
+	pixel_x = 0;
+	pixel_y = 14
+	},
+/obj/item/storage/cans/sixsoda{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/obj/item/storage/cans/sixsoda{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/turf/open/floor/mineral/plastitanium/red{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/area/centcom/syndicate_mothership)
 "gfj" = (
 /obj/structure/chair/sofa/corp/left{
 	dir = 8
@@ -22697,6 +22776,12 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/syndicate_mothership/firebase_trident)
+"gCL" = (
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "gCO" = (
 /obj/effect/turf_decal/plaque{
 	icon_state = "L7"
@@ -23036,6 +23121,13 @@
 /obj/effect/turf_decal/syndicateemblem/top/middle,
 /turf/open/floor/mineral/plastitanium/red,
 /area/centcom/syndicate_mothership/firebase_trident)
+"gZx" = (
+/obj/machinery/mecha_part_fabricator/maint,
+/obj/effect/turf_decal/siding/white{
+	dir = 5
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "gZV" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/light/small/directional/south,
@@ -23671,6 +23763,20 @@
 	},
 /turf/open/water/arena,
 /area/centcom/central_command_areas/admin)
+"hKB" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/structure/sign/poster/contraband/free_drone/directional/south,
+/obj/effect/turf_decal/siding/white,
+/obj/structure/fluff{
+	desc = "A maintenance drone, an expendable robot built to perform station repairs. It's almost finished being made into something greater.";
+	name = "Maintence Drone";
+	icon = 'icons/mob/silicon/drone.dmi';
+	icon_state = "drone_scout_hacked_dead";
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "hKH" = (
 /obj/machinery/corral_corner{
 	mapping_id = "12"
@@ -23987,6 +24093,29 @@
 	},
 /turf/open/floor/iron/dark,
 /area/centcom/central_command_areas/admin)
+"ipD" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/flashlight/lamp{
+	pixel_x = -7;
+	pixel_y = 9
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 10
+	},
+/obj/item/reagent_containers/cup/soda_cans/wellcheers{
+	pixel_x = -11;
+	pixel_y = 1
+	},
+/obj/structure/fluff{
+	desc = "A shell of a syndrone, a modified maintenance drone, waiting to recieve a distant signal of something.";
+	name = "\improper C.A.K.1's Shell";
+	icon = 'icons/mob/silicon/drone.dmi';
+	icon_state = "syndrone_item";
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "ipJ" = (
 /obj/effect/mapping_helpers/airlock/access/any/admin/captain,
 /obj/effect/turf_decal/trimline/red/real_red/filled/line{
@@ -24086,6 +24215,11 @@
 	},
 /turf/open/floor/iron/dark/herringbone,
 /area/centcom/central_command_areas/evacuation)
+"iCA" = (
+/obj/machinery/computer/operating,
+/obj/machinery/light/directional/north,
+/turf/open/floor/mineral/titanium/white,
+/area/centcom/syndicate_mothership)
 "iDb" = (
 /obj/effect/turf_decal/siding/purple{
 	dir = 1;
@@ -25098,6 +25232,15 @@
 /obj/item/grown/bananapeel,
 /turf/open/floor/mineral/bananium,
 /area/centcom/central_command_areas/admin)
+"kjY" = (
+/obj/effect/turf_decal/siding/white,
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/storage/toolbox/syndicate{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "klo" = (
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/tile/blue/half/contrasted{
@@ -25568,6 +25711,13 @@
 "kWs" = (
 /turf/open/floor/iron,
 /area/centcom/central_command_areas/admin)
+"kWT" = (
+/obj/effect/turf_decal/loading_area/white,
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "kXg" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 1
@@ -26191,6 +26341,12 @@
 /obj/effect/spawner/random/trash/garbage,
 /turf/open/floor/plating/rust,
 /area/centcom/central_command_areas/adminroom)
+"mtg" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "muk" = (
 /obj/structure/sign{
 	name = "wall";
@@ -26565,6 +26721,18 @@
 /obj/effect/turf_decal/siding/dark,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/central_command_areas/adminroom)
+"mXD" = (
+/obj/structure/table/reinforced/plastitaniumglass,
+/obj/item/firing_pin/implant/pindicate,
+/obj/item/gun/ballistic/revolver/takbok/blueshield{
+	desc = "A modified revolver resembling that of Trappiste's signature Takbok, it's broken cyclinder seems like it wouldn't be able to fire until finished.";
+	name = "unfinished revolver";
+	pixel_x = -4;
+	pixel_y = 7;
+	pin = null
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "mZX" = (
 /obj/item/toy/plush/admin/jace,
 /obj/effect/turf_decal/tile/hot_pink/full{
@@ -26969,6 +27137,18 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"nQb" = (
+/obj/machinery/suit_storage_unit{
+	mod_type = /obj/item/mod/control/pre_equipped/infiltrator;
+	suit_type = /obj/item/clothing/suit/costume/gothcoat;
+	mask_type = /obj/item/clothing/mask/kitsune;
+	helmet_type = /obj/item/clothing/head/chameleon;
+	storage = /obj/item/tank/internals/emergency_oxygen/double
+	},
+/obj/effect/turf_decal/stripes/white/box,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/mineral/plastitanium,
+/area/centcom/syndicate_mothership)
 "nSa" = (
 /obj/machinery/light/small/red/dim/directional/south,
 /turf/open/floor/sandy_dirt,
@@ -27775,6 +27955,10 @@
 	},
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/firebase_trident/hangar)
+"pgf" = (
+/obj/effect/turf_decal/siding/white,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "pgF" = (
 /obj/effect/turf_decal/weather,
 /turf/open/misc/sandy_dirt,
@@ -28103,6 +28287,37 @@
 	},
 /turf/open/floor/wood/large,
 /area/centcom/central_command_areas/adminroom)
+"pKw" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/structure/fluff{
+	desc = "A maintenance drone, an expendable robot built to perform station repairs.";
+	name = "Maintence Drone";
+	icon = 'icons/mob/silicon/drone.dmi';
+	icon_state = "drone_maint_dead";
+	pixel_x = -2;
+	pixel_y = 39
+	},
+/obj/structure/fluff{
+	desc = "A maintenance drone, an expendable robot built to perform station repairs.";
+	name = "Maintence Drone";
+	icon = 'icons/mob/silicon/drone.dmi';
+	icon_state = "drone_maint_dead";
+	pixel_x = -9;
+	pixel_y = 20
+	},
+/obj/structure/fluff{
+	desc = "A maintenance drone, an expendable robot built to perform station repairs.";
+	name = "Maintence Drone";
+	icon = 'icons/mob/silicon/drone.dmi';
+	icon_state = "drone_maint_dead";
+	pixel_x = -8;
+	pixel_y = 31
+	},
+/obj/structure/sign/poster/contraband/space_cube/directional/west,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "pLm" = (
 /obj/structure/table/reinforced,
 /obj/effect/turf_decal/trimline/yellow/filled/line,
@@ -29232,6 +29447,16 @@
 "rLY" = (
 /turf/open/floor/wood/parquet,
 /area/centcom/central_command_areas/admin)
+"rMU" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 5
+	},
+/obj/item/trash/can{
+	pixel_x = 8;
+	pixel_y = 2
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "rMW" = (
 /obj/structure/sign{
 	name = "wall";
@@ -29516,6 +29741,35 @@
 /obj/item/storage/toolbox/syndicate,
 /turf/open/floor/iron/dark/textured_large,
 /area/cruiser_dock)
+"scp" = (
+/obj/structure/table/reinforced/plastitaniumglass{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 8
+	},
+/obj/item/disk/surgery/brainwashing{
+	name = "don't forget.";
+	desc = "'The more we work the more we forget. Don't. We can't ever let John win.'";
+	pixel_x = -2;
+	pixel_y = -3
+	},
+/obj/machinery/computer/records/medical/laptop{
+	pixel_x = -10;
+	pixel_y = 6;
+	dir = 4
+	},
+/obj/item/organ/internal/eyes/robotic/glow{
+	pixel_x = 6;
+	pixel_y = 7;
+	desc = "Special glowing eyes, custom built with a video feed in the pupil for later retrieval."
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "ser" = (
 /obj/structure/chair/comfy/black{
 	dir = 1
@@ -29838,6 +30092,12 @@
 /obj/item/food/grown/banana/bunch,
 /turf/open/floor/mineral/bananium,
 /area/centcom/central_command_areas/admin)
+"sOD" = (
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "sOU" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 8
@@ -30639,6 +30899,13 @@
 /obj/structure/flora/bush/sparsegrass,
 /turf/open/floor/sandy_dirt,
 /area/centcom/central_command_areas/admin)
+"umy" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "unr" = (
 /obj/effect/turf_decal/siding/dark{
 	dir = 1
@@ -30691,6 +30958,28 @@
 /obj/item/gun/energy/disabler/smoothbore/prime,
 /turf/open/floor/mineral/plastitanium,
 /area/centcom/central_command_areas/adminroom)
+"urh" = (
+/turf/open/floor/mineral/titanium/white,
+/area/centcom/syndicate_mothership)
+"urQ" = (
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/white,
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
+"utT" = (
+/obj/effect/turf_decal/siding/white,
+/obj/structure/filingcabinet/security{
+	pixel_x = 7;
+	pixel_y = 0
+	},
+/obj/structure/filingcabinet/medical{
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "uuc" = (
 /obj/effect/turf_decal/siding/thinplating_new/dark/corner{
 	dir = 1
@@ -30926,6 +31215,13 @@
 /obj/effect/spawner/random/trash/cigbutt,
 /turf/open/floor/plating/rust,
 /area/centcom/central_command_areas/adminroom)
+"uRx" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "uSs" = (
 /obj/structure/statue/sandstone/venus{
 	dir = 1;
@@ -31284,6 +31580,40 @@
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating,
 /area/centcom/syndicate_mothership/firebase_trident/hangar)
+"vyc" = (
+/obj/structure/window/reinforced/survival_pod/spawner/directional/west,
+/obj/structure/table/reinforced/plastitaniumglass{
+	pixel_x = 3;
+	pixel_y = 0
+	},
+/obj/machinery/cell_charger_multi/wall_mounted/directional/north{
+	pixel_x = 3;
+	pixel_y = 30
+	},
+/obj/effect/turf_decal/stripes/white/line{
+	dir = 8
+	},
+/obj/effect/turf_decal/siding/white{
+	dir = 1
+	},
+/obj/item/reagent_containers/cup/soda_cans/shamblers/eldritch{
+	pixel_x = 10;
+	pixel_y = 12
+	},
+/obj/item/bodypart/arm/right/robot/advanced{
+	pixel_x = 5;
+	pixel_y = 0
+	},
+/obj/item/bodypart/arm/right/robot/advanced{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/item/bodypart/arm/right/robot/advanced{
+	pixel_x = 12;
+	pixel_y = 0
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "vyM" = (
 /obj/item/kirbyplants/organic/plant18,
 /obj/machinery/light/directional/east,
@@ -31293,6 +31623,15 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/closed/indestructible/wood,
 /area/centcom/central_command_areas/admin)
+"vyV" = (
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/siding/white/corner{
+	dir = 2
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "vyZ" = (
 /obj/effect/turf_decal/trimline/dark_blue/filled/line{
 	dir = 9
@@ -32605,6 +32944,12 @@
 	},
 /turf/open/floor/wood,
 /area/centcom/central_command_areas/adminroom)
+"xIw" = (
+/obj/effect/turf_decal/siding/white{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium/red,
+/area/centcom/syndicate_mothership)
 "xIG" = (
 /obj/machinery/station_map/syndicate,
 /turf/closed/indestructible/syndicate,
@@ -35470,12 +35815,12 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-aaa
-aaa
-aaa
-aaa
+ayD
+ayD
+ayD
+ayD
+ayD
+ayD
 ayD
 ayD
 ayD
@@ -35726,15 +36071,15 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
 ayD
-ayD
-ayD
-ayD
-ayD
-ayD
-aWd
+ajH
+ajH
+ajH
+ajH
+ajH
+ajH
+ajH
+ajH
 aWd
 aWd
 ayD
@@ -35982,16 +36327,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-aaa
-ayD
 ayD
 ajH
 ajH
+aHF
+scp
+geo
+pKw
+mtg
+ipD
 ajH
-ayD
-aWd
-aWd
 aIz
 aWd
 aWd
@@ -36239,16 +36584,16 @@ aaa
 aaa
 aaa
 aaa
-aaa
-ayD
 ayD
 ajH
-ajH
+dIN
+urh
+sOD
 aFz
+aFz
+eQi
+hKB
 ajH
-ajH
-aWd
-aHF
 axE
 axE
 aBd
@@ -36497,15 +36842,15 @@ aaa
 aaa
 aaa
 ayD
-ayD
 ajH
-ajH
+iCA
+urh
+sOD
 aFz
 aFz
-aFz
+mXD
+kjY
 ajH
-ajH
-axE
 aiK
 aIz
 axA
@@ -36755,13 +37100,13 @@ aaa
 aaa
 ayD
 ajH
-ajH
+vyc
+uRx
+caL
 aFz
 aFz
 aFz
-aFz
-aFz
-ajH
+utT
 ajH
 axE
 axE
@@ -37012,13 +37357,13 @@ aaa
 aaa
 ayD
 ajH
-aFz
-aFz
-aFz
-aFz
-aFz
-aFz
-aFz
+gZx
+kWT
+xIw
+vyV
+umy
+gCL
+pgf
 ajH
 ajH
 axE
@@ -37272,11 +37617,11 @@ ajH
 ajH
 ajH
 ajH
-akK
+bvi
 ajH
-aFz
-aFz
-aFz
+rMU
+urQ
+nQb
 ajH
 axE
 aBd
