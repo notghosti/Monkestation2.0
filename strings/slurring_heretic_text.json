@@ -17,7 +17,16 @@
 				"r": " CRACK "
 			}
 		},
-		"string_replacements": ["'", "br", "th", "see", "etch"],
-		"string_additions": ["ah", "wth"]
+		"string_replacements": [
+			"'",
+			"br",
+			"th",
+			"see",
+			"etch"
+		],
+		"string_additions": [
+			"ah",
+			"wth"
+		]
 	}
 }

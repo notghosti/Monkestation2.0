@@ -2,10 +2,10 @@
 
 All steps in the step builder have the following format:
 
-## list(< CHEWIN_STEP_CLASS><\_OPTIONAL>, < REQUIRED_ARGS>, < CUSTOM_ARGS>=value)
+## list(< CHEWIN_STEP_CLASS><_OPTIONAL>, < REQUIRED_ARGS>, < CUSTOM_ARGS>=value)
+
 
 ### `<CHEWIN_STEP_CLASS>`
-
 The name of any one of the recipe step types, custom or otherwise. Valid options are:
 
 - **CHEWIN_ADD_ITEM**
@@ -44,38 +44,34 @@ The name of any one of the recipe step types, custom or otherwise. Valid options
     - `type_path`: The type path of the item being added.
   - **Example:**
     - `list(CHEWIN_USE_ITEM, /obj/item/rollingpin)`  
-      _Use a rolling pin on the container._
+      *Use a rolling pin on the container.*
 
 - **CHEWIN_USE_STOVE**
   - Cook the cooking container on a stove. Keep it on too long, it burns.
   - **Required Arguments:**
     - `temperature`: The required temperature to cook the food at.
-      - _Temperatures are macro'd by: `J_LO`, `J_MED`, `J_HI`._
+      - *Temperatures are macro'd by: `J_LO`, `J_MED`, `J_HI`.*
     - `time`: The amount of time, in seconds, to keep the food on the stove.
   - **Example:**
     - `list(CHEWIN_USE_STOVE, J_LO, 40)`  
-      _Cook on a stove set to "Low" for 40 seconds._
+      *Cook on a stove set to "Low" for 40 seconds.*
 
 ### `<_OPTIONAL>`
-
 The tag `_OPTIONAL` can be tacked onto any command to make it an optional step not required to finish the recipe.
 
 - **Example:**
   - `list(CHEWIN_ADD_ITEM_OPTIONAL, /obj/item/food/breadslice)`
 
 ### `<REQUIRED_ARGS>`
-
 The required arguments for a specific class of step to function. They are not labeled and must be in order. See above for which classes of step have which required arguments.
 
 ### `<CUSTOM_ARGS>`
-
 All custom arguments are declared in the format `key=value`. They are used to quickly modify a given step in a recipe.
 
 - **Example:**
   - `list(CHEWIN_ADD_ITEM, /obj/item/food/breadslice, desc="a custom description")`
 
 #### Valid options are:
-
 - **desc**
   - Adds a custom description to the recipe step, when read from a cooking book.
   - **Example:** `desc="a custom description"`
@@ -101,13 +97,13 @@ All custom arguments are declared in the format `key=value`. They are used to qu
   - **CHEWIN_ADD_ITEM, CHEWIN_USE_TOOL ONLY:**
   - Modifier to adjust the `inherited_quality_modifier` on an `add_item` recipe step.
   - **Example:** `qmod=0.5`  
-    _Only 50% of the added item's quality will be inherited._
+    *Only 50% of the added item's quality will be inherited.*
 
 - **remain_percent**
   - **CHEWIN_ADD_REAGENT ONLY:**
   - Determines the percentage of a reagent that remains in the cooking of an item. IE- if you cook a steak with wine, you can make it so the wine doesn't wind up in the resulting food.
   - **Example:** `remain_percent=0.1`  
-    _Only 10% of the units expected to be added will apply to the resulting food injection._
+    *Only 10% of the units expected to be added will apply to the resulting food injection.*
 
 - **reagent_skip**
   - **CHEWIN_ADD_ITEM, CHEWIN_ADD_PRODUCE ONLY:**
@@ -118,4 +114,4 @@ All custom arguments are declared in the format `key=value`. They are used to qu
   - **CHEWIN_ADD_ITEM, CHEWIN_ADD_PRODUCE ONLY:**
   - Excludes the presence of a reagent in an item from the resulting meal.
   - **Example:** `exclude_reagents=list(/datum/reagent/toxin/carpotoxin)`  
-    _Removes the presence of Carpotoxin from the item._
+    *Removes the presence of Carpotoxin from the item.*

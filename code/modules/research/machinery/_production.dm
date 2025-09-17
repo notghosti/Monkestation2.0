@@ -318,6 +318,7 @@
 	var/time_coefficient = design.lathe_time_factor * efficiency_coeff
 	addtimer(CALLBACK(src, PROC_REF(reset_busy)), (30 * time_coefficient * print_quantity) ** 0.5)
 	addtimer(CALLBACK(src, PROC_REF(do_print), design.build_path, print_quantity), (32 * time_coefficient * print_quantity) ** 0.8)
+	update_static_data_for_all_viewers()
 
 	return TRUE
 

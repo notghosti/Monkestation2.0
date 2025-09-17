@@ -511,7 +511,7 @@
 
 /obj/item/restraints/legcuffs/beartrap/energy/Initialize(mapload)
 	. = ..()
-	addtimer(CALLBACK(src, PROC_REF(dissipate)), 15 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(dissipate)), 100)
 
 /**
  * Handles energy snares disappearing

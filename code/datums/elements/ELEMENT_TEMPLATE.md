@@ -1,6 +1,7 @@
+
 # Template file for your new element
 
-See \_element.dm for detailed explanations
+See _element.dm for detailed explanations
 
 ```dm
 /datum/element/myelement

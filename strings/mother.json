@@ -33,7 +33,17 @@
 		"YOU'RE GROUNDED!!"
 	],
 
-	"verb": ["CALL", "HELP", "VISIT"],
+	"verb": [
+		"CALL",
+		"HELP",
+		"VISIT"
+	],
+	
+	"relative": [
+		"AUNT AND UNCLE",
+		"DAD",
+		"GRANDPARENTS",
+		"MOM"
+	]
 
-	"relative": ["AUNT AND UNCLE", "DAD", "GRANDPARENTS", "MOM"]
 }

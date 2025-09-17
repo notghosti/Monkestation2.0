@@ -22,7 +22,14 @@
 		"Yup"
 	],
 
-	"greetings": ["", "Hello ", "Hey, ", "Hi ", "It's ", "Wait, "],
+	"greetings": [
+		"",
+		"Hello ",
+		"Hey, ",
+		"Hi ",
+		"It's ",
+		"Wait, "
+	],
 
 	"getout": [
 		"@pick(add_name)fuck off",
@@ -49,7 +56,11 @@
 		"What was that?"
 	],
 
-	"add_name": ["", "%TARGETNAME% ", "%TARGETNAME%, "],
+	"add_name": [
+		"",
+		"%TARGETNAME% ",
+		"%TARGETNAME%, "
+	],
 
 	"doubt": [
 		"@pick(add_name)hold on",
@@ -247,4 +258,5 @@
 		"Surprise",
 		"Time"
 	]
+
 }

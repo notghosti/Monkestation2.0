@@ -13,32 +13,31 @@
 		return FALSE
 	var/mob/living/carbon/carbon_current = owner.current
 	// Target must be a Vassal
-	// Vassals and Bloodsuckers recognize eachother, while Monster Hunters can see Vassals.
-	if(!HAS_MIND_TRAIT(viewer, TRAIT_BLOODSUCKER_ALIGNED) && !IS_MONSTERHUNTER(viewer))
-		return FALSE
 	// Default String
-	var/return_info
-	var/return_state
-	var/species_name = carbon_current.dna?.species?.name || initial(carbon_current.name)
+	var/returnString = "\[<span class='warning'>"
+	var/returnIcon = ""
+	// Vassals and Bloodsuckers recognize eachother, while Monster Hunters can see Vassals.
+	if(!IS_BLOODSUCKER(viewer) && !IS_VASSAL(viewer) && !IS_MONSTERHUNTER(viewer))
+		return FALSE
 	// Am I Viewer's Vassal?
 	if(master.owner == viewer.mind)
-		return_info = "This [species_name] bears YOUR mark!"
-		return_state = "vassal"
+		returnString += "This [carbon_current.dna.species.name] bears YOUR mark!"
+		returnIcon = "[icon2html('monkestation/icons/bloodsuckers/vampiric.dmi', world, "vassal")]"
 	// Am I someone ELSE'S Vassal?
 	else if(IS_BLOODSUCKER(viewer) || IS_MONSTERHUNTER(viewer))
-		return_info = "This [species_name] bears the mark of <b>[master.return_full_name()][master.broke_masquerade ? " who has broken the Masquerade" : ""]</b>"
-		return_state = "vassal_grey"
+		returnString += "This [carbon_current.dna.species.name] bears the mark of <span class='boldwarning'>[master.return_full_name()][master.broke_masquerade ? " who has broken the Masquerade" : ""]</span>"
+		returnIcon = "[icon2html('monkestation/icons/bloodsuckers/vampiric.dmi', world, "vassal_grey")]"
 	// Are you serving the same master as I am?
 	else if(viewer.mind.has_antag_datum(/datum/antagonist/vassal) in master.vassals)
-		return_info = "[p_They()] bear[p_s()] the mark of your Master"
-		return_state = "vassal"
+		returnString += "[p_they(TRUE)] bears the mark of your Master"
+		returnIcon = "[icon2html('monkestation/icons/bloodsuckers/vampiric.dmi', world, "vassal")]"
 	// You serve a different Master than I do.
 	else
-		return_info = "[p_They()] bear[p_s()] the mark of another Bloodsucker"
-		return_state = "vassal_grey"
+		returnString += "[p_they(TRUE)] bears the mark of another Bloodsucker"
+		returnIcon = "[icon2html('monkestation/icons/bloodsuckers/vampiric.dmi', world, "vassal_grey")]"
 
-	var/img_html = "<img class='icon' src='\ref['monkestation/icons/bloodsuckers/vampiric.dmi']?state=[return_state]'></img>"
-	return "\[" + span_warning("[img_html] [return_info]") + "\]"
+	returnString += "</span>\]" // \n"  Don't need spacers. Using . += "" in examine.dm does this on its own.
+	return returnIcon + returnString
 
 /// Used when your Master teaches you a new Power.
 /datum/antagonist/vassal/proc/BuyPower(datum/action/cooldown/bloodsucker/power)

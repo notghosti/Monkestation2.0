@@ -372,32 +372,34 @@
 	icon_state = "staffofanimation"
 	inhand_icon_state = "staffofanimation"
 
-/obj/item/ash_staff/interact_with_atom(atom/target, mob/user, list/modifiers)
+/obj/item/ash_staff/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	if(!proximity_flag)
+		return ..()
 
 	if(!user.mind.has_antag_datum(/datum/antagonist/ashwalker))
-		return NONE
+		return ..()
 
 	if(istype(target, /obj/structure/lavaland/ash_walker))
-		return NONE
+		return
 
-	if(!isopenturf(target))
-		return NONE
-	var/turf/target_turf = target
-	if(istype(target, /turf/open/misc/asteroid/basalt/lava_land_surface))
-		to_chat(user, span_warning("You begin to corrupt the land even further..."))
-		if(!do_after(user, 4 SECONDS, target = target_turf))
+	if(isopenturf(target))
+		var/turf/target_turf = target
+		if(istype(target, /turf/open/misc/asteroid/basalt/lava_land_surface))
+			to_chat(user, span_warning("You begin to corrupt the land even further..."))
+			if(!do_after(user, 4 SECONDS, target = target_turf))
+				to_chat(user, span_warning("[src] had their casting cut short!"))
+				return
+
+			target_turf.ChangeTurf(/turf/open/lava/smooth/lava_land_surface)
+			to_chat(user, span_notice("[src] sparks, corrupting the area too far!"))
+			return
+
+		if(!do_after(user, 2 SECONDS, target = target_turf))
 			to_chat(user, span_warning("[src] had their casting cut short!"))
-			return ITEM_INTERACT_BLOCKING
+			return
 
-		target_turf.ChangeTurf(/turf/open/lava/smooth/lava_land_surface)
-		to_chat(user, span_notice("[src] sparks, corrupting the area too far!"))
-		return ITEM_INTERACT_SUCCESS
-
-	if(!do_after(user, 2 SECONDS, target = target_turf))
-		to_chat(user, span_warning("[src] had their casting cut short!"))
-		return ITEM_INTERACT_BLOCKING
-
-	target_turf.ChangeTurf(/turf/open/misc/asteroid/basalt/lava_land_surface)
+		target_turf.ChangeTurf(/turf/open/misc/asteroid/basalt/lava_land_surface)
+		return
 
 	return ..()
 

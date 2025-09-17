@@ -1,6 +1,7 @@
+
 # Template file for your new component
 
-See \_component.dm for detailed explanations
+See _component.dm for detailed explanations
 
 ```dm
 /datum/component/mycomponent

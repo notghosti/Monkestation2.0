@@ -1,22 +1,5 @@
-# Directories
-changelogs
-data
-font-awesome
-jquery
-juke
-**/build
-**/dist
-**/node_modules
-**/.yarn
+# We don't want prettier to run on anything outside of the TGUI folder, so we have to do this.
+/*
 
-# File names / types
-*.min.*
-*.pnp.*
-*.bundle.*
-
-# Don't waste time on these lol
-*.dm
-*.dme
-*.dmm
-*.dmi
-*.ogg
+# We want it to run into the TGUI folder, however.
+!/tgui

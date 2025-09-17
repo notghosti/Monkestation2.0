@@ -94,10 +94,10 @@
 	return TRUE
 
 /// The power went off! We now pay the cost of the power.
-/datum/action/cooldown/bloodsucker/targeted/proc/power_activated_sucessfully(cost_override = 0, cooldown_override)
+/datum/action/cooldown/bloodsucker/targeted/proc/power_activated_sucessfully(cost_override = 0)
 	unset_click_ability(owner)
 	pay_cost(cost_override)
-	StartCooldown(cooldown_override)
+	StartCooldown()
 	DeactivatePower()
 
 /// Called on right click
