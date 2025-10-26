@@ -80,7 +80,9 @@
 	assignment = "Assistant"
 	trim_state = "trim_assistant"
 	sechud_icon_state = SECHUD_ASSISTANT
-	minimal_access = list()
+	minimal_access = list(
+		ACCESS_MINERAL_STOREROOM,
+	)
 	extra_access = list(
 		ACCESS_MAINT_TUNNELS,
 		)
