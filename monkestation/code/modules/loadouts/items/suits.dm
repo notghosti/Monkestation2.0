@@ -518,7 +518,7 @@ GLOBAL_LIST_INIT(loadout_exosuits, generate_loadout_items(/datum/loadout_item/su
 	item_path = /obj/item/clothing/suit/frenchtrench
 
 /datum/loadout_item/suit/frontiertrench
-	name = "Frontier Trenchcoat"
+	name = "Unarmored Frontier Trenchcoat"
 	item_path = /obj/item/clothing/suit/jacket/frontier_colonist/unarmored
 
 /datum/loadout_item/suit/cossak
@@ -598,6 +598,7 @@ GLOBAL_LIST_INIT(loadout_exosuits, generate_loadout_items(/datum/loadout_item/su
 /datum/loadout_item/suit/deforest
 	name = "Deforest Jacket"
 	item_path = /obj/item/clothing/suit/toggle/labcoat/paramedic/deforest
+	restricted_roles = list(JOB_PARAMEDIC, JOB_MEDICAL_DOCTOR, JOB_CHIEF_MEDICAL_OFFICER, JOB_CHEMIST, JOB_BRIG_PHYSICIAN)
 
 /*
 *	HOODIES

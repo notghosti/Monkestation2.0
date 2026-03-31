@@ -646,10 +646,12 @@ GLOBAL_LIST_INIT(loadout_miscunders, generate_loadout_items(/datum/loadout_item/
 /datum/loadout_item/under/jumpsuit/imperial_police_uniform //BUYABLE
 	name = "Imperial Police Uniform"
 	item_path = /obj/item/clothing/under/colonial/nri_police
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_SECURITY_ASSISTANT, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 
 /datum/loadout_item/under/jumpsuit/sol_peacekeeper //BUYABLE
 	name = "Sol Peacekeeper Uniform"
 	item_path = /obj/item/clothing/under/sol_peacekeeper
+	restricted_roles = list(JOB_SECURITY_OFFICER, JOB_SECURITY_ASSISTANT, JOB_WARDEN, JOB_HEAD_OF_SECURITY)
 
 /datum/loadout_item/under/jumpsuit/sol_emt
 	name = "Sol Emergency Medical Uniform"

@@ -35,6 +35,7 @@
 	greyscale_config = /datum/greyscale_config/henchmen
 	greyscale_config_worn = /datum/greyscale_config/henchmen_worn
 	flags_1 = IS_PLAYER_COLORABLE_1
+
 /obj/item/clothing/suit/jacket/henchmen_coat/Initialize(mapload)
 	. = ..()
 	AddComponent(/datum/component/toggle_icon)

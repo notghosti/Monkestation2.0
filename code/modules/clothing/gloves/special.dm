@@ -129,6 +129,8 @@
 /obj/item/clothing/gloves/latex/nitrile/deforest/cosmetic
 	desc = "A pair of high-visibility gloves designed by Deforest Medical for search and rescue, reinforced with thicker cut-resistant fabrics and lined with a heat insulation layer, these gloves can hold their own in most environments. This variant lacks the neural lining and does not increase wearer skill."
 	clothing_traits = NONE
+	armor_type = /datum/armor/none
+	siemens_coefficient = 1
 
 /obj/item/clothing/gloves/tinkerer
 	name = "tinker's gloves"
