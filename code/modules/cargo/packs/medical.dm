@@ -155,5 +155,5 @@ End Monkestation Removal*/
 	contains = list(
 		/obj/item/organ/internal/cyberimp/arm/strongarm,
 		/obj/item/organ/internal/cyberimp/arm/strongarm/l,
-		)
+	)
 	crate_name = "Strong-Arm implant crate"
