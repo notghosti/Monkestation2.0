@@ -1,0 +1,8 @@
+author: "Tractor-Maam"
+delete-after: True
+changes:
+  - rscadd: "AIs dying due to a lack of data cores now drop a AI minicard at their last cores location instead of being deleted."
+  - bugfix: "fixed a runtime in the AI Minicard"
+  - bugfix: "fixed the Primary AI Data Core board not creating primary AI data cores."
+  - bugfix: "fixed an issue in the AI death prompt where having a new data core constructed just in time wouldnt let you shunt to it."
+  - spellcheck: "changed the messages in the AI death prompt to be more cold and computing."
