@@ -1,4 +1,0 @@
-author: "notghosti"
-delete-after: True
-changes:
-  - bugfix: "Aerobic Gloves are purchasable as intended now\n## Pre-Merge Checklist\n- [ ] You tested this on a local server.\n- [ ] This code did not runtime during testing.\n- [x] You documented all of your changes."
