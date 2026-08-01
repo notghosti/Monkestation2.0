@@ -64747,7 +64747,10 @@
 	pixel_x = -7
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/window/left/directional/north,
+/obj/machinery/door/window/left/directional/north{
+	req_access = list("robotics");
+	name = "Robotic's Desk"
+	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	name = "Robotics Shutters";
 	id = "roboticsurgery"
