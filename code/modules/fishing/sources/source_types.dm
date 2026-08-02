@@ -1,13 +1,13 @@
 /datum/fish_source/ocean
 	fish_table = list(
 		FISHING_DUD = 15,
-		/obj/item/coin/gold = 5,
-		/obj/item/fish/clownfish = 15,
-		/obj/item/fish/pufferfish = 15,
-		/obj/item/fish/cardinal = 15,
-		/obj/item/fish/greenchromis = 15,
-		/obj/item/fish/lanternfish = 5,
-		/obj/item/fish/clownfish/lube = 3,
+		/obj/item/fish/chasm_crab/ice = 120,
+		/obj/item/coin/plasma = 24,
+		/obj/item/stack/ore/plasma = 24,
+		/mob/living/basic/mining/lobstrosity = 8,
+		/obj/effect/decal/remains/plasma = 8,
+		/obj/item/stack/sheet/mineral/mythril = 3,
+		/obj/item/stack/sheet/mineral/adamantine = 8,
 	)
 	fish_counts = list(
 		/obj/item/fish/clownfish/lube = 2,
