@@ -20,3 +20,9 @@
       infinite infectious runtime and crash clients
   Watermelon914:
   - bugfix: Fixes list pick circuit compenent.
+2026-08-03:
+  Runian:
+  - bugfix: Cyborg welders that have been upgraded via the experimental welder upgrade
+      now correctly automatically refuel their welder when it is off.
+  nasend_:
+  - bugfix: Bullets now leave debris particles.
