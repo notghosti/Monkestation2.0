@@ -1,0 +1,4 @@
+author: "Runian"
+delete-after: True
+changes:
+  - bugfix: "Fixes clockwork cult power generation trying to update action buttons for mobs that don't exist."
