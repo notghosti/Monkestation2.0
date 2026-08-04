@@ -31,7 +31,7 @@
 	scan_level = 0
 	for(var/datum/stock_part/scanning_module/P in component_parts)
 		scan_level += P.tier
-	nanites_given = 60
+	nanites_given = 40
 	for(var/datum/stock_part/micro_laser/laser in component_parts) // (100 - 170 - 240 - 310)
 		nanites_given += laser.tier * 35
 
