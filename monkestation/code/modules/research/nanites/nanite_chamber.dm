@@ -20,7 +20,7 @@
 	var/busy_icon_state
 	var/busy_message
 	var/message_cooldown = 0
-	var/nanites_given = 60 // 130 base with 2 t1 lasers
+	var/nanites_given = 40 // 100 base with 2 t1 lasers
 
 /obj/machinery/nanite_chamber/Initialize(mapload)
 	. = ..()
@@ -32,7 +32,7 @@
 	for(var/datum/stock_part/scanning_module/P in component_parts)
 		scan_level += P.tier
 	nanites_given = 60
-	for(var/datum/stock_part/micro_laser/laser in component_parts) // (130 - 200 - 270 - 340)
+	for(var/datum/stock_part/micro_laser/laser in component_parts) // (100 - 170 - 240 - 310)
 		nanites_given += laser.tier * 35
 
 /obj/machinery/nanite_chamber/examine(mob/user)
@@ -73,7 +73,7 @@
 	addtimer(CALLBACK(src, PROC_REF(set_busy), TRUE, "Priming nanites...", "[initial(icon_state)]_active"),40)
 	addtimer(CALLBACK(src, PROC_REF(set_busy), TRUE, "Injecting...", "[initial(icon_state)]_active"),70)
 	addtimer(CALLBACK(src, PROC_REF(set_busy), TRUE, "Activating nanites...", "[initial(icon_state)]_falling"),110)
-	addtimer(CALLBACK(src, PROC_REF(complete_injection), locked_state), nanites_given)
+	addtimer(CALLBACK(src, PROC_REF(complete_injection), locked_state), 130)
 
 /obj/machinery/nanite_chamber/proc/complete_injection(locked_state)
 	//TODO MACHINE DING
@@ -81,7 +81,7 @@
 	set_busy(FALSE)
 	if(!occupant)
 		return
-	occupant.AddComponent(/datum/component/nanites, 100)
+	occupant.AddComponent(/datum/component/nanites, nanites_given)
 
 /obj/machinery/nanite_chamber/proc/remove_nanites(datum/nanite_program/NP)
 	if(machine_stat & (NOPOWER|BROKEN))
