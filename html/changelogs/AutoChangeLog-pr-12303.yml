@@ -1,9 +1,0 @@
-author: "TheColorCyan"
-delete-after: True
-changes:
-  - bugfix: "fixes slimes runtiming when trying to latch onto borgs"
-  - bugfix: "slimes cant latch onto robotic mobs anymore"
-  - bugfix: "fixed spy uplink runtiming and not doing anything"
-  - bugfix: "fixed oozeling spewing blood around on slasher machete hits"
-  - bugfix: "fixed blood dna and share blood related runtimes"
-  - bugfix: "fixed ancient sarcofagus from bubblegum having wrong sprite"
