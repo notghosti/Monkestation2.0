@@ -50,3 +50,7 @@
   - balance: Syndicate rebar crossbow now only holds one rod in its internal magazine
   - spellcheck: makarov magazine descriptions now correctly say 12 rounds instead
       of 8 on the uplink
+2026-08-05:
+  Runian:
+  - bugfix: Examining someone that is using digital camouflage now correctly displays
+      the obvious tell at the bottom of examine instead of the top.
