@@ -1,0 +1,4 @@
+author: "SirNightKnight"
+delete-after: True
+changes:
+  - qol: "mutes have the option to disable signer if they know it."
