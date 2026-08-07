@@ -59,3 +59,6 @@
   - qol: mutes have the option to disable signer if they know it.
   notghosti:
   - map: Voidraptor solars SMES are now hooked to the grid
+2026-08-07:
+  notghosti:
+  - bugfix: Hilbital is now 60 seconds to respond.
