@@ -60916,6 +60916,9 @@
 /obj/structure/cable,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
+/obj/structure/disposalpipe/junction/flip{
+	dir = 4
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "rIQ" = (
@@ -61023,7 +61026,9 @@
 	pixel_x = 4;
 	pixel_y = 9
 	},
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 6
+	},
 /turf/open/floor/iron/white,
 /area/station/science/research)
 "rJI" = (
@@ -61402,13 +61407,6 @@
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/iron/dark,
 /area/station/science/ordnance/office)
-"rPr" = (
-/obj/structure/cable,
-/obj/structure/disposalpipe/segment{
-	dir = 5
-	},
-/turf/open/floor/iron/white,
-/area/station/science/research)
 "rPB" = (
 /obj/structure/grandfatherclock,
 /obj/structure/disposalpipe/segment{
@@ -107455,7 +107453,7 @@ bLq
 kIN
 agN
 bGY
-jCR
+eAB
 eHC
 eHC
 eHC
@@ -107969,7 +107967,7 @@ hxo
 kIN
 ueB
 bGY
-rPr
+eAB
 ruT
 fWH
 gxR
