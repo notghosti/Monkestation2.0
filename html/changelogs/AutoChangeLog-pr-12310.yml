@@ -1,0 +1,5 @@
+author: "notghosti"
+delete-after: True
+changes:
+  - map: "Flatpackers have been added to Theseus."
+  - map: "Theseus Robotics Desk window is now under robotics access."
