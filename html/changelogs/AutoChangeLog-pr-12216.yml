@@ -1,7 +1,0 @@
-author: "sufferingintensifies"
-delete-after: True
-changes:
-  - map: "boxstation now has a disposals bin in the medical storage room, and airlocks in the operating theater."
-  - map: "boxstation patient room has been revamped to allow for minor surgeries."
-  - map: "boxstation's defibrillator mounts in the surgery area have been shifted slightly"
-  - map: "blueshift exam area now has walls and posters rather than windows to let doctors place health monitors"
