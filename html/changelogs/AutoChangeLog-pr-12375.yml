@@ -1,6 +1,0 @@
-author: "JohnFulpWillard"
-delete-after: True
-changes:
-  - qol: "Rechargeable abilities no longer disappear from the recharge UI, and you can keep points in them to automatically start charging them once you use it."
-  - bugfix: "AI's ability to clear its own resources now works."
-  - bugfix: "Induction abilities now properly update the button name as you upgrade them."
