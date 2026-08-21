@@ -1,6 +1,6 @@
 /datum/ai_project/nightvision
 	name = "Nightvision Camera Upgrade"
-	description = "By referencing previous imagary of the area and adjusting contrast of camera footage, we can approximate imagery in otherwise pitch-black areas."
+	description = "By referencing previous imagery of the area and adjusting contrast of camera footage, we can approximate imagery in otherwise pitch-black areas."
 	research_cost = 2000
 	ram_required = 3
 	category = AI_PROJECT_CAMERAS
@@ -10,7 +10,7 @@
 	if(!.)
 		return .
 	if(ai.lighting_cutoff >= LIGHTING_CUTOFF_REAL_LOW) // If the ai has equal better vision than this for some ungodly reason then dont run it.
-		to_chat(ai, span_notice("Camera network nightvision imagery already running more efficantly than project; preventing redudant processing."))
+		to_chat(ai, span_notice("Camera network night vision imagery is already running more efficiently than project; preventing redundant processing."))
 		return .
 	ai.lighting_cutoff = LIGHTING_CUTOFF_REAL_LOW
 	ai.update_sight()
