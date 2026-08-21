@@ -5784,6 +5784,7 @@
 #include "code\modules\mob\living\silicon\ai\decentralized\projects\rgb.dm"
 #include "code\modules\mob\living\silicon\ai\decentralized\projects\self_defense.dm"
 #include "code\modules\mob\living\silicon\ai\decentralized\projects\surveillance.dm"
+#include "code\modules\mob\living\silicon\ai\decentralized\projects\view_range.dm"
 #include "code\modules\mob\living\silicon\ai\decentralized\systech\cpu.dm"
 #include "code\modules\mob\living\silicon\ai\decentralized\systech\overclocking.dm"
 #include "code\modules\mob\living\silicon\ai\decentralized\systech\rack.dm"
