@@ -1,8 +1,8 @@
 /datum/ai_project/nightvision
 	name = "Nightvision Camera Upgrade"
 	description = "By referencing previous imagary of the area and adjusting contrast of camera footage, we can approximate imagery in otherwise pitch-black areas."
-	research_cost = 1
-	ram_required = 0
+	research_cost = 3
+	ram_required = 2000
 	category = AI_PROJECT_SURVEILLANCE
 
 /datum/ai_project/nightvision/run_project(force_run = FALSE)
