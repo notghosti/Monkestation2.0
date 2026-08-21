@@ -3,6 +3,7 @@
 	description = "The default range of our camera network's visibility can be expanded to comprehend more imagery at once, expanding our view radius by 3."
 	research_cost = 3000
 	ram_required = 6
+	research_requirements = list(/datum/ai_project/camera_speed)
 	category = AI_PROJECT_CAMERAS
 	var/boost_to = 3
 
