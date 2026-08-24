@@ -10,7 +10,7 @@
 	if(!.)
 		return .
 	if(ai.lighting_cutoff >= LIGHTING_CUTOFF_REAL_LOW) // If the ai has equal better vision than this for some ungodly reason then dont run it.
-		to_chat(ai, span_notice("Camera network night vision imagery is already running more efficiently than project; preventing redundant processing."))
+		to_chat(ai, span_warning("Camera network night vision imagery is already running more efficiently than project; preventing redundant processing."))
 		return .
 	ai.lighting_cutoff = LIGHTING_CUTOFF_REAL_LOW
 	ai.update_sight()
