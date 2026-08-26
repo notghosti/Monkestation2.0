@@ -1034,6 +1034,10 @@
 			if(!original)
 				return
 
+			if(length(original.sources) && get_mutation_class(original) == SCANNER_MUTATION_CLASS_OTHER)
+				say("ERROR: This mutation is anomalous, and cannot be saved.")
+				return
+
 			diskette.mutations += original.make_copy()
 
 			to_chat(usr,span_notice("Mutation successfully stored to disk."))
@@ -1054,10 +1058,6 @@
 
 			// GUARD CHECK - This should not be possible. Unexpected result
 			if(!mutation)
-				return
-
-			if(length(mutation.sources) && get_mutation_class(mutation) == SCANNER_MUTATION_CLASS_OTHER)
-				say("ERROR: This mutation is anomalous, and cannot be saved.")
 				return
 
 			// GUARD CHECK - Nullify should only be used on scrambled or "extra"
