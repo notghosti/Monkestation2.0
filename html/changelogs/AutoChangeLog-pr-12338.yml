@@ -1,0 +1,4 @@
+author: "notghosti"
+delete-after: True
+changes:
+  - rscadd: "Upgrading nanite chambers lasers increases volume of nanites initially given, by 25 per laser tier for publics, and 35 for regular chambers"
