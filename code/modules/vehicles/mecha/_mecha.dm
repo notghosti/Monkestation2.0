@@ -337,7 +337,7 @@
 				unlucky_ai.investigate_log("has been gibbed by having their mech destroyed.", INVESTIGATE_DEATHS)
 				unlucky_ai.gib() //No wreck, no AI to recover
 			else
-				mob_exit(unlucky_ai, silent = TRUE, forced = TRUE) // so we dont ghost the AI
+				mob_exit(ai_occupant, silent = TRUE, forced = TRUE) // so we dont ghost the AI
 			continue
 		mob_exit(occupant, forced = TRUE)
 		if(!isbrain(occupant)) // who would win.. 1 brain vs 1 sleep proc..
