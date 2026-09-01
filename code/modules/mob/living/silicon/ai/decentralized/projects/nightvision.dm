@@ -15,7 +15,6 @@
 	ai.lighting_cutoff = LIGHTING_CUTOFF_REAL_LOW
 	ai.update_sight()
 
-
 /datum/ai_project/nightvision/stop()
 	if(!(ai.lighting_cutoff > LIGHTING_CUTOFF_REAL_LOW))
 		ai.lighting_cutoff = LIGHTING_CUTOFF_VISIBLE
