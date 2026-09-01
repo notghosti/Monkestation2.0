@@ -552,6 +552,16 @@
 /obj/item/storage/box/syndie_kit/imp_radio/PopulateContents()
 	new /obj/item/implanter/radio/syndicate(src)
 
+/obj/item/storage/box/syndie_kit/plasmaman
+	name = "boxed badass plasmaman outfit"
+	desc = "A sleek, sturdy box used to hold a \"tactical\" plasmaman outfit."
+	illustration = "syndiesuit"
+
+/obj/item/storage/box/syndie_kit/plasmaman/PopulateContents()
+	new /obj/item/clothing/under/plasmaman/syndicate(src)
+	new /obj/item/clothing/head/helmet/space/plasmaman/syndie(src)
+	new /obj/item/clothing/gloves/combat(src)
+
 /obj/item/storage/box/syndie_kit/space
 	name = "boxed space suit and helmet"
 	desc = "A sleek, sturdy box used to hold an emergency spacesuit and a jetpack harness."
