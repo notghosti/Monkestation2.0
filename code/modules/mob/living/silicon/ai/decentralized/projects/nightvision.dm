@@ -20,4 +20,3 @@
 		ai.lighting_cutoff = LIGHTING_CUTOFF_VISIBLE
 		ai.update_sight()
 	return ..()
-
