@@ -18,4 +18,3 @@
 /datum/ai_project/view_range/stop()
 	ai.client?.view_size.resetToDefault()
 	return ..()
-
