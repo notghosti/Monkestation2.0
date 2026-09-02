@@ -16,4 +16,3 @@
 /datum/ai_project/quick_shuttle/stop()
 	SSshuttle.supply.callTime *= (1 / shuttle_speed)
 	return ..()
-
