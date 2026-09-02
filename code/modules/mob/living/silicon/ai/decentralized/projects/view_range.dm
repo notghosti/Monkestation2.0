@@ -5,6 +5,7 @@
 	ram_required = 6
 	research_requirements = list(/datum/ai_project/camera_speed)
 	category = AI_PROJECT_CAMERAS
+	/// How many tiles the viewing range of the ai is increased by.
 	var/boost_to = 3
 
 /datum/ai_project/view_range/run_project(force_run = FALSE)

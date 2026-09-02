@@ -4,6 +4,7 @@
 	research_cost = 2500
 	ram_required = 4
 	category = AI_PROJECT_MISC
+	/// Mutiplier to how fast the supply shuttle is while the program is active.
 	var/shuttle_speed = 0.8
 
 /datum/ai_project/quick_shuttle/run_project(force_run = FALSE)
