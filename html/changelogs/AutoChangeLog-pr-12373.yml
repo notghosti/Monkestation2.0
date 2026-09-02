@@ -1,7 +1,0 @@
-author: "JohnFulpWillard"
-delete-after: True
-changes:
-  - bugfix: "Fixes (very much lowers) AI CPU point generation (both in Research points & researching programs)."
-  - balance: "Lowers credits gained from bitcoin mining."
-  - balance: "Makes CPU scaling slightly more linear."
-  - balance: "Buffs Bluespace CPU a tiny bit."
