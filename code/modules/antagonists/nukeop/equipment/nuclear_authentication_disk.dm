@@ -45,7 +45,7 @@
 		//MONKESTATION EDIT START
 		unsecured_timer = new(src)
 		unsecured_timer.start()
-		junior_lone_operative_trigger_time = (20 + rand(-5, 5)) * 60 //35 minutes + -5 to 5 minutes
+		junior_lone_operative_trigger_time = (20 + rand(-5, 5)) MINUTES //20 minutes + -5 to 5 minutes
 		can_trigger_junior_operative = TRUE
 		GLOB.nuke_disk_list += src
 		//MONKESTATION EDIT STOP
@@ -61,7 +61,7 @@
 		if(loneopmode.weight % 5 == 0 && SSticker.totalPlayers > 1)
 			message_admins("[src] is secured (currently in [ADMIN_VERBOSEJMP(new_turf)]). The weight of Lone Operative is now [loneopmode.get_weight()] (base [loneopmode.weight]).")
 		log_game("[src] being secured has reduced the weight of the Lone Operative event to [loneopmode.get_weight()] (base [loneopmode.weight]).")
-	junior_lone_operative_trigger_time = (20 + rand(-5, 5)) * 60
+	junior_lone_operative_trigger_time = (20 + rand(-5, 5)) MINUTES
 	unsecured_time = 0
 
 /obj/item/disk/nuclear/proc/unsecured_process(last_move)
@@ -69,7 +69,7 @@
 	/// How comfy is our disk?
 	var/disk_comfort_level = 0
 
-	unsecured_time += 1
+	unsecured_time += 2 SECONDS // Yes two.
 	if(unsecured_time == junior_lone_operative_trigger_time && can_trigger_junior_operative)
 		var/datum/round_event_control/loneopflavor
 		if(prob(50))
@@ -77,10 +77,9 @@
 		else
 			loneopflavor = SSevents.control_by_type[/datum/round_event_control/junior_lone_operative]
 		if(istype(loneopflavor) && loneopflavor.get_occurrences() < loneopflavor.max_occurrences)
-			force_event(loneopflavor.type, "the nuke disk being unsecured for [round(unsecured_time/60, 1)] minutes")
+			force_event(loneopflavor.type, "the nuke disk being unsecured for [round((unsecured_time/600), 1)] minutes")
 		else
-			junior_lone_operative_trigger_time += (5 * 60) // 5 More minutes according to the disk. It doesnt run on different scaling than MINUTES for some reason
-
+			junior_lone_operative_trigger_time += 5 MINUTES
 	//Go through and check for items that make disk comfy
 	for(var/obj/comfort_item in loc)
 		if(istype(comfort_item, /obj/item/bedsheet) || istype(comfort_item, /obj/structure/bed))
