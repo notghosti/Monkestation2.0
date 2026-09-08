@@ -1,0 +1,8 @@
+author: "hexakats"
+delete-after: True
+changes:
+  - rscadd: "Adds the auto shotgun case to the traitor uplink"
+  - rscadd: "Replaces the special ammo boxes with auto shotgun magazines that come with said ammo types"
+  - rscdel: "Removes the renoster shotgun case from the traitor uplink"
+  - balance: "Trickshot shells now deal a total of 42 damage per shell when all pellets hit"
+  - balance: "Uranium penetrator shells now have high armor penetration (75%)"
