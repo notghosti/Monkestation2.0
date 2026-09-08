@@ -72,3 +72,8 @@
   - rscadd: AI Dashboard Program; Expanded Camera Network
   - bugfix: Malfunctioning AI Camera Upgrade now properly provides night vision
   - admin: Spawn AI no longer asks if you want to move it into a new core
+2026-09-08:
+  Runian:
+  - bugfix: Experimental Cloner Corruption is no longer a valid event for False Alarm.
+  Tractor-Maam:
+  - bugfix: AIs can now read program notifications from their PDA in the chat box.
