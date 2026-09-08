@@ -1,0 +1,6 @@
+author: "hexakats"
+delete-after: True
+changes:
+  - balance: "the chameleon holster no longer fits on suit storage (this was done because a lot of forms looked borked or have missing icons for suit storage, also it already said that on the description before)"
+  - refactor: "moved more chameleon items from attackby to multitool_act for chameleon locking"
+  - code_imp: "moved more chameleon items to chameleon.dm"
