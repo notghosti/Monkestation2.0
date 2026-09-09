@@ -11,7 +11,7 @@
 	if(!.)
 		return .
 	ai.view_range_boost = 3
-	if(!ai.multicam)
+	if(!ai.multicam_on)
 		ai.client?.view_size.setTo(ai.view_range_boost)
 
 /datum/ai_project/view_range/stop()
