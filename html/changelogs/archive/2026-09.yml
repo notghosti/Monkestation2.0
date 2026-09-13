@@ -111,3 +111,7 @@
       to randomize your body.
   - bugfix: The randomization dropdowns in character setup now correctly show their
       color state.
+2026-09-13:
+  hexakats:
+  - bugfix: Removed autoshotgun ammo from the nukie uplink (they can't buy the gun
+      for it)
