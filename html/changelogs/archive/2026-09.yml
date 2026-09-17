@@ -133,3 +133,10 @@
   - rscadd: Added malf button to MULEbot UI
   - rscadd: Added speed adjuster button (when malf) to MULEbot UI
   - code_imp: fixed MULEbot variable autodocs
+2026-09-17:
+  BebeYoshi:
+  - rscadd: 'A new fuzzy hat has been added to your local loadout shop  for only 4.999
+      monkey coins: The Bear Pelt Hat! (1 Monkey Coin tip required)'
+  CabinetOnFire, TheColorCyan:
+  - bugfix: Fixed some sleeping procs that could run in procs that arent allowed to
+      sleep
