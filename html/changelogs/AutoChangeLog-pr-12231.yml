@@ -1,0 +1,4 @@
+author: "Mantlecrawler"
+delete-after: True
+changes:
+  - rscadd: "Adds the green, a new storyteller that only runs events that dont create antagonists"
