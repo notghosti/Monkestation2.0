@@ -59,11 +59,9 @@
 	automatic_charge_overlays = FALSE
 	single_shot_type_overlay = FALSE
 	can_select = FALSE
+	has_manufacturer = FALSE
 
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/coconut)
-
-/obj/item/gun/energy/laser/coconut_gun/give_manufacturer_examine()
-	return
 
 /obj/item/ammo_casing/energy/laser/coconut
 	projectile_type = /obj/projectile/beam/disabler/coconut
