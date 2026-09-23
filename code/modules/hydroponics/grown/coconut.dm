@@ -63,7 +63,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/coconut)
 
 /obj/item/gun/energy/laser/coconut_gun/give_manufacturer_examine()
-	AddElement(/datum/element/manufacturer_examine, COMPANY_REMOVED)
+	return
 
 /obj/item/ammo_casing/energy/laser/coconut
 	projectile_type = /obj/projectile/beam/disabler/coconut
