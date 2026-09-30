@@ -193,3 +193,10 @@
       issues on the bug tracker
   - qol: the command bar is now a bit prettier, and also autocompletes things like
       typepaths and mob targets (primarily useful for admins)
+2026-09-30:
+  Gboster-0:
+  - rscadd: The Rod of Asclepius can now rarelly spawn instead of an immovable rod
+  hexakats:
+  - image: the auto shotgun case now uses the large syndicate case sprite
+  - image: added a blinking animation for the large case if it's a variant that can
+      explode
