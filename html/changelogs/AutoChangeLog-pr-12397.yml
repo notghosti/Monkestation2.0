@@ -1,0 +1,6 @@
+author: "hexakats"
+delete-after: True
+changes:
+  - qol: "surgery trays can hold autopsy scanners now"
+  - map: "replaced surgery duffel bags on all maps with surgery trays"
+  - map: "tweaked theseus a little (moved trays to nicer spots and removed drapes that spawn on the surgery tables)"
