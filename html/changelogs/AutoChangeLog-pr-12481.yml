@@ -1,5 +1,0 @@
-author: "Singul0"
-delete-after: True
-changes:
-  - rscadd: "Adds 4 new AI projects for you lots to tinker with! (Tray scanners, Engineering Scan, Lights Controls, Advanced Tracking)"
-  - balance: "Adjusted human examine project cost to make the newly advanced tracking easier to obtain 4K to 2K, reducing the strain to obtain advanced tracking from 9K to 7K."
