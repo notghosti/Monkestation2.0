@@ -1,0 +1,5 @@
+author: "Tractor-Maam"
+delete-after: True
+changes:
+  - spellcheck: "fixed a typo in the Advanced Tracking AI project"
+  - code_imp: "removed an unused define"
