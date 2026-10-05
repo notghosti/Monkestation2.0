@@ -1,0 +1,5 @@
+author: "hexakats"
+delete-after: True
+changes:
+  - balance: "buffs the damage of laser guns to 25"
+  - balance: "buffs the damage of hellfire laser guns to 30"
