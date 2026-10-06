@@ -1,5 +1,5 @@
 GLOBAL_LIST_INIT(blessed_ckeys, list(
-	"taocat" = list(3, 25),
+	
 )) //this is a lmao moment should be a json but its being left here because lol it goes ckey = list(multiplier, base)
 
 ///adjusts antag rep by {VALUE} keeping the value above 0
