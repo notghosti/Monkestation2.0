@@ -111,7 +111,6 @@ GLOBAL_LIST_INIT(ai_core_display_screens, sort_list(list(
 	"Triumvirate-M",
 	"Triumvirate",
 	"Weird", // monkestation additions start below this line
-	"Monkestation",
 	"Facepunch",
 	"Kitty",
 	"Sus",
