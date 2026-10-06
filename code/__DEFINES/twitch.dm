@@ -6,7 +6,6 @@
 
 // twitch event IDs
 #define T_EVENT_AMONGUS_ALL_15 "amongus-all15"
-#define T_EVENT_AMONGUS_OOK_10 "amongus-ook10"
 #define T_EVENT_AUSTRALIA_MODE "australia-mode"
 #define T_EVENT_BUFF_5 "buff-5"
 #define T_EVENT_CHUCKLENUTS_RANDOM "chucklenuts-random"
