@@ -1,4 +1,4 @@
-/datum/twitch_event/chucklenuts/random
+/datum/twitch_event/chucklenuts
 	event_name = "Think Fast"
 	event_duration = 1 SECONDS
 	event_flags = TWITCH_AFFECTS_RANDOM | CLEAR_TARGETS_AFTER_EFFECTS
