@@ -4,7 +4,7 @@
 	/// duration of the event
 	var/event_duration = 10 MINUTES
 	/// event flags
-	var/event_flags = TWITCH_AFFECTS_STREAMER | CLEAR_TARGETS_AFTER_EFFECTS
+	var/event_flags = CLEAR_TARGETS_AFTER_EFFECTS
 	///amount of people we affect if its random
 	var/random_count = 0
 	///list of targets
@@ -27,9 +27,6 @@
 		minor_announce("[event_name] has just been triggered by [name].", "The Observers")
 
 /datum/twitch_event/proc/get_targets()
-	if(event_flags & TWITCH_AFFECTS_STREAMER)
-		event_flags & TWITCH_ALLOW_DUPLICATE_TARGETS ? (targets += get_mob_by_ckey("taocat")) : (targets |= get_mob_by_ckey("taocat"))
-
 	if(event_flags & TWITCH_AFFECTS_ALL)
 		event_flags & TWITCH_ALLOW_DUPLICATE_TARGETS ? (targets += GLOB.alive_player_list) : (targets |= GLOB.alive_player_list)
 

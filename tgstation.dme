@@ -8701,7 +8701,6 @@
 #include "monkestation\code\modules\twitch_bits\admin_command.dm"
 #include "monkestation\code\modules\twitch_bits\events\_base_event.dm"
 #include "monkestation\code\modules\twitch_bits\events\amongus.dm"
-#include "monkestation\code\modules\twitch_bits\events\anime_ook.dm"
 #include "monkestation\code\modules\twitch_bits\events\australia_mode.dm"
 #include "monkestation\code\modules\twitch_bits\events\buff.dm"
 #include "monkestation\code\modules\twitch_bits\events\chuckle_nut.dm"

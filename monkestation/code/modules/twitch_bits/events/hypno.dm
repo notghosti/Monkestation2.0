@@ -18,12 +18,6 @@
 		target.cure_trauma_type(/datum/brain_trauma/hypnosis, TRAUMA_RESILIENCE_SURGERY)
 	return ..()
 
-/datum/twitch_event/hypno/ook
-	event_name = "Hypnotize Ook"
-	event_flags = TWITCH_AFFECTS_STREAMER | CLEAR_TARGETS_ON_END_EVENT
-	id_tag = T_EVENT_HYPNO_OOK
-	token_cost = 1000
-
 /datum/twitch_event/hypno/everyone
 	event_name = "Hypnotize Everyone"
 	event_flags = TWITCH_AFFECTS_ALL | CLEAR_TARGETS_ON_END_EVENT
