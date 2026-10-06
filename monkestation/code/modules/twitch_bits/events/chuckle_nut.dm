@@ -7,7 +7,7 @@
 
 /datum/twitch_event/chucklenuts/apply_effects()
 	for(var/target in targets)
-		var/mob/living/target = target
-		var/obj/item/grenade/flashbang/primed_and_ready = new(get_turf(target))
-		target.put_in_active_hand(primed_and_ready, forced = TRUE)
-		primed_and_ready.arm_grenade(target)
+		var/mob/living/victem = target
+		var/obj/item/grenade/flashbang/primed_and_ready = new(get_turf(victem))
+		victem.put_in_active_hand(primed_and_ready, forced = TRUE)
+		primed_and_ready.arm_grenade(victem)
