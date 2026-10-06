@@ -4,6 +4,7 @@
 	event_flags = TWITCH_AFFECTS_RANDOM | CLEAR_TARGETS_ON_END_EVENT
 	id_tag = T_EVENT_HYPNO_RANDOM
 	announce = FALSE //MMMM, ME SEE VALID
+	random_count = 1
 
 /datum/twitch_event/hypno/apply_effects()
 	for(var/mob/living/carbon/target in targets)
