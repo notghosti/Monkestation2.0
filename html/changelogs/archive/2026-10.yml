@@ -63,3 +63,16 @@
   - map: replaced surgery duffel bags on all maps with surgery trays
   - map: tweaked theseus a little (moved trays to nicer spots and removed drapes that
       spawn on the surgery tables)
+2026-10-06:
+  Absolucy:
+  - bugfix: Fixed oozeling core revives (and other DNA updates) sometimes changing
+      your gender.
+  Runian:
+  - bugfix: You can no longer teleport living beings via a cargo teleporter by teleporting
+      whatever they're buckled to.
+  Tractor-Maam:
+  - spellcheck: fixed a typo in the Advanced Tracking AI project
+  - code_imp: removed an unused define
+  hexakats:
+  - balance: buffs the damage of laser guns to 25
+  - balance: buffs the damage of hellfire laser guns to 30
