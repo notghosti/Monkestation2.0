@@ -135,3 +135,8 @@
   ThePooba:
   - bugfix: fixed exsanguinating unusuals being milk
   - bugfix: disable dullahans because they are extremely broken
+2026-10-11:
+  Absolucy:
+  - qol: hoods now automatically overslot hats - as in, like, if ur wearing a hat,
+      and flip a hood up, the hat will try to just go on top of the hood.
+  - qol: The Navigate verb should be slightly faster now.
