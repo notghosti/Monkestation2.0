@@ -21,8 +21,8 @@
 	gold_core_spawnable = HOSTILE_SPAWN
 	mob_biotypes = MOB_ORGANIC | MOB_BEAST
 	movement_type = FLYING
-	health = 30
-	maxHealth = 30
+	health = 25
+	maxHealth = 25
 	pressure_resistance = 200
 	istate = ISTATE_HARM|ISTATE_BLOCKING
 	obj_damage = 50
@@ -271,6 +271,7 @@
 	new_overlays += disk_overlay
 
 /mob/living/basic/carp/advanced
+	maxHealth = 40
 	health = 40
 	obj_damage = 15
 
