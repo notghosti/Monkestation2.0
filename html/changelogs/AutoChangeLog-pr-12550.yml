@@ -1,5 +1,0 @@
-author: "Runian"
-delete-after: True
-changes:
-  - qol: "Unlocking an APC via right-click hotkey as an AI/Cyborg no longer open the APC's menu."
-  - bugfix: "Cyborgs that are in low power mode can no longer use certain hotkeys such as shocking, bolting, or opening airlocks remotely."
