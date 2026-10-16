@@ -1,11 +1,3 @@
-#define ROBOTIC_LIGHT_BRUTE_MSG "marred"
-#define ROBOTIC_MEDIUM_BRUTE_MSG "dented"
-#define ROBOTIC_HEAVY_BRUTE_MSG "falling apart"
-
-#define ROBOTIC_LIGHT_BURN_MSG "scorched"
-#define ROBOTIC_MEDIUM_BURN_MSG "charred"
-#define ROBOTIC_HEAVY_BURN_MSG "smoldering"
-
 /obj/item/bodypart/head/ipc
 	icon = 'icons/mob/species/ipc/bodyparts.dmi'
 	icon_greyscale = 'icons/mob/species/ipc/bodyparts.dmi'
@@ -206,11 +198,3 @@
 	biological_state = (BIO_ROBOTIC|BIO_JOINTED)
 
 	damage_examines = list(BRUTE = ROBOTIC_BRUTE_EXAMINE_TEXT, BURN = ROBOTIC_BURN_EXAMINE_TEXT, CLONE = DEFAULT_CLONE_EXAMINE_TEXT)
-
-#undef ROBOTIC_LIGHT_BRUTE_MSG
-#undef ROBOTIC_MEDIUM_BRUTE_MSG
-#undef ROBOTIC_HEAVY_BRUTE_MSG
-
-#undef ROBOTIC_LIGHT_BURN_MSG
-#undef ROBOTIC_MEDIUM_BURN_MSG
-#undef ROBOTIC_HEAVY_BURN_MSG
