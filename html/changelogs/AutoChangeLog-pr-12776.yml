@@ -1,0 +1,5 @@
+author: "SmArtKar"
+delete-after: True
+changes:
+  - bugfix: "Getting deconverted from cult no longer leaves you with black eyes."
+  - bugfix: "Eye color effects (cult, weed, silverscale, demoneye) no longer mess up your eye color when they overlap."
